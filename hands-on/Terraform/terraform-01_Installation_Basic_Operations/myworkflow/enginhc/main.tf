@@ -22,8 +22,8 @@ data "aws_ami" "tf_ami" {
 }
 
 resource "aws_instance" "test" {
-    ami = "data"
-    instance_type = var.ec2_type
+    ami = "data.aws_ami.tf_ami.id"
+    instance_type = var.instance_type
     key_name      = var.key_name
     tags = {
         Name  = "testec2"
