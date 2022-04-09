@@ -14,7 +14,7 @@ terraform {
 resource "aws_instance" "test" {
     ami = "ami-0742b4e673072066f"
     instance_type = var.ec2_type
-    key_name      = "FirstKey"
+    key_name      = var.key_name
     tags = {
         Name  = "testec2"
     }
