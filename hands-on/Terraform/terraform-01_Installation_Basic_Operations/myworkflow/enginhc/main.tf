@@ -11,8 +11,18 @@ terraform {
   }
 }
 
+data "aws_ami" "tf_ami" {
+    most_recent = true
+    owners = ["self"]
+    filter {
+      name = "virtualization-type"
+      values = ["hvm"]
+    }
+  
+}
+
 resource "aws_instance" "test" {
-    ami = "ami-0742b4e673072066f"
+    ami = "data"
     instance_type = var.ec2_type
     key_name      = var.key_name
     tags = {
