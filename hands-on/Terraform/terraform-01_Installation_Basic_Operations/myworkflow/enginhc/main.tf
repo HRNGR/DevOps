@@ -41,5 +41,4 @@ resource "aws_instance" "tf-Ec2" {
     tags = {
         "Name"  = "testec2"
     }
-  count = 2
 }
