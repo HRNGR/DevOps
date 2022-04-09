@@ -13,3 +13,7 @@ terraform {
     encrypt = true
   }
 }
+
+output "s3-arn-1" {
+  value = aws_s3_bucket.tf-s3["fredo"].arn
+  }
