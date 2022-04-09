@@ -21,24 +21,14 @@ data "aws_ami" "tf_ami" {
   
 }
 
-data "aws_ami" "ubuntu" {
-    most_recent = true
-    filter {
-      name   = "name"
-      values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
-    }
-    filter {
-      name   = "virtualization-type"
-      values = ["hvm"]
-    }
-    owners = ["099720109477"] # Canonical
+locals {
+  mytag = "engin"
 }
-
-resource "aws_instance" "tf-Ec2" {
-    ami = data.aws_ami.tf_ami.id
+resource "aws_instance" "tf-ec2" {
+    ami = data.aws_ami.tf-ami.id
+    key_name = var.key_name
     instance_type = var.instance_type
-    key_name      = var.key_name
     tags = {
-        "Name"  = "testec2"
+        Name = "${local.mytag}-this is from my-ami"
     }
 }
