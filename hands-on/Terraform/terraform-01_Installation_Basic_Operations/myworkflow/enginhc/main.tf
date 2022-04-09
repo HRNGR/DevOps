@@ -26,7 +26,7 @@ resource "aws_instance" "test" {
     instance_type = var.instance_type
     key_name      = var.key_name
     tags = {
-        Name  = "testec2"
+        "Name"  = "testec2"
     }
   count = 2
 }
