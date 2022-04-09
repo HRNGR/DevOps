@@ -9,7 +9,6 @@ terraform {
     }
   }
 }
-
 data "aws_ami" "tf_ami" {
   most_recent = true
   owners      = ["self"]
@@ -18,9 +17,20 @@ data "aws_ami" "tf_ami" {
     values = ["hvm"]
   }
 }
-
+data "aws_ami" "ubuntu" {
+  most_recent = true
+  filter {
+    name   = "name"
+    values = ["ubuntu/images/hvm-ssd/ubuntu-focal-20.04-amd64-server-*"]
+  }
+  filter {
+    name   = "virtualization-type"
+    values = ["hvm"]
+  }
+  owners = ["099720109477"] # Canonical
+}
 resource "aws_instance" "tf-Ec2" {
-  ami = data.aws_ami.tf_ami.id
+  ami = data.aws_ami.ubuntu.id
   key_name = var.key_name
   instance_type = var.instance_type
   tags = {
