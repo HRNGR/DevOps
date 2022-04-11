@@ -14,7 +14,7 @@ provider "aws" {
 resource "aws_instance" "instance" {
   ami = "ami-0c02fb55956c7d316"
   instance_type = "t2.micro"
-  key_name = "oliver"
+  key_name = "FirstKey"
   security_groups = ["tf-provisioner-sg"]
   tags = {
     Name = "terraform-instance-with-provisioner"
@@ -39,10 +39,32 @@ resource "aws_instance" "instance" {
       }
 
     provisioner "file" {
+    content = self.public_ip
+    destination = "/home/ec2-user/my_public_ip"
     
     }
 
+}
 
+resource "aws_security_group" "tf-sec-gr" {
+  name        = "tf-provisioner-sg"
 
+  ingress {
+    description      = "TLS from VPC"
+    from_port        = 443
+    to_port          = 443
+    protocol         = "tcp"
+    cidr_blocks      = [aws_vpc.main.cidr_block]
+  }
 
+  egress {
+    from_port        = 0
+    to_port          = 0
+    protocol         = "-1"
+    cidr_blocks      = ["0.0.0.0/0"]
+  }
+
+  tags = {
+    Name = "allow_tls"
+  }
 }
