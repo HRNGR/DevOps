@@ -279,13 +279,13 @@ $ terraform init
 - Go to the terraform registry and check the terraform aws instance import section. Then go to the AWS console, take the instance-id and import the "aws-linux-2" to the terraform management.
 
 ```bash
-$ terraform import "aws_instance.tf-instances[0]" i-001ad24a396d7cffe
+$ terraform import "aws_instance.tf-instances[0]" i-0b14296d13e2c1d46
 
 
-aws_instance.tf-instances[0]: Importing from ID "i-001ad24a396d7cffe"...
+aws_instance.tf-instances[0]: Importing from ID "i-0b14296d13e2c1d46"...
 aws_instance.tf-instances[0]: Import prepared!
   Prepared aws_instance for import
-aws_instance.tf-instances[0]: Refreshing state... [id=i-001ad24a396d7cffe]
+aws_instance.tf-instances[0]: Refreshing state... [id=i-0b14296d13e2c1d46]
 
 Import successful!
 
@@ -296,13 +296,13 @@ your Terraform state and will henceforth be managed by Terraform.
 - Check the terraform.tfstate and import the second instance. (Take the ubuntu 20.04 instance-id from the console)
 
 ```bash
-$ terraform import "aws_instance.tf-instances[1]" i-0d2b6bfccb70a6ea1
+$ terraform import "aws_instance.tf-instances[1]" i-07c55a34568120be9
 
 
-aws_instance.tf-instances[1]: Importing from ID "i-092fe70d1cef163c1"...
+aws_instance.tf-instances[1]: Importing from ID "i-07c55a34568120be9"...
 aws_instance.tf-instances[1]: Import prepared!
   Prepared aws_instance for import
-aws_instance.tf-instances[1]: Refreshing state... [id=i-092fe70d1cef163c1]
+aws_instance.tf-instances[1]: Refreshing state... [id=i-07c55a34568120be9]
 
 Import successful!
 
