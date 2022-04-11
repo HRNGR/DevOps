@@ -315,13 +315,13 @@ your Terraform state and will henceforth be managed by Terraform.
 - Go to the terraform registry and check the aws_security_group import section. Then take security group id from the console and use it in the command.
 
 ```bash
-$ terraform import aws_security_group.tf-sg sg-01b92e29e828a2177
+$ terraform import aws_security_group.tf-sg sg-0ceeade7b5829b0d6
 
 
-aws_security_group.tf-sg: Importing from ID "sg-01b92e29e828a2177"...
+aws_security_group.tf-sg: Importing from ID "sg-0ceeade7b5829b0d6"...
 aws_security_group.tf-sg: Import prepared!
   Prepared aws_security_group for import
-aws_security_group.tf-sg: Refreshing state... [id=sg-01b92e29e828a2177]
+aws_security_group.tf-sg: Refreshing state... [id=sg-0ceeade7b5829b0d6]
 
 Import successful!
 
