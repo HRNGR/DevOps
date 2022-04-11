@@ -1,8 +1,8 @@
 module "tf-vpc" {
   source = "../modules"
-  environment = "DEV"
-  }
+  environment = "PROD"
+}
 
 output "vpc-cidr-block" {
-  value = module.tf-vpc.vpc_cidr
+  values = ["module.tf-vpc.vpc_cidr"]
 }
