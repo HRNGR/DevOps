@@ -10,24 +10,17 @@ resource "aws_vpc" "main" {
 }
 
 resource "aws_subnet" "public_subnet" {
-  vpc_id     = aws_vpc.module_vpc.id
-  cidr_block = var.vpc_cidr_block
-
+  cidr_block = var.public_subnet_cidr
+  vpc_id = aws_vpc.module_vpc.id
   tags = {
-    Name = "Main"
+    Name = "terraform-public-subnet-${var.environment}"
   }
 }
 
-resource "aws_subnet" "privet_subnet" {
-  vpc_id     = aws_vpc.module_vpc.id
-  cidr_block = var.vpc_cidr_block
-
+resource "aws_subnet" "private_subnet" {
+  cidr_block = var.private_subnet_cidr
+  vpc_id = aws_vpc.module_vpc.id
   tags = {
-    Name = "Main"
+    Name = "terraform-private-subnet-${var.environment}"
   }
-}
-
-output "instance_ip_addr" {
-  value       = aws_instance.server.private_ip
-  description = "The private IP address of the main server instance."
 }
