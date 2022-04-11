@@ -11,6 +11,18 @@ provider "aws" {
   region = "us-east-1"
 }
 
+resource "aws_instance" "natf-instance" {
+  ami = ""
+  instance_type = "t2.micro"
+  count = 3
+  key_name = "FirstKey"
+  security_groups = ["tf-import-sg"]
+  tags = {
+    Name =
+  }
+  
+}
+
 resource "aws_security_group" "tf-sg" {
   name = "tf-import-sg"
   description = "terraform import-sg"
