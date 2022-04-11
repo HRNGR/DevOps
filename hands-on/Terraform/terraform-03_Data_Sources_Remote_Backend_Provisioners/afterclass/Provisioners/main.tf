@@ -1,7 +1,7 @@
 terraform {
   required_providers {
     aws = {
-      source = "hashicorp/aws"
+      source  = "hashicorp/aws"
       version = "~>4.0"
     }
   }
@@ -12,59 +12,64 @@ provider "aws" {
 }
 
 resource "aws_instance" "instance" {
-  ami = "ami-0c02fb55956c7d316"
-  instance_type = "t2.micro"
-  key_name = "FirstKey"
+  ami             = "ami-0c02fb55956c7d316"
+  instance_type   = "t2.micro"
+  key_name        = "FirstKey"
   security_groups = ["tf-provisioner-sg"]
   tags = {
     Name = "terraform-instance-with-provisioner"
   }
 
-    provisioner "lokal-exec" {
+  provisioner "lokal-exec" {
     command = "echo http://${self.public_ip}" > "public_ip.txt"
-    }
+  }
 
-    connection {
-        type     = "ssh"
-        user     = "ec2-user"
-        private_key = file(""C:\\Users\\gurha\\Downloads\\FirstKey.pem"")
-        host     = self.public_ip
-    }
+  connection {
+    type        = "ssh"
+    user        = "ec2-user"
+    private_key = file("C:/Users/gurha/Downloads/FirstKey.pem")
+    host        = self.public_ip
+  }
   provisioner "remote-exec" {
     inline = [
       "sudo yum -y install httpd",
       "sudo systemctl enable httpd",
       "sudo systemctl start httpd"
-        ]
-      }
+    ]
+  }
 
-    provisioner "file" {
-    content = self.public_ip
+  provisioner "file" {
+    content     = self.public_ip
     destination = "/home/ec2-user/my_public_ip"
-    
-    }
+
+  }
 
 }
 
 resource "aws_security_group" "tf-sec-gr" {
-  name        = "tf-provisioner-sg"
+  name = "tf-provisioner-sg"
 
   ingress {
-    description      = "TLS from VPC"
-    from_port        = 443
-    to_port          = 443
-    protocol         = "tcp"
-    cidr_blocks      = [aws_vpc.main.cidr_block]
+    from_port   = 22
+    to_port     = 22
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
+  ingress {
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["0.0.0.0/0"]
+  }
   egress {
-    from_port        = 0
-    to_port          = 0
-    protocol         = "-1"
-    cidr_blocks      = ["0.0.0.0/0"]
+    from_port   = 0
+    to_port     = 0
+    protocol    = "-1"
+    cidr_blocks = ["0.0.0.0/0"]
   }
 
   tags = {
-    Name = "allow_tls"
+    Name = "tf-provisioner-sg"
   }
 }
