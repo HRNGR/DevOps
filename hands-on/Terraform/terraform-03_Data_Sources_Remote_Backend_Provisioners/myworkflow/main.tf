@@ -10,7 +10,7 @@ resource "aws_vpc" "main" {
 }
 
 resource "aws_subnet" "public_subnet" {
-  vpc_id     = var.public_cidr
+  vpc_id     = aws_vpc.module_vpc.id
   cidr_block = var.vpc_cidr_block
 
   tags = {
@@ -19,7 +19,7 @@ resource "aws_subnet" "public_subnet" {
 }
 
 resource "aws_subnet" "privet_subnet" {
-  vpc_id     = var.public_cidr
+  vpc_id     = aws_vpc.module_vpc.id
   cidr_block = var.vpc_cidr_block
 
   tags = {
