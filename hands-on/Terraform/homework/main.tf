@@ -11,10 +11,20 @@ provider "aws" {
     region = "us-east-1"
 }
 
+data "aws_ami" "my_ami" {
+  most_recent = true
+  owners = ["self"]
+
+  filter {
+    name = "name"
+    values = ["hvm"]
+  }
+}
+
 resource "aws_security_group" "name" {
   name = "odev-sg"
     tags = {
-    Name = "tf-sg"
+    Name = "hw-sg"
   }
 
   ingress {
@@ -42,12 +52,3 @@ resource "aws_security_group" "name" {
 
 
 
-data "aws_ami" "my_ami" {
-  most_recent = true
-  owners = ["self"]
-
-  filter {
-    name = "name"
-    values = ["myami-*"]
-  }
-}
