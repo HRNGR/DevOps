@@ -13,13 +13,26 @@ provider "aws" {
 
 data "aws_ami" "my_ami" {
   most_recent = true
-  owners = ["self"]
+  owners = ["amazon"]
 
   filter {
     name = "name"
     values = ["hvm"]
   }
 }
+
+resource "aws_instance" "hw-ec2" {
+  ami = ""
+  instance_type = "t2.micro"
+  key_name = "FirstKey"
+  security_groups = ["hw-sg"]
+  tags = {
+      "Name" = "Terraform ${element(var.hw_tags, count.index)} instance"
+  }
+}
+
+
+
 
 resource "aws_security_group" "name" {
   name = "odev-sg"

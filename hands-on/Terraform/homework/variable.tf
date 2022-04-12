@@ -1,11 +1,5 @@
-resource "null_resource" "name" {
-  connection {
-    
-  }
-
-
-
-
-
-
+variable "hw-tags" {
+    type = list (string)
+    default = [ "first, second"]
+  
 }
