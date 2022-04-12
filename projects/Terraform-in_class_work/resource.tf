@@ -28,4 +28,3 @@ resource "aws_security_group" "webserverSG" {
     Name = "allow_tls"
   }
 }
-}
