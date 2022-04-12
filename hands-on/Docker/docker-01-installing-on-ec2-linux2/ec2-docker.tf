@@ -50,7 +50,7 @@ resource "aws_instance" "tf-ec2" {
   instance_type = var.instance-type
   key_name = "FirstKey"
   vpc_security_group_ids = [ aws_security_group.allow_ssh.id ]
-  iam_instance_profile = "terraformtf"
+  iam_instance_profile = "terraform"
       tags = {
       Name = "Docker-engine"
   }
