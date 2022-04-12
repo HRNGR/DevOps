@@ -43,6 +43,11 @@ resource "aws_security_group" "name" {
 
 
 data "aws_ami" "my_ami" {
-    most_recent = true
-  
+  most_recent = true
+  owners = ["self"]
+
+  filter {
+    name = "name"
+    values = ["myami-*"]
+  }
 }
