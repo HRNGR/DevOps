@@ -45,12 +45,12 @@ resource "aws_security_group" "allow_ssh" {
   }
 }
 
-resource "aws_instance" "tf_ec2" {
+resource "aws_instance" "tf-ec2" {
   ami           = "ami-087c17d1fe0178315"
   instance_type = var.instance-type
   key_name = "FirstKey"
   vpc_security_group_ids = [ aws_security_group.allow_ssh.id ]
-  iam_instance_profile = "terraform"
+  iam_instance_profile = "terraformtf"
       tags = {
       Name = "Docker-engine"
   }
@@ -69,5 +69,5 @@ resource "aws_instance" "tf_ec2" {
 	            EOF
 }  
 output "myec2-public-ip" {
-  value = aws_instance.tf_ec2.public_ip
+  value = aws_instance.tf-ec2.public_ip
 }
