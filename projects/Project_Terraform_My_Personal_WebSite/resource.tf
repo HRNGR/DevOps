@@ -52,11 +52,11 @@ resource "aws_instance" "Personal_Website" {
   }
 }
 
-
+#rout53
 resource "aws_route53_zone" "ec2" {
   name = "harungur.com"
 }
-
+#rout53 record
 resource "aws_route53_record" "ec2" {
   zone_id = aws_route53_zone.s3.zone_id
   name    = "www.harungur.com"
