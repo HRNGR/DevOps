@@ -101,20 +101,12 @@ resource "aws_s3_bucket_object" "Website_Bucket" {
 }
 
 
-
+#rout53
 resource "aws_route53_zone" "s3" {
   name = "harungur.com"
 }
 
-resource "aws_route53_record" "www" {
-  zone_id = aws_route53_zone.s3.zone_id
-  name    = "www.harungur.com"
-  type    = "A"
-  ttl     = "60"
-  records = [aws_instance.Personal_Website.public_ip]
-}
-
-
+#rout53 record
 resource "aws_route53_record" "www" {
   zone_id = aws_route53_zone.s3.zone_id
   name    = "example.com"
