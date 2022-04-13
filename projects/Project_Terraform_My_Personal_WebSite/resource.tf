@@ -112,3 +112,16 @@ resource "aws_route53_record" "www" {
   ttl     = "60"
   records = [aws_instance.Personal_Website.public_ip]
 }
+
+
+resource "aws_route53_record" "www" {
+  zone_id = aws_route53_zone.s3.zone_id
+  name    = "example.com"
+  type    = "A"
+
+  alias {
+    name                   = aws_s3_bucket.Website_Bucket.dns_name
+    zone_id                = aws_s3_bucket.Website_Bucket.zone_id
+    evaluate_target_health = true
+  }
+}
