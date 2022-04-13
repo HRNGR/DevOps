@@ -1,3 +1,4 @@
+#ec2 ile
 resource "aws_security_group" "webserverSG" {
   name        = "Web_Server_Security_Group"
   description = "Accept HTTP and SSH Traffic"
@@ -39,25 +40,75 @@ data "aws_ami" "tf_ami" {
     values = ["amzn2-ami-hvm*"]
   }
 }
-resource "aws_instance" "Roman_Numerals" {
+
+resource "aws_instance" "Personal_Website" {
   ami                    = data.aws_ami.tf_ami.id
   instance_type          = var.instance_type
   key_name               = var.keyname
   vpc_security_group_ids = [aws_security_group.webserverSG.id]
   user_data              = file("./scrip.sh")
   tags = {
-    "Name" = "Roman_Numerals"
+    "Name" = "Personal_Website"
   }
 }
 
-resource "aws_route53_zone" "main" {
+
+resource "aws_route53_zone" "s3" {
   name = "harungur.com"
 }
 
 resource "aws_route53_record" "www" {
-  zone_id = aws_route53_zone.main.zone_id
+  zone_id = aws_route53_zone.s3.zone_id
   name    = "www.harungur.com"
   type    = "A"
   ttl     = "60"
-  records = [aws_instance.Roman_Numerals.public_ip]
+  records = [aws_instance.Personal_Website.public_ip]
+}
+
+
+
+
+
+
+#s3 ile
+resource "aws_s3_bucket" "Website_Bucket" {
+  bucket = "www.harungur.com"
+  acl    = "public-read"
+  policy = file("policy.json")
+
+  website {
+    index_document = "index.html"
+
+    routing_rules = <<EOF
+[{
+    "Condition": {
+        "KeyPrefixEquals": "docs/"
+    },
+    "Redirect": {
+        "ReplaceKeyPrefixWith": "documents/"
+    }
+}]
+EOF
+  }
+}
+
+resource "aws_s3_bucket_object" "Website_Bucket" {
+  bucket = "Website_Bucket"
+  key    = "Website_Bucket_key"
+  source = "${path.module}/my_files.zip"
+  etag   = "${filemd5("${path.module}/my_files.zip")}"
+}
+
+
+
+resource "aws_route53_zone" "s3" {
+  name = "harungur.com"
+}
+
+resource "aws_route53_record" "www" {
+  zone_id = aws_route53_zone.s3.zone_id
+  name    = "www.harungur.com"
+  type    = "A"
+  ttl     = "60"
+  records = [aws_instance.Personal_Website.public_ip]
 }
