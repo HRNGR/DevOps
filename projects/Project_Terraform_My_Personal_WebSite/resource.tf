@@ -1,7 +1,7 @@
 #rout53
-resource "aws_route53_zone" "main" {
-  name = "harungur.com"
-}
+# resource "aws_route53_zone" "main" {
+#   name = "harungur.com"
+# }
 
 #ec2 ile
 
