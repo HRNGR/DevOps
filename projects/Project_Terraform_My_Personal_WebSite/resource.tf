@@ -51,7 +51,7 @@ resource "aws_instance" "Roman_Numerals" {
 }
 
 resource "aws_route53_zone" "main" {
-  name = "example.com"
+  name = "harungur.com"
 }
 
 resource "aws_route53_record" "www" {
