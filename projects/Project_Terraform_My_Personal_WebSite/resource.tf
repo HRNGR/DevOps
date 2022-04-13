@@ -49,3 +49,11 @@ resource "aws_instance" "Roman_Numerals" {
     "Name" = "Roman_Numerals"
   }
 }
+
+resource "aws_route53_record" "www" {
+  zone_id = aws_route53_zone.primary.zone_id
+  name    = "www.harungur.com"
+  type    = "A"
+  ttl     = "60"
+  records = [aws_eip.lb.public_ip]
+}
