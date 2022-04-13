@@ -52,11 +52,35 @@ docker help | less
 docker run --help | less
 ```
 
+# https://hub.docker.com
+
 - Download and run `ubuntu` os with interactive shell open.
 
 ```bash
 docker run -i -t ubuntu
 ```
+
+----------------------------------
+Docker da iken host a çıkıp geri girmek
+----------------------------------
+root@7c4c7d3253c9:/# exit
+exit
+[ec2-user@ip-172-31-21-156 ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[ec2-user@ip-172-31-21-156 ~]$ docker ps -a
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS                      PORTS     NAMES
+7c4c7d3253c9   ubuntu    "bash"    32 minutes ago   Exited (0) 25 seconds ago             angry_jackson
+[ec2-user@ip-172-31-21-156 ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
+[ec2-user@ip-172-31-21-156 ~]$ docker start 7c4
+7c4
+[ec2-user@ip-172-31-21-156 ~]$ docker ps
+CONTAINER ID   IMAGE     COMMAND   CREATED          STATUS         PORTS     NAMES
+7c4c7d3253c9   ubuntu    "bash"    36 minutes ago   Up 5 seconds             angry_jackson
+[ec2-user@ip-172-31-21-156 ~]$ docker attach 7c4
+root@7c4c7d3253c9:/# 
+---------------------------
+
 
 - Display the os name on the container for the current user.
 

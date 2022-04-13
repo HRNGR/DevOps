@@ -1,4 +1,33 @@
+#rout53
+resource "aws_route53_zone" "main" {
+  name = "harungur.com"
+}
+
 #ec2 ile
+
+# #rout53 record s3
+# resource "aws_route53_record" "main" {
+#   zone_id = aws_route53_zone.main.zone_id
+#   name    = "example.com"
+#   type    = "A"
+
+#   alias {
+#     name                   = aws_s3_bucket.Website_Bucket.dns_name
+#     zone_id                = aws_s3_bucket.Website_Bucket.zone_id
+#     evaluate_target_health = true
+#   }
+# }
+
+#rout53 record ec2
+resource "aws_route53_record" "main" {
+  zone_id = aws_route53_zone.main.zone_id
+  name    = "www.harungur.com"
+  type    = "A"
+  ttl     = "60"
+  records = [aws_instance.Personal_Website.public_ip]
+}
+
+
 resource "aws_security_group" "webserverSG" {
   name        = "Web_Server_Security_Group"
   description = "Accept HTTP and SSH Traffic"
@@ -52,69 +81,88 @@ resource "aws_instance" "Personal_Website" {
   }
 }
 
-#rout53
-resource "aws_route53_zone" "ec2" {
-  name = "harungur.com"
-}
-#rout53 record
-resource "aws_route53_record" "ec2" {
-  zone_id = aws_route53_zone.s3.zone_id
-  name    = "www.harungur.com"
-  type    = "A"
-  ttl     = "60"
-  records = [aws_instance.Personal_Website.public_ip]
-}
+# #-------------------------------------------------------------
+
+
+# #s3 ile
+
+
+# #s3
+# resource "aws_s3_bucket" "Website_Bucket" {
+#   bucket = "www.harungur.com"
+#   acl    = "public-read"
+#   policy = file("policy.json")
+
+#   website {
+#     index_document = "index.html"
+
+#     routing_rules = <<EOF
+# [{
+#     "Condition": {
+#         "KeyPrefixEquals": "docs/"
+#     },
+#     "Redirect": {
+#         "ReplaceKeyPrefixWith": "documents/"
+#     }
+# }]
+# EOF
+#   }
+# }
+
+# # #s3 configuration
+# resource "aws_s3_bucket_website_configuration" "Website_Bucket" {
+#   bucket = aws_s3_bucket.Website_Bucket.bucket
+
+#   index_document {
+#     suffix = "index.html"
+#   }
+
+#   error_document {
+#     key = "error.html"
+#   }
+
+#   routing_rule {
+#     condition {
+#       key_prefix_equals = "docs/"
+#     }
+#     redirect {
+#       replace_key_prefix_with = "documents/"
+#     }
+#   }
+# }
+
+
+# # #s3 upload
+
+# # #uploadfromlokal
+# resource "aws_s3_bucket_object" "Website_Bucket" {
+# for_each = fileset("${path.module}/harungurcom/", "*")
+# bucket = aws_s3_bucket.Website_Bucket.id
+# key = each.value
+# source = "myfiles/${each.value}"
+# etag = filemd5("myfiles/${each.value}")
+# }
+
+# # resource "aws_s3_bucket_object" "Website_Bucket" {
+# #   bucket = "Website_Bucket"
+# #   key    = "Website_Bucket_key"
+# #   source = "${path.module}/harungurcom.rar"
+# #   etag   = "${filemd5("${path.module}/harungurcom.rar")}"
+# # }
+
+# # #uploadfromgithub
+# # resource "aws_s3_object_copy" "Website_Bucket_copy" {
+# #   bucket = "Website_Bucket"
+# #   key    = "destination_key"
+# #   source = "source_bucket/source_key"
+
+# #   grant {
+# #     uri         = "https://raw.githubusercontent.com/HRNGR/mywebsite/main/harungurcom/"
+# #     type        = "Group"
+# #     permissions = ["READ"]
+# #   }
+# # }
 
 
 
-#-------------------------------------------------------------
 
-
-#s3 ile
-#s3
-resource "aws_s3_bucket" "Website_Bucket" {
-  bucket = "www.harungur.com"
-  acl    = "public-read"
-  policy = file("policy.json")
-
-  website {
-    index_document = "index.html"
-
-    routing_rules = <<EOF
-[{
-    "Condition": {
-        "KeyPrefixEquals": "docs/"
-    },
-    "Redirect": {
-        "ReplaceKeyPrefixWith": "documents/"
-    }
-}]
-EOF
-  }
-}
-#s3 upload
-resource "aws_s3_bucket_object" "Website_Bucket" {
-  bucket = "Website_Bucket"
-  key    = "Website_Bucket_key"
-  source = "${path.module}/my_files.zip"
-  etag   = "${filemd5("${path.module}/my_files.zip")}"
-}
-
-
-#rout53
-resource "aws_route53_zone" "s3" {
-  name = "harungur.com"
-}
-
-#rout53 record
-resource "aws_route53_record" "www" {
-  zone_id = aws_route53_zone.s3.zone_id
-  name    = "example.com"
-  type    = "A"
-
-  alias {
-    name                   = aws_s3_bucket.Website_Bucket.dns_name
-    zone_id                = aws_s3_bucket.Website_Bucket.zone_id
-    evaluate_target_health = true
-  }
-}

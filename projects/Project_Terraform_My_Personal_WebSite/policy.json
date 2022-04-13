@@ -1,0 +1,15 @@
+{
+    "Id": "Policy1649873333188",
+    "Version": "2012-10-17",
+    "Statement": [
+      {
+        "Sid": "Stmt1649873329775",
+        "Action": [
+          "s3:GetObject"
+        ],
+        "Effect": "Allow",
+        "Resource": "arn:aws:s3:::www.harungur.com/*",
+        "Principal": "*"
+      }
+    ]
+  }
