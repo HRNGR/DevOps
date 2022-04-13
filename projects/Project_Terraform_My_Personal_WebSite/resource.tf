@@ -20,7 +20,7 @@
 
 #rout53 record ec2
 resource "aws_route53_record" "ec2" {
-  zone_id = aws_route53_zone.ec2.zone_id
+  zone_id = aws_route53_zone.zone_id
   name    = "www.harungur.com"
   type    = "A"
   ttl     = "60"
