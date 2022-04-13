@@ -50,10 +50,14 @@ resource "aws_instance" "Roman_Numerals" {
   }
 }
 
+resource "aws_route53_zone" "main" {
+  name = "example.com"
+}
+
 resource "aws_route53_record" "www" {
-  zone_id = aws_route53_zone.primary.zone_id
+  zone_id = aws_route53_zone.main.zone_id
   name    = "www.harungur.com"
   type    = "A"
   ttl     = "60"
-  records = [aws_instance.roman_numerals.public_ip]
+  records = [aws_instance.Roman_Numerals.public_ip]
 }
