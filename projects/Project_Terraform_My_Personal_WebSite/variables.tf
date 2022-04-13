@@ -8,6 +8,6 @@ variable "instance_type" {
   default = "t2.micro"
 }
 
-variable "aws_hosted_zone.domain_name" {
+variable "aws_route53_zone.name_servers" {
   default = "harungur.com"
 }
