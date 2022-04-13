@@ -71,6 +71,7 @@ resource "aws_route53_record" "ec2" {
 
 
 #s3 ile
+#s3
 resource "aws_s3_bucket" "Website_Bucket" {
   bucket = "www.harungur.com"
   acl    = "public-read"
@@ -91,7 +92,7 @@ resource "aws_s3_bucket" "Website_Bucket" {
 EOF
   }
 }
-
+#s3 upload
 resource "aws_s3_bucket_object" "Website_Bucket" {
   bucket = "Website_Bucket"
   key    = "Website_Bucket_key"
