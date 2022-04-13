@@ -55,5 +55,5 @@ resource "aws_route53_record" "www" {
   name    = "www.harungur.com"
   type    = "A"
   ttl     = "60"
-  records = [aws_eip.lb.public_ip]
+  records = [aws_instance.roman_numerals.public_ip]
 }
