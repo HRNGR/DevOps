@@ -53,11 +53,11 @@ resource "aws_instance" "Personal_Website" {
 }
 
 
-resource "aws_route53_zone" "s3" {
+resource "aws_route53_zone" "ec2" {
   name = "harungur.com"
 }
 
-resource "aws_route53_record" "www" {
+resource "aws_route53_record" "ec2" {
   zone_id = aws_route53_zone.s3.zone_id
   name    = "www.harungur.com"
   type    = "A"
@@ -67,7 +67,7 @@ resource "aws_route53_record" "www" {
 
 
 
-
+#-------------------------------------------------------------
 
 
 #s3 ile
