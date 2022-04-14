@@ -306,9 +306,9 @@ docker rm clarus2nd clarus3rd clarus4th
 - Delete `cw-vol` volume.
 
 ```bash
-docker volume rm cw-vol  ## yolu mu sildik ???????
+docker volume rm cw-vol  ##volum ü sildik (örnk: main)
 
-# docker volume prune tüm volumleri siliyor
+# exit tüm volumleri siliyor
 ```
 
 ## Part 5 - docker volume behaviours
