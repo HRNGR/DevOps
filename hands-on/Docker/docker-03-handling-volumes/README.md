@@ -268,7 +268,7 @@ exit
 - Run an another `ubuntu` container with interactive shell open, name the container as `clarus4th`, attach the volume `cw-vol` as read-only to `/cw4th` mount point in the container, and add command to run bash shell.
 
 ```bash
-docker run -it --name clarus4th -v cw-vol:/cw4th:ro ubuntu bash
+docker run -it --name clarus4th -v cw-vol:/cw4th:ro ubuntu bash   ## ro read only
 ```
 
 - List the files in `/cw4th` folder, and show that we can reach the all files created earlier.
@@ -293,6 +293,7 @@ exit
 
 ```bash
 docker ps -a
+##docker container ls aynı komut
 ```
 
 - Delete `clarus2nd`, `clarus3rd` and `clarus4th` containers.
@@ -304,7 +305,9 @@ docker rm clarus2nd clarus3rd clarus4th
 - Delete `cw-vol` volume.
 
 ```bash
-docker volume rm cw-vol
+docker volume rm cw-vol  ## yolu mu sildik ???????
+
+# docker volume prune tüm volumleri siliyor
 ```
 
 ## Part 5 - docker volume behaviours
