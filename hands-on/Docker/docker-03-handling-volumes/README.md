@@ -59,6 +59,13 @@ systemctl status docker
 ```bash
 docker run -it alpine ash
 ```
+## problem olursa 
+newgrp docker
+sudo docker run -it alpine ash
+/// usermod -a -G docker ec2-user
+##
+
+
 
 - Display the os release of the alpine container.
 
