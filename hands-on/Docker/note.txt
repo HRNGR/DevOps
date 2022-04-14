@@ -1,0 +1,2 @@
+Docker images // image leri listeler
+docker rmi ubuntu // ubuntu image ini silver
