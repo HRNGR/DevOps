@@ -2,7 +2,7 @@
 
 Purpose of the this hands-on training is to teach students how to handle volumes in Docker containers.
 
-## Learning Outcomes 
+## Learning Outcomes
 
 At the end of the this hands-on training, students will be able to;
 
@@ -59,7 +59,7 @@ systemctl status docker
 ```bash
 docker run -it alpine ash
 ```
-## problem olursa 
+## problem olursa
 newgrp docker
 sudo docker run -it alpine ash
 /// usermod -a -G docker ec2-user # ec2-user ı docker mod a ekledik.
@@ -100,7 +100,7 @@ docker start 737 && docker attach 737
 - Show that the file `short-life.txt` is still there, and explain why it is there. (Container holds it data until removed).
 
 ```bash
-ls /home 
+ls /home
 ```
 
 - Exit the container and return to ec2-user bash shell.
@@ -326,7 +326,7 @@ docker volume create empty-vol
 docker volume create full-vol
 ```
 
-- Run an `alpine` container with interactive shell open, name the container as `vol-lesson`, attach the volume `full-vol` to `/cw` mount point in the container, and add command to run alpine shell. 
+- Run an `alpine` container with interactive shell open, name the container as `vol-lesson`, attach the volume `full-vol` to `/cw` mount point in the container, and add command to run alpine shell.
 
 ```bash
 docker run -it --name vol-lesson -v full-vol:/cw alpine ash
@@ -463,6 +463,9 @@ docker container ls
 
 ```bash
 docker run -d --name nginx-default -p 80:80  nginx
+
+# -d
+# -p port publishing
 ```
 
 - Add a security rule for protocol HTTP port 80 and show Nginx Web Server is running on Docker Machine.
@@ -507,9 +510,9 @@ http://<public-ip>:8080
 ```bash
 docker exec -it nginx-new bash
 root@a7e3d276a147:/# cd usr/share/nginx/html
-root@a7e3d276a147:/usr/share/nginx/html# ls 
+root@a7e3d276a147:/usr/share/nginx/html# ls
 index.html
-root@a7e3d276a147:/usr/share/nginx/html# cat index.html 
+root@a7e3d276a147:/usr/share/nginx/html# cat index.html
 <h1>Welcome to Clarusway</h1>
 ```
 
@@ -533,5 +536,8 @@ docker rm -f nginx-default nginx-new
 ```bash
  docker volume prune -f
 ```
+<!-- docker volume prune -f
+Total reclaimed space: 0B
+zaten volume yokmuş -->
 
- 
+

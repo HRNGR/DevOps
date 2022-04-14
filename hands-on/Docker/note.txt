@@ -1,5 +1,7 @@
 docker images // image leri listeler
 docker rmi ubuntu // ubuntu image ini silver
+docker container prune // tüm containerları ini silver
+docker volume prune // tüm volume leri ini silver
 docker ps -a // docker container ls //container ları listeler 
 docker start 756 && docker attach 756 // container çalıştır ve bağlan
 
