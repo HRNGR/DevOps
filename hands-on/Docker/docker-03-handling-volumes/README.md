@@ -62,7 +62,7 @@ docker run -it alpine ash
 ## problem olursa 
 newgrp docker
 sudo docker run -it alpine ash
-/// usermod -a -G docker ec2-user # ec2-user ı docker mod a ekledik
+/// usermod -a -G docker ec2-user # ec2-user ı docker mod a ekledik.
 ##
 
 
