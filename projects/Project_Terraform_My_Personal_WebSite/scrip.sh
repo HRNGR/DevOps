@@ -7,6 +7,14 @@ cd /usr/share/nginx/html
 chmod -R 777 /usr/share/nginx/html
 rm index.html
 FOLDER="https://raw.githubusercontent.com/HRNGR/mywebsite/main/harungurcom/" #kendi github uzantınızı eklemeniz lazım
+
+wget https://raw.githubusercontent.com/HRNGR/mywebsite/main/harungurcom/
+
+
+
+
+
+
 wget "${FOLDER}"/index.html
 wget "${FOLDER}"/about.html
 wget "${FOLDER}"/myproject.html
