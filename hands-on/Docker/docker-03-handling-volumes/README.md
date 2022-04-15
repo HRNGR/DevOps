@@ -308,7 +308,9 @@ docker rm clarus2nd clarus3rd clarus4th
 ```bash
 docker volume rm cw-vol  ##volum ü sildik (örnk: main)
 
-# exit tüm volumleri siliyor
+# docker volume prune // tüm volumleri siliyor
+
+exit 
 ```
 
 ## Part 5 - docker volume behaviours
