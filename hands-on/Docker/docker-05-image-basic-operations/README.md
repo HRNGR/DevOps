@@ -77,6 +77,9 @@ docker image ls
 docker image pull ubuntu
 docker image ls
 ```
+## kurulu işlletim sistemini öğrenme 
+## uname
+
 
 - Run `ubuntu` as container with interactive shell open.
 
