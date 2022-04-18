@@ -105,7 +105,7 @@ resource "aws_db_instance" "db-server" {
 resource "github_repository_file" "dbendpoint" {
   content = aws_db_instance.db-server.address
   file = "dbserver.endpoint"
-  repository = "phonebook"
+  repository = "phonebooktf" #repo adı yazılacak
   overwrite_on_create = true
   branch = "master"
 }
