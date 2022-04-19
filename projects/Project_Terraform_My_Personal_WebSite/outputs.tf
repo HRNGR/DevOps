@@ -3,6 +3,8 @@ output "publicip" {
 
 }
 
+
+
 # output "s3" {
 #   value = aws_s3_bucket.Website_Bucket.dns_name
 
