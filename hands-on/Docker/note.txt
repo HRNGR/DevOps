@@ -4,4 +4,9 @@ docker container prune // tüm containerları ini silver
 docker volume prune // tüm volume leri ini silver
 docker ps -a // docker container ls //container ları listeler 
 docker start 756 && docker attach 756 // container çalıştır ve bağlan
-
+## kurulu işlletim sistemini öğrenme 
+## uname
+Defaults to ubuntu:latest
+docker image inspect ubuntu
+Ubuntu with tag 18.04
+docker image inspect ubuntu:18.04
