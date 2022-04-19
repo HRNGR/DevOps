@@ -33,6 +33,6 @@ LogicalID:
       SubjectAlternativeNames
     Tags:
       Tags
-    ValidationMethod: "String"
+    ValidationMethod: "DNS"
 
 ##Çalıştırıldı
