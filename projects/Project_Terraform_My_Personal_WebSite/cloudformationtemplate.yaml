@@ -35,4 +35,16 @@ LogicalID:
       Tags
     ValidationMethod: "DNS"
 
+
+ACMCertificate: 
+    Type: "AWS::CertificateManager::Certificate"
+    Properties: 
+      DomainName: example.com
+      DomainValidationOptions:
+            - DomainName: www.example.com
+              HostedZoneId: ZZZHHHHWWWWAAA
+      ValidationMethod: DNS 
+
+
+
 ##Çalıştırıldı
