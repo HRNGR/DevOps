@@ -20,4 +20,19 @@ Resources:
       DomainName: "harungur.com" # Required
       ValidationMethod: "DNS"
 
+
+LogicalID:
+  Type: AWS::CertificateManager::Certificate
+  Properties:
+    CertificateAuthorityArn: "String"
+    CertificateTransparencyLoggingPreference: "String"
+    DomainName: "String" # Required
+    DomainValidationOptions:
+      DomainValidationOptions
+    SubjectAlternativeNames:
+      SubjectAlternativeNames
+    Tags:
+      Tags
+    ValidationMethod: "String"
+
 ##Çalıştırıldı
