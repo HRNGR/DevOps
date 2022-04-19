@@ -18,7 +18,4 @@ Resources:
     Type: AWS::CertificateManager::Certificate
     Properties:
       DomainName: "harungur.com" # Required
-      ValidationMethod: "DNS validation"
-
-
-  certifi
+      ValidationMethod: "DNS"
