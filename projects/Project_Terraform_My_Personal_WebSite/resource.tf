@@ -11,6 +11,7 @@
 #   name    = "example.com"
 #   type    = "A"
 
+
 #   alias {
 #     name                   = aws_s3_bucket.Website_Bucket.dns_name
 #     zone_id                = aws_s3_bucket.Website_Bucket.zone_id
@@ -39,7 +40,7 @@ resource "aws_security_group" "webserverSG" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  //To Allow Port 80 HTTP
+  //To Allow Port 80 HTTP PORT
   ingress {
     from_port   = 80
     to_port     = 80
