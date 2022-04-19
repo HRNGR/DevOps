@@ -19,3 +19,5 @@ Resources:
     Properties:
       DomainName: "harungur.com" # Required
       ValidationMethod: "DNS"
+
+##Çalıştırıldı
