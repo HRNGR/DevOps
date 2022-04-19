@@ -33,7 +33,7 @@ resource "aws_security_group" "webserverSG" {
   name        = "Web_Server_Security_Group"
   description = "Accept HTTP and SSH Traffic"
   vpc_id      = var.vpc_id # lookup(var.awsprops, "vps_id")
-  //To Allow Port 22 SSH
+  //To Allow Port 22 SSH PORT
   ingress {
     from_port   = 22
     to_port     = 22
