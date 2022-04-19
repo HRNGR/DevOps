@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 variable "secgr-dynamic-ports" {
-  default = [22,80,443]
+  default = [22,80,443,8080]
 }
 
 variable "instance-type" {
