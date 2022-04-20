@@ -11,7 +11,7 @@
 # }
 
 resource "aws_instance" "dockerserver" {
-  ami           = "ami-02e136e904f3da870"
+  ami           = "ami-03ededff12e34e59e"
   instance_type = "t2.micro"
   key_name      = "FirstKey"
   //  Write your pem file name
