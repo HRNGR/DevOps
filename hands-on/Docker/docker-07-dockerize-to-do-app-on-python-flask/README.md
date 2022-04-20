@@ -362,3 +362,4 @@ docker image ls
 docker container ls
 docker network ls
 ```
+## docker system prune -af

@@ -277,3 +277,4 @@ docker-compose down
 ```bash
 docker ps -a
 ```
+## docker system prune -af
