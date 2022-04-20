@@ -10,7 +10,7 @@
 #   //  If you have entered your credentials in AWS CLI before, you do not need to use these arguments.
 # }
 
-resource "aws_instance" "docker-server" {
+resource "aws_instance" "dockerserver" {
   ami             = "ami-02e136e904f3da870"
   instance_type   = "t2.micro"
   key_name        = "FirstKey"
@@ -77,5 +77,5 @@ resource "aws_instance" "docker-server" {
     }
   }
 output "docker-compose-public-ip" {
-  value = aws_instance.docker-server.public_ip 
+  value = aws_instance.dockerserver.public_ip 
 }
