@@ -13,7 +13,7 @@
 resource "aws_instance" "docker-server" {
   ami             = "ami-02e136e904f3da870"
   instance_type   = "t2.micro"
-  key_name        = "personal-aws"
+  key_name        = "FirstKey"
   //  Write your pem file name
   security_groups = ["sec-group"]
   tags = {
