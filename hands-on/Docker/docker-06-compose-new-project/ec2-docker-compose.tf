@@ -3,12 +3,12 @@
 //allowing SSH (22) and HTTP (80) connections from anywhere.
 //User needs to select appropriate key name when launching the instance.
 
-provider "aws" {
-  region = "us-east-1"
-  access_key = ""
-  secret_key = ""
-  //  If you have entered your credentials in AWS CLI before, you do not need to use these arguments.
-}
+# provider "aws" {
+#   region = "us-east-1"
+#   access_key = ""
+#   secret_key = ""
+#   //  If you have entered your credentials in AWS CLI before, you do not need to use these arguments.
+# }
 
 resource "aws_instance" "docker-server" {
   ami             = "ami-02e136e904f3da870"
