@@ -15,6 +15,7 @@ resource "aws_instance" "dockerserver" {
   instance_type = "t2.micro"
   key_name      = "FirstKey"
   //  Write your pem file name
+  vpc_security_group_ids = [aws_security_group.sec-gr.id]
   security_groups = ["docker_compose_sec_group"]
   tags = {
     Name = "docker_compose_instance_1"
