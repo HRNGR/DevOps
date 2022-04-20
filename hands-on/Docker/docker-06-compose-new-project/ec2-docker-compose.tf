@@ -61,7 +61,7 @@ resource "aws_security_group" "docker_compose_sec_group" {
   }
 
   ingress {
-    from_port   = 5000
+    from_port   = 5000 //Docker-compose için açtık
     protocol    = "tcp"
     to_port     = 5000
     cidr_blocks = ["0.0.0.0/0"]
