@@ -10,3 +10,8 @@ Defaults to ubuntu:latest
 docker image inspect ubuntu
 Ubuntu with tag 18.04
 docker image inspect ubuntu:18.04
+
+
+docker-compose up
+docker-compose down
+docker system prune -af
