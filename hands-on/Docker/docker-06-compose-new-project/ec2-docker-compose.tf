@@ -15,9 +15,9 @@ resource "aws_instance" "dockerserver" {
   instance_type = "t2.micro"
   key_name      = "FirstKey"
   //  Write your pem file name
-  security_groups = ["sec-group"]
+  security_groups = ["docker_compose_sec_group"]
   tags = {
-    Name = "docker-compose-instance-1"
+    Name = "docker_compose_instance_1"
   }
   user_data = <<-EOF
               #! /bin/bash
@@ -36,10 +36,10 @@ resource "aws_instance" "dockerserver" {
 }
 
 
-resource "aws_security_group" "sec-gr" {
-  name = "docker-compose-sec-group"
+resource "aws_security_group" "docker_compose_sec_group" {
+  name = "docker_compose_sec_group"
   tags = {
-    Name = "docker-compose-sec-group"
+    Name = "docker_compose"
           }
 
   ingress {
