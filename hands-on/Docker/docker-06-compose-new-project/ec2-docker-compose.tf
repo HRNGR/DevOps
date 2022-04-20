@@ -35,6 +35,7 @@ resource "aws_instance" "dockerserver" {
               EOF
 }
 
+   // vpc_security_group_ids = [aws_security_group.sec-gr.id]
 
 resource "aws_security_group" "docker_compose_sec_group" {
   name = "docker_compose_sec_group"
