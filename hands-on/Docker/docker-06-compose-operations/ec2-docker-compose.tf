@@ -9,6 +9,7 @@ provider "aws" {
   secret_key = ""
   //  If you have entered your credentials in AWS CLI before, you do not need to use these arguments.
 }
+## bu kısmı yazmayacağız
 
 resource "aws_instance" "docker-server" {
   ami             = "ami-02e136e904f3da870"
