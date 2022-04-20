@@ -49,6 +49,20 @@ resource "aws_instance" "docker-server" {
     }
 
     ingress {
+      from_port   = 8080
+      protocol    = "tcp"
+      to_port     = 8080
+      cidr_blocks = ["0.0.0.0/0"]
+    }
+
+        ingress {
+      from_port   = 5000
+      protocol    = "tcp"
+      to_port     = 5000
+      cidr_blocks = ["0.0.0.0/0"]
+    }
+
+    ingress {
       from_port   = 22
       protocol    = "tcp"
       to_port     = 22
