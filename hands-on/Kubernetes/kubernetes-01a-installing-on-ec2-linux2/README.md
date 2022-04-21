@@ -161,6 +161,8 @@ sudo kubeadm init --apiserver-advertise-address=172.31.20.50 --pod-network-cidr=
 >```bash
 >sudo kubeadm init --apiserver-advertise-address=<ec2 private ip> --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=NumCPU
 >```
+sudo kubeadm init --apiserver-advertise-address=172.31.20.50 --pod-network-cidr=10.244.0.0/16 --ignore-preflight-errors=NumCPU --ignore-preflight-errors=Mem
+
 
 > **Note**: There are a bunch of pod network providers and some of them use pre-defined `--pod-network-cidr` block. Check the documentation at the References part. We will use Flannel for pod network and Flannel uses 10.244.0.0/16 CIDR block. 
 
