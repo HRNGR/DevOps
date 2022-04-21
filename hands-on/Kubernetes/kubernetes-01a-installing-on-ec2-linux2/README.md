@@ -212,6 +212,8 @@ sudo chown $(id -u):$(id -g) $HOME/.kube/config
 
 - Activate the `Flannel` pod networking and explain briefly the about network add-ons on `https://kubernetes.io/docs/concepts/cluster-administration/addons/`.
 
+## Flannel container lar arası haberleşmeyi sağlayan interface
+
 ```bash
 kubectl apply -f https://github.com/coreos/flannel/raw/master/Documentation/kube-flannel.yml
 ```
