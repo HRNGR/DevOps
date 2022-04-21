@@ -19,7 +19,7 @@ sudo kubeadm join \
   --token nx1jjq.u42y27ip3bhmj8vj \
   --discovery-token-ca-cert-hash sha256:c6de85f6c862c0d58cc3d10fd199064ff25c4021b6e88475822d6163a25b4a6c
 
-# Compact version... 
+# Compact version...  Kubernetes
 kubeadm join \
   ${KubeMaster1.PrivateIp}:6443 \
   --token $(kubeadm token list | awk 'NR == 2 {print $1}') \
