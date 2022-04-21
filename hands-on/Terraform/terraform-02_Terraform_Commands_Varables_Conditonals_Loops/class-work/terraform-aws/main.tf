@@ -12,7 +12,7 @@ terraform {
 }
 
 locals {
-    mytag = "oliver-local-name"
+    mytag = "harun-local-name"
 }
 
 resource "aws_instance" "tf-ec2" {
