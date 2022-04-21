@@ -29,7 +29,7 @@ resource "aws_s3_bucket" "tf-s3" {
   # count = var.num_of_buckets
   # count = var.num_of_buckets != 0 ? var.num_of_buckets : 1
   for_each = toset(var.users)
-  bucket   = "murat-tf-s3-bucket-${each.value}"
+  bucket   = "harun-tf-s3-bucket-${each.value}"
 }
 
 # if var.num_of_buckets !=0
