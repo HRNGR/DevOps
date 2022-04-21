@@ -41,7 +41,6 @@ resource "aws_instance" "instance" {
   provisioner "file" {
     content     = self.public_ip
     destination = "/home/ec2-user/my_public_ip"
-
   }
 
 }
