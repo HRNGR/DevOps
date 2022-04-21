@@ -75,7 +75,8 @@ At the end of the this hands-on training, students will be able to;
 > free -m
 > sudo swapoff -a && sudo sed -i '/ swap / s/^/#/' /etc/fstab
 > ```
->//buraya kadar iptal
+>
+## Buraya kadar iptal (18 satır)
 
 - Hostname change of the nodes, so we can discern the roles of each nodes. For example, you can name the nodes (instances) like `kube-master, kube-worker-1`
 
