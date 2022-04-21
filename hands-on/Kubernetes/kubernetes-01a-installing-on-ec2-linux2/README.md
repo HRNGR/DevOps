@@ -80,7 +80,10 @@ At the end of the this hands-on training, students will be able to;
 - Hostname change of the nodes, so we can discern the roles of each nodes. For example, you can name the nodes (instances) like `kube-master, kube-worker-1`
 
 ```bash
-sudo hostnamectl set-hostname <node-name-master-or-worker>
+sudo hostnamectl set-hostname kubermaster
+bash
+
+sudo hostnamectl set-hostname kuberworker
 bash
 ```
 
@@ -149,6 +152,8 @@ sudo systemctl restart kubelet
 
 ```bash
 sudo kubeadm init --apiserver-advertise-address=<ec2-private-ip> --pod-network-cidr=10.244.0.0/16
+
+sudo kubeadm init --apiserver-advertise-address=172.31.20.50 --pod-network-cidr=10.244.0.0/16
 ```
 
 > :warning: **Note**: If you are working on `t2.micro` or `t2.small` instances,  use the command with `--ignore-preflight-errors=NumCPU` as shown below to ignore the errors.
@@ -159,7 +164,9 @@ sudo kubeadm init --apiserver-advertise-address=<ec2-private-ip> --pod-network-c
 
 > **Note**: There are a bunch of pod network providers and some of them use pre-defined `--pod-network-cidr` block. Check the documentation at the References part. We will use Flannel for pod network and Flannel uses 10.244.0.0/16 CIDR block. 
 
-- In case of problems, use following command to reset the initialization and restart from Part 2 (Setting Up Master Node for Kubernetes).
+- In case of problems, use following command to reset the initialization and restart from Part 2 (Setting Up Master Node for Kubernetes). 
+
+## eğer problem yaşanırsa
 
 ```bash
 sudo kubeadm reset
@@ -185,6 +192,9 @@ Then you can join any number of worker nodes by running the following on each as
 
   kubeadm join 172.31.3.109:6443 --token 1aiej0.kf0t4on7c7bm2hpa \
       --discovery-token-ca-cert-hash sha256:0e2abfb56733665c0e6204217fef34be2a4f3c4b8d1ea44dff85666ddf722c02
+## my token
+kubeadm join 172.31.20.50:6443 --token 3gzgkc.je9jpy43mpx4qfri \
+        --discovery-token-ca-cert-hash sha256:ca77bd18c64c21c1b6b4f71f8bed6982786254aca37d52b850b1e81f477e2b26
 ```
 
 > Note to the Instructor: Note down the `kubeadm join ...` part in order to connect your worker nodes to the master node. Remember to run this command with `sudo`.
