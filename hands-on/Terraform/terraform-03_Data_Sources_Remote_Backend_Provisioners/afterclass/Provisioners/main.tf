@@ -11,6 +11,8 @@ provider "aws" {
   region = "us-east-1"
 }
 
+## üst kısım provider şeklinde ayrı bir .tf dosyasına da eklenebilir
+
 resource "aws_instance" "instance" {
   ami             = "ami-0c02fb55956c7d316"
   instance_type   = "t2.micro"
@@ -61,7 +63,7 @@ resource "aws_security_group" "tf-sec-gr" {
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
   }
-  
+
   egress {
     from_port   = 0
     to_port     = 0
