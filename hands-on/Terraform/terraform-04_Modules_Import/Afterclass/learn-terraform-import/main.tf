@@ -14,3 +14,5 @@ provider "aws" {
 resource "aws_instance" "tf-instance" {
   ami = ""
 }
+
+## eksik kalmış
