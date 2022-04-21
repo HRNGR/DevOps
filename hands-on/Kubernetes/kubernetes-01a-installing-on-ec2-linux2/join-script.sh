@@ -5,7 +5,7 @@ kubeadm token list | awk 'NR == 2 {print $1}'
 openssl x509 -pubkey -in /etc/kubernetes/pki/ca.crt | openssl rsa -pubin -outform der 2>/dev/null | openssl dgst -sha256 -hex | sed 's/^.* //'
 
 # Get API Server Advertise address
-kubectl cluster-info | awk 'NR == 1 {print $6}'
+kubectl cluster-info | awk 'NR == 1 {print $7}'
 
 # Join a new Kubernetes Worker Node a Cluster
 
