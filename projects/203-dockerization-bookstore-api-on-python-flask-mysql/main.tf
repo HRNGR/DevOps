@@ -18,7 +18,7 @@ provider "aws" {
 
 provider "github" {
   # Configuration options
-  token = "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"
+  token = "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"
 }
 
 resource "github_repository" "myrepo" {
@@ -66,7 +66,7 @@ resource "aws_instance" "tf-docker-ec2" {
           -o /usr/local/bin/docker-compose
           chmod +x /usr/local/bin/docker-compose
           mkdir -p /home/ec2-user/bookstore-api
-          TOKEN="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"
+          TOKEN="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"
           FOLDER="https://raw.githubusercontent.com/HRNGR/bookstore-repo/main/"
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/app.py" -L "$FOLDER"bookstore-api.py
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/requirements.txt" -L "$FOLDER"requirements.txt
