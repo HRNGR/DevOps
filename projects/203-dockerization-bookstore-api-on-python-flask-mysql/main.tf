@@ -106,5 +106,4 @@ resource "aws_security_group" "tf-docker-sec-gr-203" {
 
 output "website" {
   value = "http://${aws_instance.tf-docker-ec2.public_dns}"
-
 }
