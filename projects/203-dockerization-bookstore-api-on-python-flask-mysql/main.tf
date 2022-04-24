@@ -21,7 +21,6 @@ provider "github" {
   token = "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"
 }
 
-
 resource "github_repository" "myrepo" {
     name = "bookstore-repo"
     auto_init = true
