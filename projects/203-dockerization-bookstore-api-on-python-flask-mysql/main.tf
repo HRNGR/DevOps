@@ -50,12 +50,13 @@ resource "aws_instance" "tf-docker-ec2" {
   ami = "ami-0f9fc25dd2506cf6d"
   instance_type = "t2.micro"
   key_name = "FirstKey"
-  security_groups = [aws_security_group.tf-docker-sec-gr-203.id]
+  security_groups = ["tf-docker-sec-gr-203"]
   tags = {
     Name = "Web Server of Bookstore"
   }
   user_data = <<-EOF
           #! /bin/bash
+
           yum update -y
           amazon-linux-extras install docker -y
           systemctl start docker
@@ -66,7 +67,7 @@ resource "aws_instance" "tf-docker-ec2" {
           chmod +x /usr/local/bin/docker-compose
           mkdir -p /home/ec2-user/bookstore-api
           TOKEN=""
-          FOLDER="https://raw.githubusercontent.com/HRNGR/bookstore-repo/main/"
+          FOLDER="https://$TOKEN@raw.githubusercontent.com/HRNGR/bookstore-repo/main/"
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/app.py" -L "$FOLDER"bookstore-api.py
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/requirements.txt" -L "$FOLDER"requirements.txt
           curl -s --create-dirs -o "/home/ec2-user/bookstore-api/Dockerfile" -L "$FOLDER"Dockerfile
@@ -80,7 +81,7 @@ resource "aws_instance" "tf-docker-ec2" {
 }
 
 resource "aws_security_group" "tf-docker-sec-gr-203" {
-  name = "tf-docker-sec-group-203"
+  name = "tf-docker-sec-gr-203"
   tags = {
     Name = "tf-docker-sec-gr-203"
   }
