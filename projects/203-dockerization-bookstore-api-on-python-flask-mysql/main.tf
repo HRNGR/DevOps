@@ -25,7 +25,6 @@ resource "github_repository" "myrepo" {
     name = "bookstore-repo"
     auto_init = true
     visibility = "private"
-  
 }
 
 resource "github_branch_default" "main" {
