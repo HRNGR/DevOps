@@ -80,9 +80,9 @@ resource "aws_instance" "tf-docker-ec2" {
 }
 
 resource "aws_security_group" "tf-docker-sec-gr-203" {
-  name = "docker-sec-group-203"
+  name = "tf-docker-sec-group-203"
   tags = {
-    Name = "docker-sec-gr-203"
+    Name = "tf-docker-sec-gr-203"
   }
   ingress {
     from_port = 80
