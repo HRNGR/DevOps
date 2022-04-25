@@ -82,7 +82,7 @@ kubectl explain pods
 - Create yaml file named `mypod.yaml` and explain fields of it.
 
 ```yaml
-apiVersion: v1
+apiVersion: v1                 ##kubectl api-resources ile versiyonunu bulabiliriz
 kind: Pod
 metadata:
   name: nginx-pod
