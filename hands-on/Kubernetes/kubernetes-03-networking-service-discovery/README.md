@@ -434,8 +434,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - port: 3000
-    nodePort: 30036
+  - port: 3000 ##loadbalancer's port
+    nodePort: 30036 
     targetPort: 5000
   selector:
     env: front-end
