@@ -362,7 +362,7 @@ spec:
   type: NodePort 
   ports:
   - nodePort: 30036  
-    port: 3000        
+    port: 3000        ##loadbalancer's port
     targetPort: 5000
   selector:
     env: front-end
