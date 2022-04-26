@@ -65,7 +65,7 @@ Resources:
         - IpProtocol: tcp
           FromPort: 30000
           ToPort: 32767
-          CidrIp: 0.0.0.0/0        
+          CidrIp: 0.0.0.0/0
   WorkersSecurityGroup:
     Type: AWS::EC2::SecurityGroup
     Properties:
