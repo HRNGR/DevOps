@@ -92,7 +92,7 @@ Resources:
     Type: "AWS::EC2::SecurityGroupIngress"
     Properties:
       GroupId: !GetAtt ManagersSecurityGroup.GroupId
-      IpProtocol: -1 #required
+      IpProtocol: -1 #required.
       SourceSecurityGroupId: !GetAtt ManagersSecurityGroup.GroupId
   ManagersSGIngress2:
     Type: "AWS::EC2::SecurityGroupIngress"
