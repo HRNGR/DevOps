@@ -583,7 +583,7 @@ spec:
       - name: web-flask-pod
         image: clarusway/cw_web_flask1
         ports:
-        - containerPort: 5000
+        - containerPort: 5000 ##node's port'
 ```
 - Create a service inside the `demo` namespace.
 ```yaml
