@@ -633,7 +633,7 @@ or we can use `FQDN`.
 / #  curl web-flask-svc.demo.svc.cluster.local:3000
 ```
 
-- Delete all objects.
+- Delete all objects. (ns demo)
 
 ```bash
 kubectl delete -f .
