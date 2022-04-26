@@ -102,7 +102,7 @@ kind: Deployment
 metadata:
   name: web-flask-deploy
 spec:
-  replicas: 3 
+  replicas: 4 
   selector:  
     matchLabels:
       app: web-flask
