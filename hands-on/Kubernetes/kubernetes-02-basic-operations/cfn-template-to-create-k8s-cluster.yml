@@ -10,6 +10,7 @@ Description: |
   User needs to select appropriate key name when launching the template.
   This template is designed for us-east-1 (N. Virginia) region. If you work on another region, do not forget to change instances imageId
 
+
 Parameters:
   KeyPairName:
     Description: Enter the name of your Key Pair for SSH connections.
