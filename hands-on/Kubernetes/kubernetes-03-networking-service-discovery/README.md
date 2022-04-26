@@ -363,7 +363,7 @@ spec:
   ports:
   - nodePort: 30036  
     port: 3000        ##loadbalancer's port
-    targetPort: 5000
+    targetPort: 5000 ##node's port
   selector:
     env: front-end
 ```
