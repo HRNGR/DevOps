@@ -357,6 +357,8 @@ kubectl delete -f .
 
 ## Part 4 - EmptyDir
 
+## anlamadım tekrar et
+
 - An `emptyDir volume` is first created when a Pod is assigned to a node, and exists as long as that Pod is running on that node. 
 - As the name says, the emptyDir volume is initially empty. 
 - When a Pod is removed from a node for any reason, the data in the emptyDir is deleted permanently.
