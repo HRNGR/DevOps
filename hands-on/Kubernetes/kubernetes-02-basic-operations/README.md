@@ -10,7 +10,7 @@ At the end of the this hands-on training, students will be able to;
 
 - Learn how to update and rollback deployments in Kubernetes
 
-- Learn uses of namespace in Kubernetes
+- Learn uses of namespace in Kubernetes ## Çalışılacak
 
 ## Outline
 
