@@ -10,7 +10,7 @@ At the end of the this hands-on training, students will be able to;
 
 - Explore the service discovery options available in Kubernetes.
 
-- Learn different types of Services in Kubernetes.
+- Learn different types of Services in Kubernetes. ## Çalışılacak
 
 ## Outline
 
