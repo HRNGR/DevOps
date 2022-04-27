@@ -184,6 +184,8 @@ kubectl exec -it clarus-pod -- /bin/bash
 curl http://localhost/
 ```
 
+## çalışılacak slatı oku
+
 - Log into the `kube20-worker-1` node, change the `index.html`.
 
 ```bash
