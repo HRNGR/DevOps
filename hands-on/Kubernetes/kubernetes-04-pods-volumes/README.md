@@ -290,6 +290,9 @@ kubectl get pv
 
 - Create a `pv-claim-2g.yaml` file using the following content to create a `PersistentVolumeClaim`.
 
+
+## 2Gi olmadığından 3Gi veriyor
+
 ```yaml
 apiVersion: v1
 kind: PersistentVolumeClaim
