@@ -443,3 +443,4 @@ Hello World
 ```bash
 kubectl delete pod nginx-pod
 ```
+##  destroy etmeyi unutma
