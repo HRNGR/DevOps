@@ -151,7 +151,7 @@ resource "aws_security_group" "tf-k8s-master-sec-gr" {
   }
 
   egress {
-    from_port   = 0
+    from_port   = 0  ##ALL TRAFIC 
     protocol    = "-1"
     to_port     = 0
     cidr_blocks = ["0.0.0.0/0"]
