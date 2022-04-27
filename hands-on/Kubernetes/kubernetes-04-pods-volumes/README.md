@@ -445,4 +445,4 @@ Hello World
 ```bash
 kubectl delete pod nginx-pod
 ```
-##  destroy etmeyi unutma (terraform daha güncel)
+##  destroy etmeyi unutma (terraform daha güncel)(Cloudformation )
