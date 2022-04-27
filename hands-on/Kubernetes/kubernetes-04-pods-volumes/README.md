@@ -343,6 +343,8 @@ kubectl apply -f pv-claim-7g.yaml
 
 - View information about the `PersistentVolume's` and `PersistentVolumeClaim's` and show that the status of `pv-claim-7g` is `pending` and the satus of pv-6g is available. 
 
+## Pending !!!!
+
 ```bash
 kubectl get pv,pvc
 ```
