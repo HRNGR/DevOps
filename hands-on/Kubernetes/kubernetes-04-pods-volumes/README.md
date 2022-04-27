@@ -226,7 +226,7 @@ kubectl delete pv clarus-pv-vol
 
 ## Part 3 - Binding PV to PVC
 ## PersistentVolume ##  Çalışılacak
-## PersistentVolumeClaim
+## PersistentVolumeClaim ##  Çalışılacak
 
 - Create a folder name it "pvc-bound"
 
