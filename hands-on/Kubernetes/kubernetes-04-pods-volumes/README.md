@@ -60,7 +60,9 @@ pwd
 mkdir volume-lessons && cd volume-lessons
 ```
 
-- Create a `clarus-pv.yaml` file using the following content with the volume type of `hostPath` to build a `PersistentVolume` and explain fields.
+- Create a `clarus-pv.yaml` file using the following content with the volume type of `hostPath` to build a `PersistentVolume` and explain fields. 
+
+##  Çalışılacak
 
 ```yaml
 apiVersion: v1
