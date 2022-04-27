@@ -20,7 +20,7 @@ variable "key-name" {
 }
 
 locals {
-  name = "Harun"   # change here, optional
+  name = "Harun"   # change here, optional Ok
 }
 
 resource "aws_instance" "master" {
