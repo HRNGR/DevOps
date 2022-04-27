@@ -16,7 +16,7 @@ data "aws_caller_identity" "current" {}
 data "aws_region" "current" {}
 
 variable "key-name" {
-  default = "FirstKey"   # change here
+  default = "FirstKey"   # change here OK
 }
 
 locals {
