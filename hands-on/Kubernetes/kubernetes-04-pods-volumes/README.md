@@ -345,7 +345,7 @@ kubectl apply -f pv-claim-7g.yaml
 
 - View information about the `PersistentVolume's` and `PersistentVolumeClaim's` and show that the status of `pv-claim-7g` is `pending` and the satus of pv-6g is available. 
 
-## Pending !!!! çünkü yeterli kapasite yok beklemede duruyor
+## Pending !!!! çünkü yeterli kapasite yok beklemede duruyor 6 var 7 yok
 
 ```bash
 kubectl get pv,pvc
