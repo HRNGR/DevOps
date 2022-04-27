@@ -14,7 +14,7 @@ At the end of the this hands-on training, students will be able to;
 
 - explain the Kubernetes architecture.
 
-- deploy a simple server on Kubernetes cluster.
+- deploy a simple server on Kubernetes cluster. ## Çalışılacak
 
 ## Outline
 
