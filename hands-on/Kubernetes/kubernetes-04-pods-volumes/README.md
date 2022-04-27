@@ -97,6 +97,8 @@ kubectl get pv clarus-pv-vol
 kubectl explain pvc
 ```
 
+## çalışılacak slatı oku
+
 - Create a `clarus-pv-claim.yaml` file using the following content to create a `PersistentVolumeClaim` and explain fields.
 
 ```yaml
