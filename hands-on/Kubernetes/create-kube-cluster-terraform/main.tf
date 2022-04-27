@@ -144,7 +144,7 @@ resource "aws_security_group" "tf-k8s-master-sec-gr" {
   }
 
   ingress {
-    from_port   = 30000
+    from_port   = 30000  ##NODES PORTS
     to_port     = 32767
     protocol    = "tcp"
     cidr_blocks = ["0.0.0.0/0"]
