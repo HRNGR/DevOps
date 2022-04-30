@@ -44,7 +44,7 @@ kubectl get no
 kubectl explain pv
 ```
 
-- Log into the `kube20-worker-1` node, create a `pv-data` directory under home folder, also create an `index.html` file with `Welcome to Kubernetes persistence volume lesson` text and note down path of the `pv-data` folder.
+- Log into the `kube-worker-1` node, create a `pv-data` directory under home folder, also create an `index.html` file with `Welcome to Kubernetes persistence volume lesson` text and note down path of the `pv-data` folder.
 
 ```bash
 mkdir pv-data && cd pv-data
@@ -54,7 +54,7 @@ pwd
 /home/ubuntu/pv-data
 ```
 
-- Log into `kube20-master` node and create a folder named volume-lessons.
+- Log into `kube-master` node and create a folder named volume-lessons.
 
 ```bash
 mkdir volume-lessons && cd volume-lessons
@@ -186,16 +186,20 @@ kubectl exec -it clarus-pod -- /bin/bash
 curl http://localhost/
 ```
 
+<<<<<<< HEAD
 ## çalışılacak slatı oku ##  Çalışılacak
 
 - Log into the `kube20-worker-1` node, change the `index.html`.
+=======
+- Log into the `kube-worker-1` node, change the `index.html`.
+>>>>>>> 3672c257897820ad49b138f1c882aae6eee27f2c
 
 ```bash
 cd pv-data
 echo "Kubernetes Rocks!!!!" > index.html
 ```
 
-- Log into the `kube20-master` node, check if the change is in effect.
+- Log into the `kube-master` node, check if the change is in effect.
 
 ```bash
 kubectl exec -it clarus-pod -- /bin/bash
@@ -373,7 +377,7 @@ kubectl delete -f .
 mkdir emptydir && cd emptydir
 ```
 
-- Create an nginx.yaml file for creating an nginx pod.
+- Create an `nginx.yaml` file for creating an nginx pod.
 
 ```yaml
 apiVersion: v1
@@ -420,7 +424,7 @@ root@nginx-pod:/test# cat hello.txt
 Hello World
 ```
 
-- Log in the kube20-worker-1 ec2-instance and remove the `nginx container`. Note that container is changed.
+- Log in the `kube-worker-1 ec2-instance` and remove the `nginx container`. Note that container is changed.
 
 ```bash
 docker container ls
@@ -428,7 +432,7 @@ docker container rm -f <container-id>
 docker container ls
 ```
 
-- Log in the kube20-master ec2-instance again and connect the nginx-pod. See that test folder and content are there.
+- Log in the kube-master ec2-instance again and connect the nginx-pod. See that test folder and content are there.
 
 ```bash
 kubectl exec -it nginx-pod -- bash
@@ -444,5 +448,9 @@ Hello World
 
 ```bash
 kubectl delete pod nginx-pod
+<<<<<<< HEAD
 ```
 ##  destroy etmeyi unutma (terraform daha güncel)(Cloudformation güncel değil )
+=======
+```
+>>>>>>> 3672c257897820ad49b138f1c882aae6eee27f2c
