@@ -883,7 +883,6 @@ deployment.apps "demo" deleted
 service "demo-service" deleted
 ```
 
-
 ### Optional
 
 Here is the challenge:
