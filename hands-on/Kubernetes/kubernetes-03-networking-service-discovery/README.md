@@ -192,12 +192,6 @@ kubectl scale deploy web-flask-deploy --replicas=0
 kubectl get pods -o wide
 ```
 
-<<<<<<< HEAD
-- Scale the deployment up to three replicas...
-=======
-- Scale the deployment up to three replicas.
-
->>>>>>> 3672c257897820ad49b138f1c882aae6eee27f2c
 ```bash
 kubectl scale deploy web-flask-deploy --replicas=3
 ```
