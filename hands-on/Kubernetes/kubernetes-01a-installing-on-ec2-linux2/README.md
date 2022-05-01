@@ -357,18 +357,6 @@ kubectl get pods
   - Drain and delete worker node on the master.
 
   ```bash
-<<<<<<< HEAD
-kubectl get nodes
-kubectl drain kube-worker-1 --ignore-daemonsets --delete-emptydir-data
-kubectl cordon kube-worker-1
-kubectl delete node kube-worker-1
-=======
-  kubectl get nodes
-  kubectl cordon kube-worker-1
-  kubectl drain kube-worker-1 --ignore-daemonsets --delete-emptydir-data
-
-  kubectl delete node kube-worker-1
->>>>>>> 09be69f935c7d429a5827704515dffc8435f219b
   ```
 
   - Remove and reset settings on the worker node.
