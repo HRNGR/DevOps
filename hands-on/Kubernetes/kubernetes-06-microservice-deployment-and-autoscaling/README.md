@@ -569,7 +569,7 @@ kind: Deployment
         - --kubelet-use-node-status-port
         - --metric-resolution=15s
 ......	
-```
+``` ## aralık değiştirilecek
 
 - Add `metrics-server` to your Kubernetes instance.
 
