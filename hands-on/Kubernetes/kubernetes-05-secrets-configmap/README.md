@@ -633,7 +633,7 @@ demo-service   NodePort    10.108.181.197   <none>        80:30001/TCP   11s   a
 kubernetes     ClusterIP   10.96.0.1        <none>        443/TCP        14h   <none>
 
 $ curl < worker-ip >:30001
-Hei, Clarusway!
+Hi, Clarusway!
 ```
 
 - Reset what we have created.
