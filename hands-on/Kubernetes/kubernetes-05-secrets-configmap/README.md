@@ -703,7 +703,7 @@ spec:
             path: demo.yaml
 ```
 
-- `Service` is the same.
+- `Service` is the same
 
 ```bash
 $ kubectl apply -f configmap.yaml
