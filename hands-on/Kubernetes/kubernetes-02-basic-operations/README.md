@@ -580,6 +580,7 @@ kubectl get deployment -n clarus-namespace
 ```bash
 kubectl get deployment -o wide --all-namespaces
 ```
+## Silme
 
 - Delete the namespace.
 
