@@ -876,6 +876,8 @@ Merhaba, Clarusway!
 
 Everything works fine!
 
+## silme
+
 ```bash
 $ kubectl delete -f k8s
 configmap "demo-config" deleted
