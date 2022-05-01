@@ -63,7 +63,7 @@ cd to-do
 
 ## Part 3 - Microservices
 
-- The MongoDB application will use a static volume provisioning with the help of persistent volume (PV) and persistent volume claim (PVC). 
+- The MongoDB application will use a static volume provisioning with the help of persistent volume (PV) and persistent volume claim (PVC) 
 
 - Create a `db-pv.yaml` file.
 
