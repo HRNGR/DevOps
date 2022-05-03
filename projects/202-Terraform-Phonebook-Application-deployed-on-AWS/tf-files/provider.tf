@@ -19,5 +19,5 @@ provider "aws" {
 
 provider "github" {
   # Configuration options
-  token = "xxxxxxxxxxxxxxxxxxxxxxxxx" # token yazma 
+  token = "xxxxxxxxxxxxxxxxxxxxxxxxx" # token yazma git push yapınca token der
 }
