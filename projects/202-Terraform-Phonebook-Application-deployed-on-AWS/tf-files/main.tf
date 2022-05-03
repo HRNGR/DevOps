@@ -1,5 +1,5 @@
 data "aws_vpc" "selected" {
-  default = true
+  default = true # Herzaman kullanılanı seçmek için
 }
 
 data "aws_subnets" "example" {
