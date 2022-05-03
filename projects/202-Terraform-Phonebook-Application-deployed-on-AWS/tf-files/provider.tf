@@ -14,7 +14,7 @@ terraform {
 provider "aws" {
   # Configuration options
   region = "us-east-1"
-  # profile = "cw-training"
+  # profile = "cw-training"  #tek profil varsa kullanmaya lüzüm yok
 }
 
 provider "github" {
