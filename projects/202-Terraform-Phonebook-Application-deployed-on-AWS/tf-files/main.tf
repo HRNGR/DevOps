@@ -24,7 +24,7 @@ resource "aws_launch_template" "asg-lt" {
   instance_type = "t2.micro"
   key_name = "oliver"
   vpc_security_group_ids = [aws_security_group.server-sg.id]
-  user_data = filebase64("user-data.sh") #userdatayı klasörden çeker
+  user_data = filebase64("user-data.sh") # userdatayı klasörden çeker
   depends_on = [github_repository_file.dbendpoint]
   tag_specifications {
     resource_type = "instance"
