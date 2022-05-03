@@ -57,7 +57,7 @@ resource "aws_security_group" "db-sg" {
   }
 
   ingress {
-    from_port = 3306
+    from_port = 3306 #rds için
     protocol = "tcp"
     to_port = 3306
     security_groups = [aws_security_group.server-sg.id]
