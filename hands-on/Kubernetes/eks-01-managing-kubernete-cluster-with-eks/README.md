@@ -301,7 +301,7 @@ This command will open the yaml file for your editting. Replace <CLUSTER NAME> v
 
 8. Then, in the following command, set the Cluster Autoscaler image tag as that version you have found in the previous step.
 ```bash
-kubectl -n kube-system set image deployment.apps/cluster-autoscaler cluster-autoscaler=us.gcr.io/k8s-artifacts-prod/autoscaling/cluster-autoscaler:<YOUR-VERSION-HERE>
+kubectl -n kube-system set image deployment.apps/cluster-autoscaler cluster-autoscaler=us.gcr.io/k8s-artifacts-prod/autoscaling/cluster-autoscaler:<YOUR-VERSION-HERE> ## version un başına v gir.
 ```
 You can also replace ```us``` with ```asia``` or ```eu```.
 
