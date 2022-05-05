@@ -55,6 +55,10 @@ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bash_profile
 kubectl version --short --client
 ```
 
+curl -LO "https://dl.k8s.io/release/v1.24.0/bin/windows/amd64/kubectl.exe"
+
+
+
 or
 
 ```bash
