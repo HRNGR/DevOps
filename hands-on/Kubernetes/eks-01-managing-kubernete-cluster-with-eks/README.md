@@ -89,7 +89,7 @@ $ aws eks list-clusters
 }
 ```
 
-## Part 1 - Creating the Kubernetes Cluster on EKS
+## Part 1 - Creating the Kubernetes Cluster on EKS    ## BURADA KALDIK
 
 1. Direct the students to AWS EKS Service webpage. 
 
