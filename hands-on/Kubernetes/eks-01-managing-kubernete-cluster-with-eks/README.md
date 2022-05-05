@@ -303,7 +303,7 @@ This command will open the yaml file for your editting. Replace <CLUSTER NAME> v
 ```bash
 kubectl -n kube-system set image deployment.apps/cluster-autoscaler cluster-autoscaler=us.gcr.io/k8s-artifacts-prod/autoscaling/cluster-autoscaler:<YOUR-VERSION-HERE> ## version un başına v gir. v 1.21.2
 ```
-You can also replace ```us``` with ```asia``` or ```eu```.
+You can also replace ```us``` with ```asia``` or ```eu```.  ## değişillik varsa unutma
 
 
 ## Part 5 - Deploying a Sample Application
