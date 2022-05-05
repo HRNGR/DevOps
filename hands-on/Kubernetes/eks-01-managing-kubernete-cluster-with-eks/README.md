@@ -253,7 +253,7 @@ kubectl get nodes --watch
 8. Show the EC2 instances newly created.
 
 
-## Part 4 - Configuring Cluster Autoscaler   ## OK
+## Part 4 - Configuring Cluster Autoscaler   ## OK 
 
 1. Explain what ```Cluster Autoscaler``` is and why we need it.
 
