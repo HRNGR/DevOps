@@ -105,7 +105,7 @@ eksctl version
 - Configure AWS credentials. Or you can attach `AWS IAM Role` to your EC2 instance.
 
 ```bash
-aws configure    ## accses key girmeyeceğiz     ## "AdministratorAccess"
+aws configure    ## accses key girmeyeceğiz     ## "AdministratorAccess" role tanımladık
 ```
 
 - Create an EKS cluster via `eksctl`. It will take a while.
