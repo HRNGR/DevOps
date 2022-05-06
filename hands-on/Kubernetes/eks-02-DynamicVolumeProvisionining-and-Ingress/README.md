@@ -75,7 +75,7 @@ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 - After you install kubectl , you can verify its version with the following command:
 
 ```bash
-kubectl version --short --client
+kubectl version --short --client ## verisyon kontrol
 ```
 
 ### Install eksctl
