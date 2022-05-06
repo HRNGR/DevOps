@@ -48,7 +48,7 @@ For information on installing or upgrading eksctl, see [Installing or upgrading 
 sudo yum update -y
 ```
 
-- Download the Amazon EKS vended kubectl binary.
+- Download the Amazon EKS vended kubectl binary. ## Yükledik
 
 ```bash
 curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl
