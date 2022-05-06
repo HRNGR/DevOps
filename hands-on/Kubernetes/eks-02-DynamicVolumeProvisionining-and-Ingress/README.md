@@ -128,7 +128,7 @@ eksctl create cluster \
 or 
 
 ```bash
-eksctl create cluster --region us-east-1 --node-type t2.medium --nodes 2 --nodes-min 2 --nodes-max 3 --name my-cluster ## Ok
+eksctl create cluster --region us-east-1 --node-type t2.medium --nodes 2 --nodes-min 2 --nodes-max 3 --name my-cluster ## Ok den sonra buraya atlayacağız
 ```
 
 - Explain the deault values. 
