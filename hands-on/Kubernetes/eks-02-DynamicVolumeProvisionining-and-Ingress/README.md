@@ -95,7 +95,7 @@ sudo mv /tmp/eksctl /usr/local/bin
 - Test that your installation was successful with the following command.
 
 ```bash
-eksctl version
+eksctl version  ## verisyon kontrol
 ```
 
 ## Part 2 - Creating the Kubernetes Cluster on EKS
