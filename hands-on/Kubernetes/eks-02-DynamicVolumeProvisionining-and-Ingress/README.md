@@ -57,7 +57,7 @@ curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/
 - Apply execute permissions to the binary.
 
 ```bash
-chmod +x ./kubectl
+chmod +x ./kubectl ## Yetki verdik
 ```
 
 - Copy the binary to a folder in your PATH. If you have already installed a version of kubectl, then we recommend creating a $HOME/bin/kubectl and ensuring that $HOME/bin comes first in your $PATH.
