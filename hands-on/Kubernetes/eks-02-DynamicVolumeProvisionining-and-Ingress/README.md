@@ -134,7 +134,7 @@ eksctl create cluster --region us-east-1 --node-type t2.medium --nodes 2 --nodes
 - Explain the deault values. 
 
 ```bash
-eksctl create cluster --help
+eksctl create cluster --help  ## cluster yüklü mü diye kontrol ettik
 ```
 
 - Show the aws `eks service` on aws management console and explain `eksctl-my-cluster-cluster` stack on `cloudformation service`.
