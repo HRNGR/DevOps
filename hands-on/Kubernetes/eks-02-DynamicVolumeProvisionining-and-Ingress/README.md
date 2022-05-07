@@ -333,7 +333,7 @@ git config core.sparseCheckout true
 echo "subdirectory/under/repo/" >> .git/info/sparse-checkout  # do not put the repository folder name in the beginning ## "hands-on/Kubernetes/eks-02-DynamicVolumeProvisionining-and-Ingress/" "" arasına sadece kopyalamak istediğimiz path i yazarız
 git pull origin <branch-name> ## git pull origin main ###### buradan sonra username ve TOKEN istiyor. girdikten sonra yükleyecek.!!!!
 ```
-
+## mv ./ingress-yaml-files/ /home/ec2-user/lesson/ ## hoca böyle yapıştırdı 
 ### Steps of execution:
 
 1. We will deploy the `to-do` app first and look at some key points.
