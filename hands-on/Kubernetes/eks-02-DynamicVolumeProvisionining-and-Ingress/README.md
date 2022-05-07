@@ -51,7 +51,7 @@ sudo yum update -y
 - Download the Amazon EKS vended kubectl binary. ## Yükledik
 
 ```bash
-curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl ## kubectl yükleme
+curl -o kubectl https://s3.us-west-2.amazonaws.com/amazon-eks/1.22.6/2022-03-09/bin/linux/amd64/kubectl ## kubectl yükleme ## source https://docs.aws.amazon.com/eks/latest/userguide/install-kubectl.html
 ```
 
 - Apply execute permissions to the binary.
