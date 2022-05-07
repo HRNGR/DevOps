@@ -144,9 +144,9 @@ eksctl create cluster --help  ## cluster yüklü mü diye kontrol ettik
 - Firstly, check the StorageClass object in the cluster. 
 
 ```bash
-kubectl get sc
+kubectl get sc  ## StorageClass kontrol ettik
 
-kubectl describe sc/gp2
+kubectl describe sc/gp2 ## StorageClass tanımladık/bağladık
 ```
 
 - Create a StorageClass with the following settings.
