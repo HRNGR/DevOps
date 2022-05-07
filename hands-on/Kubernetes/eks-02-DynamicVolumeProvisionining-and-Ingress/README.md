@@ -323,8 +323,8 @@ ingress-yaml-files
 ```
 
 - Alternatively you can clone some part of your repository as show below:
-
-```shell    ## sudo yum git install -y
+## sudo yum install git -y eksik onu kur
+```shell    
 mkdir repo
 cd repo
 git init
