@@ -331,7 +331,7 @@ git init
 git remote add origin <origin-url> ## < https://github.com/clarusway/clarusway_devops_10_22.git > ## original remote etme url sini yapıştır
 git config core.sparseCheckout true
 echo "subdirectory/under/repo/" >> .git/info/sparse-checkout  # do not put the repository folder name in the beginning ## "hands-on/Kubernetes/eks-02-DynamicVolumeProvisionining-and-Ingress/" "" arasına sadece kopyalamak istediğimiz path i yazarız
-git pull origin <branch-name> ## git pull origin main
+git pull origin <branch-name> ## git pull origin main ###### buradan sonra username ve TOKEN istiyor. girdikten sonra yükleyecek.!!!!
 ```
 
 ### Steps of execution:
