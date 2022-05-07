@@ -445,7 +445,7 @@ Let's deploy the to-do application.
 
 ```bash
 cd ..
-kubectl apply -f to-do
+kubectl apply -f to-do ## to-do klarörünün içindeki yaml ları çalıştırıyor
 deployment.apps/db-deployment created
 persistentvolumeclaim/database-persistent-volume-claim created
 service/db-service created
@@ -456,7 +456,7 @@ Note that we can use `directory` with `kubectl apply -f` command.
 
 - Check the pods.
 ```bash
-kubectl get pods
+kubectl get pods ## podsları kontrol eder
 ```
 - You will see an output like this
 
@@ -468,7 +468,7 @@ web-deployment-658cc55dc8-2h2zc   1/1     Running   2          4m30s
 
 - Check the services.
 ```bash
-kubectl get svc
+kubectl get svc 
 ```
 - You will see an output like this
 
