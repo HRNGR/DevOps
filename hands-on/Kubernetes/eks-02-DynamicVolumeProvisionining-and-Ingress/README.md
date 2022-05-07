@@ -250,7 +250,7 @@ kubectl apply -f pod-with-dynamic-storage.yaml
 - Enter the pod and see that ebs is mounted to  /usr/share/nginx/html path.
 
 ```bash
-kubectl exec -it test-aws -- bash
+kubectl exec -it test-aws -- bash ## kubectl in içindeki test-aws podu bağlı mı diye kontrol ettik
 ```
 - You will see an output like this
 ```text
