@@ -69,7 +69,7 @@ mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/
 - (Optional) Add the $HOME/bin path to your shell initialization file so that it is configured when you open a shell.
 
 ```bash
-echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
+echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc  ## path değişse bile executable path değişmesin diye
 ```
 
 - After you install kubectl , you can verify its version with the following command:
