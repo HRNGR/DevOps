@@ -328,7 +328,7 @@ ingress-yaml-files
 mkdir repo
 cd repo
 git init
-git remote add origin <origin-url>
+git remote add origin <origin-url> ## original remote etme url sini yapıştır
 git config core.sparseCheckout true
 echo "subdirectory/under/repo/" >> .git/info/sparse-checkout  # do not put the repository folder name in the beginning
 git pull origin <branch-name>
