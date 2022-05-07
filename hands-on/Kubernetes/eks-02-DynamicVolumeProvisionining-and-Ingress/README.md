@@ -468,7 +468,7 @@ web-deployment-658cc55dc8-2h2zc   1/1     Running   2          4m30s
 
 - Check the services.
 ```bash
-kubectl get svc 
+kubectl get svc  ## servisleri kontrol eder
 ```
 - You will see an output like this
 
