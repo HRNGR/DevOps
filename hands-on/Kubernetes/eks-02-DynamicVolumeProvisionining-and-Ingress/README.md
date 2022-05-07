@@ -668,4 +668,4 @@ my-cluster      us-east-2
 eksctl delete cluster my-cluster --region us-east-1 ## "my-cluster" yerine kendi cluster name ini yazmayı unutma...!!!
 ```
 
-- Do no forget to delete related ebs volumes.
+- Do no forget to delete related ebs volumes.  ## 2 adet 
