@@ -7,7 +7,7 @@ variable "num_of_instance" {
 }
 
 variable "keyname" {
-  default = "mk"
+  default = "FirstKey"
 }
 
 variable "tf-tags" {
