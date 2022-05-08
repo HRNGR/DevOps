@@ -11,11 +11,11 @@ terraform {
 provider "aws" {
   region  = "us-east-1"
 }
-
+## Variable Dynamic Example with for_each
 variable "secgr-dynamic-ports" {
   default = [22,80,443,8080]
 }
-## Variable Dynamic Example with for_each
+
 variable "instance-type" {
   default = "t2.micro"
   sensitive = true
