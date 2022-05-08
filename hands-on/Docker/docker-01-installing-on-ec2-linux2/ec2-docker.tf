@@ -33,7 +33,7 @@ resource "aws_security_group" "allow_ssh" {
       protocol = "tcp"
       cidr_blocks = ["0.0.0.0/0"]
   }
-}
+}## Variable Dynamic Example with for_each
 
   egress {
     description = "Outbound Allowed"
