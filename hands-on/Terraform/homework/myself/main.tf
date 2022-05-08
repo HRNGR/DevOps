@@ -28,8 +28,6 @@ resource "aws_instance" "hw-ec2" {
 }
 
 
-
-
 resource "aws_security_group" "hw-sg" {
   name = "hw-sg"
     tags = {
