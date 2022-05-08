@@ -15,7 +15,7 @@ provider "aws" {
 variable "secgr-dynamic-ports" {
   default = [22,80,443,8080]
 }
-## Variable
+## Variable Dynamic Example
 variable "instance-type" {
   default = "t2.micro"
   sensitive = true
