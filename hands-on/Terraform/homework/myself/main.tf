@@ -17,7 +17,7 @@ data "aws_ami" "my_ami" {
 }
 
 resource "aws_instance" "hw-ec2" {
-  ami = ""
+  ami = ""  ## AMI ID yazılacak
   instance_type = "t2.micro"
   key_name = "FirstKey"
   security_groups = ["hw-sg"]
