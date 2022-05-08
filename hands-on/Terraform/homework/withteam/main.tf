@@ -36,11 +36,11 @@ resource "aws_instance" "tf-ec2" {
   tags = {
     Name = "Terraform ${element(var.tf-tags, count.index)} Instance"
   }
-
+## SOR
   provisioner "local-exec" {
     command = "echo http://${self.public_ip} > public_ip.txt"
   }
-
+## SOR
   provisioner "local-exec" {
     command = "echo http://${self.private_ip} > private_ip.txt"
   }
