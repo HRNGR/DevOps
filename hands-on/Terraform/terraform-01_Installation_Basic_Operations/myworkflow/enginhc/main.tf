@@ -18,7 +18,6 @@ data "aws_ami" "tf_ami" {
       name = "virtualization-type"
       values = ["hvm"]
     }
-  
 }
 
 locals {
