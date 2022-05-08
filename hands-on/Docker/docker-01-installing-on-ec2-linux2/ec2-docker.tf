@@ -24,7 +24,7 @@ variable "instance-type" {
 resource "aws_security_group" "allow_ssh" {
   name        = "allow_ssh"
   description = "Allow SSH inbound traffic"
-
+## Variable Dynamic Example with for_each
   dynamic "ingress" {
     for_each = var.secgr-dynamic-ports
     content {
