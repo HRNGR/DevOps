@@ -21,7 +21,7 @@ data "aws_ami" "tf_ami" {
 }
 
 locals {
-  mytag = "engin"
+  mytag = "hrn"
 }
 resource "aws_instance" "tf-ec2" {
     ami = data.aws_ami.tf-ami.id
