@@ -113,8 +113,8 @@ aws configure    ## güvenlik amaçlı accses key girmeyeceğiz  ## "Administrat
 ```bash
 eksctl create cluster \
  --name serdar-cluster \
- --region us-east-2 \
- --zones us-east-1a, us-east-1b, us-east-1c \
+ --region us-east-1 \
+ --zones us-east-1a,us-east-1b,us-east-1c \
  --nodegroup-name my-nodes \
  --node-type t2.medium \
  --nodes 2 \
@@ -128,7 +128,11 @@ eksctl create cluster \
 or 
 
 ```bash
+<<<<<<< HEAD
 eksctl create cluster --region us-east-1 --node-type t2.medium --nodes 2 --nodes-min 2 --nodes-max 3 --name my-cluster ## Ok den sonra buraya atlayacağız
+=======
+eksctl create cluster --region us-east-1 --zones us-east-1a,us-east-1b,us-east-1c --node-type t2.medium --nodes 2 --nodes-min 2 --nodes-max 3 --name my-cluster
+>>>>>>> 388457876bfccc02dab338151dc08d33664dbbb3
 ```
 
 - Explain the deault values. 
