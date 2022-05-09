@@ -12,7 +12,7 @@ provider "aws" {
 }
 
 resource "aws_instance" "tf-instance" {
-  ami = ""
+  ami = "" ## Data kullan
 }
 
 ## eksik kalmış
