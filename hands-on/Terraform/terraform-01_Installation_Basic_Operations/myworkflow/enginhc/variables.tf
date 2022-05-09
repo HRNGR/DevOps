@@ -7,5 +7,5 @@ variable "key_name" {
 }
 
 variable "names" {
-  default = ["Harun", "Melike", "Meral", "Sevda"]
+  default = ["Harun", "Melike", "Elif", "Sevda"]
 }
