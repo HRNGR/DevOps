@@ -75,7 +75,7 @@ Common commands:
 - Add any subcommand to terraform -help to learn more about what it does and available options.
 
 ```bash
-$ terraform -help apply
+$ terraform -help apply ## same
 or
 $ terraform apply -help
 ```
