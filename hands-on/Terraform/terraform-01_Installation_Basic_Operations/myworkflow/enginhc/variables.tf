@@ -5,6 +5,7 @@ variable "instance_type" {
 variable "key_name" {
   default = "Engin_Linux"
 }
+
 variable "names" {
  default = ["Engin", "Huseyin", "Meral", "Sevda"]
 }
