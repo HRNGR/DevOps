@@ -47,7 +47,7 @@ Phonebook Microservice Web Application aims to create a web application with MyS
     - Deployment definition file should configure create/delete/update operations with one or more replicas.
     - Expose the container port on `port 80`.
     - Deployment definition file should set the proper Environmental Variables for the db connection.
-    - Passwords should be protected by kubernetes-secrets.
+    - Passwords should be protected by kubernetes-secrets. ## example ?
     - Database Host's value should be defined in the deployment using Kubernetes-ConfigMap.
 
   1.2. CREATE/DELETE/UPDATE SERVICE
