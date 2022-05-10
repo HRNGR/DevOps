@@ -313,7 +313,6 @@ You can also replace ```us``` with ```asia``` or ```eu```.  ## değişillik vars
 
 ## Part 5 - Deploying a Sample Application
 
-
 1. Create a .yml file in your local environment with the following content. 
 
 ```yaml
