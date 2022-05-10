@@ -310,7 +310,6 @@ kubectl -n kube-system set image deployment.apps/cluster-autoscaler cluster-auto
 ```
 You can also replace ```us``` with ```asia``` or ```eu```.  ## değişillik varsa unutma
 
-
 ## Part 5 - Deploying a Sample Application
 
 1. Create a .yml file in your local environment with the following content. 
