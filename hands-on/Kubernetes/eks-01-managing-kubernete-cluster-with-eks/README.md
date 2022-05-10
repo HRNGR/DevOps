@@ -178,7 +178,7 @@ $ aws eks list-clusters
 
 4. Run the command
 ```bash
-aws eks --region <us-east-1> update-kubeconfig --name <cluster_name>
+aws eks --region <us-east-1> update-kubeconfig --name <cluster_name> ## EKS den oluşturduğun name
 ``` 
 
 5. Explain what the above command does.
