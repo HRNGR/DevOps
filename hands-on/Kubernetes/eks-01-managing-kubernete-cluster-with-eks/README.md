@@ -249,7 +249,7 @@ $ aws eks describe-cluster --name <cluster-name> --query cluster.status
     - You can also limit the IPs for the connection.
 
     - Proceed to the next step. Review and create the ```Node Group```.
-
+## Subnet  AZ-E problemi ekleyince hata veriyor
 7. Run the command below on your local.
 ```bash
 kubectl get nodes --watch
