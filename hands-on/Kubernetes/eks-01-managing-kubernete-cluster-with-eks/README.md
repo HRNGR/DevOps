@@ -235,7 +235,7 @@ $ aws eks describe-cluster --name <cluster-name> --query cluster.status
         <i>Explain why we can't use</i> ```t2.micro```.
     - Choose appropriate options for other fields. (3 nodes are enough for maximum, 2 nodes for minimum and desired sizes.)
 
-    - Proceed to the next step. ## max
+    - Proceed to the next step. ## max aviable 
 
 6. On the ```Specify networking``` page:
 
