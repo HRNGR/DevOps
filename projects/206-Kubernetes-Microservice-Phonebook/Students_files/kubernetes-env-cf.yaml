@@ -3,7 +3,7 @@ AWSTemplateFormatVersion: 2010-09-09
 Description: |
   This Cloudformation Template creates a Kubernetes Cluster on Ubuntu 20.04 of EC2 Instances.
   Kubernetes cluster comprises of one master node and one worker node.
-  Once the Master node is up and running, Worker node automatically joins the Cluster.
+  Once the Master node is up and running, Worker node automatically joins the Cluster.                      ## Join komutu ile
   Managers security group allows all protocols from all ports within itself and from the Workers.
   Workers security group allows all protocols from all ports within itself and from the Managers.
   Both Security groups allows SSH (22) connections from anywhere.
