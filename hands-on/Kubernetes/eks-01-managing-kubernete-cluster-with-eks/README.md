@@ -63,15 +63,13 @@ echo 'export PATH=$PATH:$HOME/bin' >> ~/.bashrc
 kubectl version --short --client
 ```
 
-<<<<<<< HEAD
 curl -LO "https://dl.k8s.io/release/v1.24.0/bin/windows/amd64/kubectl.exe"
 export PATH=$PATH:$HOME
 kubectl.exe version --short --client
 
 or
-=======
+
 - Configure AWS credentials. Or you can attach `AWS IAM Role` to your EC2 instance.
->>>>>>> 388457876bfccc02dab338151dc08d33664dbbb3
 
 ```bash
 aws configure
