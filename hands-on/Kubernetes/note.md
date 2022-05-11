@@ -2,5 +2,5 @@
 ------------------------
 
 1) kubectl get po -o wide
-watch kube get po 
-kubectl get po -w
+2) watch kube get po 
+3) kubectl get po -w
