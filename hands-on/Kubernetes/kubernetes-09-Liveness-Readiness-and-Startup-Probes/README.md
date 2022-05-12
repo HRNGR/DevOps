@@ -54,7 +54,7 @@ spec:
         path: /healthz
         port: 80
       initialDelaySeconds: 3 ## 3 sn sonra denetleyecek
-      periodSeconds: 3
+      periodSeconds: 3 ## 3 sn de bir sürekli denetlemeyecek
 ---
 apiVersion: v1
 kind: Service   
