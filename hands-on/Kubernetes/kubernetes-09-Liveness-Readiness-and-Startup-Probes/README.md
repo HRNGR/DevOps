@@ -65,7 +65,7 @@ spec:
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 30001
+    nodePort: 30001 ## çıkış portu <worker ip>:30001/healthz
   selector:
     test: liveness
 ```
