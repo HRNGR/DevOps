@@ -306,7 +306,7 @@ spec:
             nodeSelectorTerms:
             - matchExpressions:
               - key: size
-                operator: In   ## IN ; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek
+                operator: In   ## IN; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek, Equal; Herşey eşitse
                 values:
                 - large
                 - medium
@@ -393,7 +393,7 @@ spec:
             preference:                                      # This field is changed.   
               matchExpressions:
               - key: size
-                operator: In    ## IN ; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek
+                operator: In    ## IN; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek, Equal; Herşey eşitse
                 values:
                 - large
                 - medium
@@ -501,7 +501,7 @@ kubectl get po -o wide
 ```yaml
 tolerations:
 - key: "clarus"
-  operator: "Equal"    ## IN ; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek
+  operator: "Equal"    ## IN; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek, Equal; Herşey eşitse
   value: "way"
   effect: "NoSchedule"
 ```
@@ -511,7 +511,7 @@ or
 ```yaml
 tolerations:
 - key: "clarus"
-  operator: "Exists"    ## IN ; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek
+  operator: "Exists"    ## IN; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek, Equal; Herşey eşitse
   effect: "NoSchedule"
 ```
 
@@ -541,7 +541,7 @@ spec:
         - containerPort: 80
       tolerations:
       - key: "clarus"
-        operator: "Exists"    ## IN ; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek
+        operator: "Exists"    ## IN; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek, Equal; Herşey eşitse
         effect: "NoSchedule"
 ```
 
