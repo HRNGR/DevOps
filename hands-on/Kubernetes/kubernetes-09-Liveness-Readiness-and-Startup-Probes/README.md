@@ -135,7 +135,7 @@ metadata:
 spec:
   containers:
   - name: liveness
-    image: clarusway/probes
+    image: clarusway/probes ## image
     args:
     - /bin/sh
     - -c
