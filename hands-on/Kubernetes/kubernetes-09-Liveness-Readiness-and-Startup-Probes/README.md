@@ -139,7 +139,7 @@ spec:
     args:
     - /bin/sh
     - -c
-    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600
+    - touch /tmp/healthy; sleep 30; rm -rf /tmp/healthy; sleep 600 ## 30 sn sonra dosyayı remove ediyor ve dolayısıyla hataya düşecek
     livenessProbe:
       exec:
         command:
