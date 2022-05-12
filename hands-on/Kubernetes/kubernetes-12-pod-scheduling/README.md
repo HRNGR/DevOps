@@ -197,7 +197,7 @@ kubectl label nodes <node-name> <label-key>=<label-value>  ##  Label ekleme örn
 - For example, let's assume that we have some applications that require different requirements. And we also have nodes that have different capacities. For this, we want to assign large pods to large nodes. For this, we add a label to controlplane node as below.
 
 ```bash
-kubectl label nodes kube-master size=large  ##  Label ekleme size label i value large
+kubectl label nodes kube-master size=large  ##  Label ekleme kube-master nodunna size label i value large olarak tanımlandı
 ```
 
 - We can check that the node now has a label with the following command. 
@@ -232,7 +232,7 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
-      nodeSelector:         # This part is added.
+      nodeSelector:         # This part is added. ## eklendikten sonra kubemaster da oluşturdu. yukarıda 200. satırda size large tanımladığımızdan oraya kurdu
         size: large
 ```
 
