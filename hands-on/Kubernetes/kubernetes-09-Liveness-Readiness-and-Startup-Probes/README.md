@@ -65,7 +65,7 @@ spec:
   ports:
   - port: 80
     targetPort: 80
-    nodePort: 30001 ## çıkış portu <worker ip>:30001/healthz
+    nodePort: 30001 ## çıkış portu: <worker ip>:30001/healthz
   selector:
     test: liveness
 ```
@@ -145,7 +145,7 @@ spec:
         command:
         - cat
         - /tmp/healthy
-      initialDelaySeconds: 5
+      initialDelaySeconds: 5 ## 5 sn sonra denetleyecek
       periodSeconds: 5
 ```
 
