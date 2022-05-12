@@ -191,7 +191,7 @@ kubectl delete -f clarus-deploy.yaml
 - First, we will add a label to controlplane node with the following command. 
 
 ```bash
-kubectl label nodes <node-name> <label-key>=<label-value>
+kubectl label nodes <node-name> <label-key>=<label-value>  ##  Label ekleme örnek
 ```
 
 - For example, let's assume that we have some applications that require different requirements. And we also have nodes that have different capacities. For this, we want to assign large pods to large nodes. For this, we add a label to controlplane node as below.
