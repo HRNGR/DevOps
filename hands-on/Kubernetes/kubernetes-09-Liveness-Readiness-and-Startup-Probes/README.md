@@ -202,7 +202,7 @@ spec:
   - name: liveness-tcp
     image: mysql
     ports:
-    - containerPort: 3306
+    - containerPort: 3306  ## container port is not same
     env:
         - name: MYSQL_ROOT_PASSWORD
           value: "123456"
