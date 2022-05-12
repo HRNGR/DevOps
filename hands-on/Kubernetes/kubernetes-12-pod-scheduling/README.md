@@ -306,7 +306,7 @@ spec:
             nodeSelectorTerms:
             - matchExpressions:
               - key: size
-                operator: In
+                operator: In   ## IN ; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek
                 values:
                 - large
                 - medium
