@@ -161,7 +161,7 @@ spec:
         image: nginx
         ports:
         - containerPort: 80
-      nodeName: kube-master  #just add this line 
+      nodeName: kube-master  #just add this line ## eklenmeden önce hem master hem de worker a yükleniyordu. eklendikten sonra sadece master a yüklendi
 ```
 
 - Create the clarus-deploy again.
