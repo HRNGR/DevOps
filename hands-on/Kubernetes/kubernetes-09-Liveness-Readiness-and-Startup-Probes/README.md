@@ -320,7 +320,7 @@ kubectl describe pod startup-http
 - Delete the pod.
 
 ```bash
-kubectl delete -f http-liveness.yaml
+kubectl delete -f startup.yaml
 ```
 
 ## Part 4 - readinessProbe
