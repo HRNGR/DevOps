@@ -146,7 +146,7 @@ spec:
         - cat
         - /tmp/healthy
       initialDelaySeconds: 5 ## 5 sn sonra denetleyecek
-      periodSeconds: 5
+      periodSeconds: 5 ## 5 sn de bir sürekli denetlemeyecek
 ```
 
 - Create the pod with `liveness-exec.yaml` command.
