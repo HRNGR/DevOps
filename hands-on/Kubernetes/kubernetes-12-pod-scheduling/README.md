@@ -393,7 +393,7 @@ spec:
             preference:                                      # This field is changed.   
               matchExpressions:
               - key: size
-                operator: In
+                operator: In    ## IN ; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek
                 values:
                 - large
                 - medium
@@ -501,7 +501,7 @@ kubectl get po -o wide
 ```yaml
 tolerations:
 - key: "clarus"
-  operator: "Equal"
+  operator: "Equal"    ## IN ; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek
   value: "way"
   effect: "NoSchedule"
 ```
@@ -511,7 +511,7 @@ or
 ```yaml
 tolerations:
 - key: "clarus"
-  operator: "Exists"
+  operator: "Exists" 
   effect: "NoSchedule"
 ```
 
