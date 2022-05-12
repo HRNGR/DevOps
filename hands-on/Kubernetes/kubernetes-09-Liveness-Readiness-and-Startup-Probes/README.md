@@ -261,7 +261,7 @@ spec:
         port: 80
       initialDelaySeconds: 3
       periodSeconds: 3
-    startupProbe:
+    startupProbe:  ## şağıda ya da yukaarıda yazsak da farketmez herzaman önce startup koşuluna bakar sonra liveness koşuluna bakar
       httpGet:
         path: /healthz
         port: 80
