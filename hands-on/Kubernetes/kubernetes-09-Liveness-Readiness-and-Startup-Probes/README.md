@@ -53,7 +53,7 @@ spec:
       httpGet:
         path: /healthz
         port: 80
-      initialDelaySeconds: 3
+      initialDelaySeconds: 3 ## 3 sn sonra denetleyecek
       periodSeconds: 3
 ---
 apiVersion: v1
