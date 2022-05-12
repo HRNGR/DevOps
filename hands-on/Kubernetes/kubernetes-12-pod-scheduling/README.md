@@ -197,7 +197,7 @@ kubectl label nodes <node-name> <label-key>=<label-value>
 - For example, let's assume that we have some applications that require different requirements. And we also have nodes that have different capacities. For this, we want to assign large pods to large nodes. For this, we add a label to controlplane node as below.
 
 ```bash
-kubectl label nodes kube-master size=large
+kubectl label nodes kube-master size=large  ##  Label ekleme 
 ```
 
 - We can check that the node now has a label with the following command. 
