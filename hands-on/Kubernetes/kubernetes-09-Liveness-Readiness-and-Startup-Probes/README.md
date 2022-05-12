@@ -208,7 +208,7 @@ spec:
           value: "123456"
     livenessProbe:
       tcpSocket:
-        port: 8080
+        port: 8080  ## container port is not same
       initialDelaySeconds: 15
       periodSeconds: 20
 ```
