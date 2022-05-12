@@ -511,7 +511,7 @@ or
 ```yaml
 tolerations:
 - key: "clarus"
-  operator: "Exists" 
+  operator: "Exists"    ## IN ; içeren, NotIn; içermeyen, Exist; sadece key e bakıyor key varsa demek, DoesNotExist; sadece key e bakıyor key yoksa demek
   effect: "NoSchedule"
 ```
 
