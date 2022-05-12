@@ -203,7 +203,7 @@ kubectl label nodes kube-master size=large  ##  Label ekleme
 - We can check that the node now has a label with the following command. 
 
 ```bash
-kubectl get nodes --show-labels
+kubectl get nodes --show-labels  ##  Label listesi
 ```
 
 - We can also use `kubectl describe node "nodename"` to see the full list of labels of the given node.
