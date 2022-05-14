@@ -1,0 +1,23 @@
+kubectl get no
+kubectl describe node kube-master | grep -i taint
+kubectl describe node kube-worker-1 | grep -i taint
+
+kubectl taint nodes kube-master node-role.kubernetes.io/master:NoSchedule-
+kubectl taint nodes kube-master node-role.kubernetes.io/control-plane:NoSchedule-
+
+
+
+
+
+
+
+
+
+kubectl delete -f clarus-deploy.yaml
+
+
+kubectl taint nodes kube-worker-1 clarus=way:NoSchedule-
+kubectl describe node kube-worker-1 | grep -i taint
+ 
+kubectl taint nodes kube-master node-role.kubernetes.io/master:NoSchedule
+kubectl taint nodes kube-master node-role.kubernetes.io/control-plane:NoSchedule
