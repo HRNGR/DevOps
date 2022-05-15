@@ -8,3 +8,12 @@ spec:    ## Specificatin of pod
     image: nginx:1.14.2 ## Search it  or creat it in dockerhub
     ports:
     - containerPort: 80 ## Port
+
+
+## kubectl apply -f mypod.yaml
+## kubectl get pods
+
+// NAME        READY   STATUS    RESTARTS   AGE
+// nginx-pod   1/1     Running   0          20s
+
+## kubectl describe pods
