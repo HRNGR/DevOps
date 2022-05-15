@@ -31,4 +31,4 @@ spec:
 
 kubectl get deploy,rs,po -l app=container-info ## ilgili etiketteki deployment replicaset ve podları listeler
 
-kubectl get namespace
+# kubectl get namespace
