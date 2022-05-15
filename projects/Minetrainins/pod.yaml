@@ -17,3 +17,4 @@ spec:    ## Specificatin of pod
 // nginx-pod   1/1     Running   0          20s
 
 ## kubectl describe pods
+## kubectl delete -f mypod.yaml
