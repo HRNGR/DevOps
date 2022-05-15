@@ -5,6 +5,6 @@ metadata:
 spec:    ## Specificatin of pod
   containers:
   - name: nginx
-    image: nginx:1.14.2
+    image: nginx:1.14.2 ## Search it  or creat it in dockerhub
     ports:
     - containerPort: 80 ## Port
