@@ -361,7 +361,7 @@ vi playbook8.yml
         - aaron
       when: ansible_os_family == "Debian" or ansible_distribution_version == "20.04" ## Koşul
 ```
-
+## sonuçları sorgılama komutu; ansible node1:node2:node3 -m gather_facts | grep ansible_os_family   ////  ansible all -m setup | grep ansible_os_family
 - Run the playbook8.yml
 
 ```bash
