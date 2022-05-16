@@ -351,7 +351,7 @@ vi playbook8.yml
       loop:
         - david
         - tyler
-      when: ansible_os_family == "SUSE"
+      when: ansible_os_family == "SUSE" ## Koşul
 
     - user:
         name: "{{ item }}"
