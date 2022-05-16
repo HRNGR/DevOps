@@ -14,11 +14,9 @@ terraform {
 
 provider "aws" {
   region = "us-east-1"
-<<<<<<< HEAD
-=======
   # secret_key = ""
   # access_key = ""
->>>>>>> 9d8c093bc6658ec27eb9f884d1f1822783b14c93
+
 }
 
 variable "tags" {
@@ -37,15 +35,14 @@ resource "aws_instance" "amazon-linux-2" {
 }
 
 resource "aws_instance" "ubuntu" {
-<<<<<<< HEAD
+
   ami             = "ami-04505e74c0741db8d"
   instance_type   = "t2.micro"
   key_name        = "FirtKey"
-=======
+
   ami = "ami-04505e74c0741db8d"
   instance_type = "t2.micro"
-  key_name = "walter-pem" ####### CHANGE HERE #######
->>>>>>> 9d8c093bc6658ec27eb9f884d1f1822783b14c93
+  key_name = "FirstKey" ####### CHANGE HERE #######
   security_groups = ["ansible-session-sec-gr"]
 
   tags = {
@@ -86,7 +83,7 @@ resource "aws_security_group" "tf-sec-gr" {
     to_port     = 0
     cidr_blocks = ["0.0.0.0/0"]
   }
-}
+  }
 
 # resource "null_resource" "config" {
 #   depends_on = [aws_instance.amazon-linux-2[0]]
@@ -97,19 +94,16 @@ resource "aws_security_group" "tf-sec-gr" {
 #     private_key = file("F:/CLA-AWS/0.AWS-Cloud/7-KEY.PEMS/FirtKey.pem") ####### CHANGE HERE #######
 #   }
 
-<<<<<<< HEAD
+
 #   rovisioner "remote-exec" {
 #     inline = [
 #       "sudo apt install rsync grsync -y"
 #     ]
 #   }
-
 # }
-=======
-  provisioner "remote-exec" {
-    inline = [
-    "sudo yum install rsync grsync -y",
-    ]
-  }
-}
->>>>>>> 9d8c093bc6658ec27eb9f884d1f1822783b14c93
+
+  # provisioner "remote-exec" {
+  #   inline = [
+  #   "sudo yum install rsync grsync -y",
+  #   ]
+  # }
