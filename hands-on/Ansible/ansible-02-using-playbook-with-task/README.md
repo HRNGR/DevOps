@@ -352,7 +352,7 @@ vi playbook8.yml
         - david
         - tyler
       when: ansible_os_family == "SUSE" ## Koşul
-
+## user sorgulama; ansible node1:node2:node3 -m gather_facts | grep ansible_os_family
     - user:
         name: "{{ item }}"
         state: present
