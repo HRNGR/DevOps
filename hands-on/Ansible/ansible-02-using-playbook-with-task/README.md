@@ -338,7 +338,7 @@ vi playbook8.yml
     - user:
         name: "{{ item }}"
         state: present
-      loop:
+      loop:   ## loop Modulün (user) hizasında oılması lazım
         - joe
         - matt
         - james
