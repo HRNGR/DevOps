@@ -63,7 +63,7 @@ chmod +x ./kubectl ## Yetki verdik
 - Copy the binary to a folder in your PATH. If you have already installed a version of kubectl, then we recommend creating a $HOME/bin/kubectl and ensuring that $HOME/bin comes first in your $PATH.
 
 ```bash
-mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin  ## cp ile kopyalamak yerine mv ile taşınabilir.
+mkdir -p $HOME/bin && cp ./kubectl $HOME/bin/kubectl && export PATH=$PATH:$HOME/bin  ## cp ile kopyalamak yerine mv ile taşınabilir. ## export ile çalışma path ini sabit home/bin şeklinde ayarladık
 ```
 
 - (Optional) Add the $HOME/bin path to your shell initialization file so that it is configured when you open a shell.
