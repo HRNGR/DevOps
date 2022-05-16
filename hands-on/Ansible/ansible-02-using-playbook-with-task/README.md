@@ -304,7 +304,7 @@ vim playbook7.yml
    - name: Remove unwanted Apache2 packages
      apt:
        autoremove: yes
-       purge: yes
+       purge: yes  ## diğer yapılandırma dosyalarını da siliyor
 
 - name: play 7
   hosts: webservers
