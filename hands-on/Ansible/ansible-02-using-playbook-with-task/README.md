@@ -343,7 +343,7 @@ vi playbook8.yml
         - matt
         - james
         - oliver
-      when: ansible_os_family == "RedHat"
+      when: ansible_os_family == "RedHat" ## Koşul
 
     - user:
         name: "{{ item }}"
