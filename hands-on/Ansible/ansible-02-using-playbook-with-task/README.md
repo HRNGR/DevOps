@@ -386,3 +386,6 @@ ilgili hosta ait işletim sistemi bilgisi verir.
 ansible \! webservers --list-hosts
 webservers haricindeki hostları listeler
 
+ansible-playbook -b playbook1.yaml --check
+--check önündeki komutu --dry-run gibi çalıştırır.
+
