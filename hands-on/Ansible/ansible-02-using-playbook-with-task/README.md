@@ -389,3 +389,5 @@ webservers haricindeki hostları listeler
 ansible-playbook -b playbook1.yaml --check
 --check önündeki komutu --dry-run gibi çalıştırır.
 
+ansible-playbook -b playbook1.yml --list-hosts
+hangi hostlarda değişiklik yapılacağını gösterir.
