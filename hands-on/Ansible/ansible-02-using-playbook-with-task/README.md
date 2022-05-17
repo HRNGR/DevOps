@@ -352,7 +352,7 @@ vi playbook8.yml
         - david
         - tyler
       when: ansible_os_family == "SUSE" ## Koşul
-## user sorgulama; ansible node1:node2:node3 -m gather_facts | grep ansible_os_family
+## user sorgulama; ansible node1:node2:node3 -m gather_facts | grep ansible_os_family   //// ansible all -m shell -a "cat etc/password | tail -n5"
     - user:
         name: "{{ item }}"
         state: present
@@ -367,3 +367,15 @@ vi playbook8.yml
 ```bash
 ansible-playbook -b playbook8.yml
 ```
+
+
+
+ansible node1 -m setup | grep ansible_os_family
+white_check_mark
+eyes
+raised_hands
+
+
+
+Notes
+
