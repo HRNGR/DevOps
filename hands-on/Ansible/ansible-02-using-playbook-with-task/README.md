@@ -382,3 +382,7 @@ Notes
 ansible node1 -m setup | grep ansible_os_family
 ilgili hosta ait işletim sistemi bilgisi verir.
 
+-m setup yerine -m gather_facts de yazılabilir...
+ansible \! webservers --list-hosts
+webservers haricindeki hostları listeler
+
