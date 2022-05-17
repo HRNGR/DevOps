@@ -381,3 +381,6 @@ ansible-playbook -b playbook1.yaml --check
 
 ansible-playbook -b playbook1.yml --list-hosts
 hangi hostlarda değişiklik yapılacağını gösterir.
+
+ansible all -m shell -a "cat /etc/passwd | tail -n5"
+son 5 işletim sistemii listeler 
