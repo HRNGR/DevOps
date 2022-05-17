@@ -367,16 +367,6 @@ vi playbook8.yml
 ```bash
 ansible-playbook -b playbook8.yml
 ```
-
-
-
-ansible node1 -m setup | grep ansible_os_family
-white_check_mark
-eyes
-raised_hands
-
-
-
 Notes
 
 ansible node1 -m setup | grep ansible_os_family
