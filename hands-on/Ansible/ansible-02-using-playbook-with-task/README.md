@@ -379,3 +379,6 @@ raised_hands
 
 Notes
 
+ansible node1 -m setup | grep ansible_os_family
+ilgili hosta ait işletim sistemi bilgisi verir.
+
