@@ -7,7 +7,7 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 4.0"
+      version = "4.14.0"        ## version = "~> 4.0"     ======>>>>   version = "4.14.0" olarak düzeltildi yoksa Terraform init hatası veriyordu.
     }
   }
 }
