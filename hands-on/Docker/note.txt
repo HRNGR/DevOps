@@ -15,3 +15,7 @@ docker image inspect ubuntu:18.04
 docker-compose up
 docker-compose down
 docker system prune -af
+
+
+
+Docker  ignore
