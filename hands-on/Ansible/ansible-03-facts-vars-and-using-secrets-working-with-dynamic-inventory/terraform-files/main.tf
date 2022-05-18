@@ -22,7 +22,6 @@ locals {
   user = "Harun" # Do not forget to change user name
 }
 
-
 resource "aws_instance" "nodes" {
   ami = var.myami
   instance_type = var.instancetype
