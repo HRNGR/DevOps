@@ -18,4 +18,4 @@ docker system prune -af
 
 
 
-Docker da da   ignore
+Dockerda da gitignore u kullanabiliriz..
