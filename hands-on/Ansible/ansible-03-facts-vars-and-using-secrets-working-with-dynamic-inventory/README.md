@@ -175,7 +175,7 @@ ansible-playbook ipaddress.yml
 - Create encypted variables using "ansible-vault" command
 
 ```bash
-ansible-vault create secret.yml
+ansible-vault create secret.yml  ##vault kasa demek
 ```
 
 New Vault password: xxxx
