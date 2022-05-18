@@ -92,6 +92,7 @@ resource "null_resource" "config" {
       "echo [dbservers] >> inventory.txt",
       "echo node2 ansible_host=${aws_instance.nodes[2].private_ip} ansible_ssh_private_key_file=~/${var.mykeypem} ansible_user=ec2-user >> inventory.txt",
       "chmod 400 ${var.mykeypem}"
+      "Echo >> .bashrc "export PS1="\[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\\$\[\e[m\]" "",
     ]
   }
 }
