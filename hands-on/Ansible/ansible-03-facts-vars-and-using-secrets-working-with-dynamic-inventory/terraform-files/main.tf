@@ -19,8 +19,7 @@ provider "aws" {
 }
 
 locals {
-  user = "Harun"
-
+  user = "Harun" # Do not forget to change user name
 }
 
 
