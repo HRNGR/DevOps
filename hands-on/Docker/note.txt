@@ -18,4 +18,4 @@ docker system prune -af
 
 
 
-Docker  ignore
+Docker da da   ignore
