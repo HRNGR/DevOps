@@ -103,7 +103,7 @@ $ scp -i <pem file> <pem file> ec2-user@<public DNS name of Control Node>:/home/
 - To make sure that all our hosts are reachable, we will run various ad-hoc commands that use the ping module.
 
 ```bash
-$ chmod 400 <pem file>
+$ chmod 400 <pem file>  ## FirstKey.pem
 ```
 
 ```bash
