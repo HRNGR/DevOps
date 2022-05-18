@@ -535,7 +535,7 @@ $ ansible all -m ping --key-file "~/<pem file>"
 ---
 - name: create a user using a variable
   hosts: all
-  become: true
+  become: true  ## admin olarak demek
   vars:
     user: lisa
     ansible_ssh_private_key_file: "/home/ec2-user/<pem file>"
