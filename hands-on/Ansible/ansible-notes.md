@@ -77,3 +77,6 @@ ansible-config view
 - import_playbook: shell.yml
 - import_playbook: configure.yml
 ```
+
+
+https://docs.ansible.com/ansible/2.9/modules/list_of_all_modules.html
