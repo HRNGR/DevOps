@@ -24,7 +24,7 @@ ansible-playbook playbook.yml -l node1
 # list host in playbook
 ansible-playbook playbook.yml --list-hosts
 # list tasks in playbook
-ansible-playbook playbook.yml --list-tasks
+ansible-playbook playbook.yml --list-tasks  ## basamak basamak gösteriyor 
 ```
 
 # list inventory
