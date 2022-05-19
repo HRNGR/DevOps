@@ -104,7 +104,7 @@ $ ansible --version
 - Run the command below to transfer your pem key to your Ansible Controller Node.
 
 ```bash
-$ scp -i <PATH-TO-PEM-FILE> <PATH-TO-PEM-FILE> ec2-user@<CONTROLLER-NODE-IP>:/home/ec2-user
+$ scp -i <PATH-TO-PEM-FILE> <PATH-TO-PEM-FILE> ec2-user@<CONTROLLER-NODE-IP>:/home/ec2-user ## scp -i ~/.ssh/ FirstKey.pem ec2-user@54.85.49.70:/home/ec2-user
 ```
 
 - Make a directory named ```Ansible-Website-Project``` under the home directory and cd into it.
@@ -181,8 +181,8 @@ $ ansible all -m ping -o
 - name: db configuration
   hosts: db_server
   tasks:
-    - name: install mariadb and PyMySQL
-      become: yes
+    - name: install mariadb and PyMySQL ## mariadb ve python3 kütüphanesini kur
+      become: yes  ## sudo yetkisi ile yapması için
       yum:
         name: 
             - mariadb-server
@@ -195,7 +195,7 @@ $ ansible all -m ping -o
 
     - name: enable mariadb
       become: yes
-      systemd: 
+      systemd:     ## <>
         name: mariadb
         enabled: true
 ```
@@ -241,7 +241,7 @@ INSERT INTO products (Name,Price,ImageUrl) VALUES ("Laptop","100","c-1.png"),("D
 - Run the command below.
 
 ```bash
-$ ansible-playbook playbook.yml
+$ ansible-playbook playbook.yml    # list tasks in playbook; ansible-playbook playbook.yml --list-tasks
 ```
 - Check if the file has been sent to the database server.
 
