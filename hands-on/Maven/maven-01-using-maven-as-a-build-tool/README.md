@@ -42,7 +42,7 @@ java -version
 
 ```
 # Append the lines below into ~/.bash_profile file by making necessary changes.
-M2_HOME=/home/ec2-user/<apache-maven-directory-with-its-version>
+M2_HOME=/home/ec2-user/apache-maven-3.6.3
 export PATH=$PATH:$M2_HOME/bin
 ```
 
@@ -93,7 +93,7 @@ tree
 
 - Explain that the ```maven.compiler.source``` property specifies the version of source code accepted and the ```maven.compiler.target``` generates class files compatible with the specified version of JVM.
 
-- Explain that ```dependencyManagement``` section in the pom file will import multiple dependencies with compatible versions.  
+- Explain that ```dependencyManagement``` section in the pom file will import multiple dependencies with compatible versions.
 
 
 ## Part 3 - Run Maven Commands
