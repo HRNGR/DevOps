@@ -401,7 +401,7 @@ ansible-galaxy init /home/ec2-user/ansible/roles/common
     msg: Common Task Triggered
 
 - name: Fix dpkg
-  command: dpkg --configure -a   ## kurulum sırasında hataları düzeltiyor
+  command: dpkg --configure -a   ## kurulum sırasında hataları düzeltiyor.
 
 - name: Update apt
   apt:
