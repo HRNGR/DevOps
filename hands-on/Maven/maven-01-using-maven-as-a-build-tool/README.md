@@ -45,7 +45,7 @@ java -version
 M2_HOME=/home/ec2-user/apache-maven-3.6.3
 export PATH=$PATH:$M2_HOME/bin
 ```
-
+## yukarıda 2. satırda versiyon eklendi
 - Run the command below to check if mvn commands are available.
 
 ```bash
