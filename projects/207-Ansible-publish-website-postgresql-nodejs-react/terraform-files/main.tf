@@ -141,7 +141,7 @@ resource "null_resource" "config" {
   }
 
 }
-
+## outputs
 output "controlnodeip" {
   value = aws_instance.control_node.public_ip
 }
