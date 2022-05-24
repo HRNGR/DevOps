@@ -59,7 +59,7 @@ resource "aws_iam_role" "ec2full" {
     ]
   })
 
-  managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonEC2FullAccess"]
+  managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonEC2FullAccess"]   ## 
 }
 
 resource "aws_iam_instance_profile" "ec2full" {
