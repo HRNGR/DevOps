@@ -105,7 +105,7 @@ resource "aws_security_group" "tf-sec-gr" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-
+## dosya kopyalama
 resource "null_resource" "config" {
   depends_on = [aws_instance.control_node]
   connection {
