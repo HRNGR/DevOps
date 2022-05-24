@@ -59,7 +59,7 @@ resource "aws_iam_role" "ec2full" {
     ]
   })
 
-  managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonEC2FullAccess"]   ## ec2fullaccess policy
+  managed_policy_arns = ["arn:aws:iam::aws:policy/AmazonEC2FullAccess"]   ## ec2fullaccess policy ile iam role oluşturduk
 }
 
 resource "aws_iam_instance_profile" "ec2full" {
