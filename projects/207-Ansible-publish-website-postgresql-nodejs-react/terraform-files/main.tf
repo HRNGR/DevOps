@@ -105,7 +105,7 @@ resource "aws_security_group" "tf-sec-gr" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 }
-## dosya kopyalama
+
 resource "null_resource" "config" {
   depends_on = [aws_instance.control_node]
   connection {
@@ -114,7 +114,7 @@ resource "null_resource" "config" {
     user = "ec2-user"
     private_key = file("~/.ssh/FirstKey.pem")
   }
-
+## dosya kopyalama
   provisioner "file" {
     source = "./ansible.cfg"
     destination = "/home/ec2-user/ansible.cfg"
