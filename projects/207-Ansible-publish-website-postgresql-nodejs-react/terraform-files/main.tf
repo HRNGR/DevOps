@@ -129,7 +129,7 @@ resource "null_resource" "config" {
     source = "~/.ssh/FirstKey.pem"
     destination = "/home/ec2-user/FirstKey.pem"
   }
-
+## program kurma
   provisioner "remote-exec" {
     inline = [
       "sudo hostnamectl set-hostname Ansible_control",
