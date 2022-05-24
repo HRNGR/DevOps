@@ -124,7 +124,7 @@ resource "null_resource" "config" {
     source = "./inventory_aws_ec2.yml"
     destination = "/home/ec2-user/inventory_aws_ec2.yml"
   }
-
+## keygen kopyalama
   provisioner "file" {
     source = "~/.ssh/FirstKey.pem"
     destination = "/home/ec2-user/FirstKey.pem"
