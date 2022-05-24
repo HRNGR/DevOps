@@ -8,7 +8,7 @@ terraform {
     }
   }
 }
-
+## provider
 provider "aws" {
   region = "us-east-1"
   # secret_key = ""
