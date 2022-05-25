@@ -18,7 +18,7 @@ provider "aws" {
 variable "tags" {
   default = ["postgresql", "nodejs", "react"]
 }
-##keygen düzeltmeyi unutma
+## keygen düzeltmeyi unutma
 resource "aws_instance" "control_node" {
   ami = "ami-0f095f89ae15be883"
   instance_type = "t2.medium"
