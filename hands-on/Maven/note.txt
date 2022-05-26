@@ -1,6 +1,12 @@
 Java oluşturma ( http://www.javaturk.org/javanin-jar-aracini-kullanarak-jar-dosyasi-olusturma/ )
 
 
+▹ Generating sources (sometimes)
+▹ Compiling sources 
+▹ Compiling test sources
+▹ Executing tests (unit tests, integration tests, etc)
+▹ Packaging (into jar, war, ejb-jar, ear)
+▹ Generating reports
 
 
 
