@@ -18,10 +18,6 @@ provider "aws" {
   # access_key = ""
 }
 
-variable "tags" {
-  default = ["postgresql", "nodejs", "react"]
-}
-
 resource "aws_instance" "control_node" {
   ami = var.myami
   instance_type = var.controlinstancetype
