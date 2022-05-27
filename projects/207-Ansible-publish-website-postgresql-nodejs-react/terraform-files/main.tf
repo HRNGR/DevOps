@@ -142,6 +142,7 @@ resource "null_resource" "config" {
       "chmod 400 ${var.mykeypem}"
     ]
   }
+
 }
 
 output "controlnodeip" {
