@@ -148,3 +148,5 @@ output "controlnodeip" {
 output "privates" {
   value = aws_instance.control_node.*.private_ip
 }
+
+## permission hatası alabilirsin
