@@ -149,4 +149,4 @@ output "privates" {
   value = aws_instance.control_node.*.private_ip
 }
 
-## Hatasız Apply dan sonra, Ansible-playbook yaparken "permission hatası alabilirsin "chmod 400" yap. Ve tekrar dene.
+## Hatasız Apply dan sonra, Ansible-playbook yaparken "permission" hatası alabilirsin "chmod 400" yap. Ve tekrar dene.
