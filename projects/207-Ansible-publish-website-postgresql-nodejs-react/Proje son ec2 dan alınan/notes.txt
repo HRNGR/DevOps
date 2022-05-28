@@ -1,0 +1,29 @@
+mkdir ansible && cd ansible
+
+mkdir ansible-Project && cd ansible-Project && mkdir postgres nodejs react
+
+sudo yum install tree -y
+
+tree
+
+ansible-inventory --graph                          ## dosya isimlerini buradan al
+
+ansible _development -m ping -o
+
+https://docs.docker.com/engine/install/centos/
+
+
+
+
+
+3ünü de çalıştıracaksın
+ansible-playbook --ask-vault-pass docker_postgre.yml 
+
+Yaklaşık 10dk sonra bitince aşağıdaki kod ile kontrol ederiz
+
+[ec2-user@CN ansible]$ ansible _ansible_postgresql -m shell -a "sudo docker ps -a"
+ec2-54-242-214-109.compute-1.amazonaws.com | CHANGED | rc=0 >>
+CONTAINER ID   IMAGE             COMMAND                  CREATED         STATUS         PORTS                    NAMES
+0ec9dc61a072   haruncw/postgre   "docker-entrypoint.s…"   7 seconds ago   Up 6 seconds   0.0.0.0:5432->5432/tcp   harun_postgre
+
+
