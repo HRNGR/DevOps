@@ -149,4 +149,4 @@ output "privates" {
   value = aws_instance.control_node.*.private_ip
 }
 
-## permission hatası alabilirsin
+## permission hatası alabilirsin chmod 400 yap 
