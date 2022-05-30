@@ -1,0 +1,31 @@
+KUBERNETES CONCEPTS – PODS, REPLICASETS, DEPLOYMENTS, LABS: REPLICA SETS
+
+How many PODs exist on the system?
+kubectl get pods
+
+How many ReplicaSets exist on the system?
+kubectl get pods -o wide
+
+What is the image used to create the pods in the new-replica-set?
+kubectl describe pod
+
+Delete any one of the 4 PODs.
+kubectl delete pod new-replica-set-2hwks
+
+Create a ReplicaSet using the replicaset-definition-1.yaml file located at /root/.
+kubectl apply -f replicaset-definition-1.yaml
+
+Delete the two newly created ReplicaSets - replicaset-1 and replicaset-2
+kubectl delete replicaset replicaset-1
+kubectl delete replicaset replicaset-2
+
+kubectl delete -f .
+
+kubectl rollout status deployment/my-deployment
+
+kubectr rollout history deployment/my-deployment
+
+kubectl set image deployment mydeployment nginx=nginx:1.18-perl
+
+
+
