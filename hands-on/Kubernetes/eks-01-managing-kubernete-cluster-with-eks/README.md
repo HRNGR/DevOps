@@ -417,4 +417,4 @@ kubectl get nodes
 
 12. Atfer clean-up `worker nodes` and `cluster`, delete the `LoadBalancer` manually.
 
-## 2. tekrarı yapıldı
+## 2. tekrarı yapıldı.
