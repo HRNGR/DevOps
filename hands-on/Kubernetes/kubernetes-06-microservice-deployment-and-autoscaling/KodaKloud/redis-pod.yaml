@@ -7,7 +7,7 @@ metadata:
     app: demo-voting-app-pod
 spec:
   containers:
-  - name: redis
-    image: redis
-    ports:
-    - containerPort: 6379
+    - name: redis
+      image: redis
+      ports:
+        - containerPort: 6379
