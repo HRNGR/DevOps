@@ -40,5 +40,6 @@ http://192.168.99.101:30005
 
 creat deployment .yaml file
 
+ls -ltr
 
 
