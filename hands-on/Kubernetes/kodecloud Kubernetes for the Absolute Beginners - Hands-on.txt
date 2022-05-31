@@ -19,6 +19,11 @@ Delete the two newly created ReplicaSets - replicaset-1 and replicaset-2
 kubectl delete replicaset replicaset-1
 kubectl delete replicaset replicaset-2
 
+What is the ip of node
+k get service --all-namespaces
+
+
+
 kubectl delete -f .
 
 kubectl rollout status deployment/my-deployment
