@@ -38,7 +38,7 @@ k get pods, svc
 minikube service result-service --url
 http://192.168.99.101:30005
 
-creat deployment .yaml file
+creat deployment .yaml file  (redis, postgres )
 
 ls -ltr
 
