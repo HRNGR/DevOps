@@ -23,7 +23,6 @@ What is the ip of node
 k get service --all-namespaces
 
 
-
 kubectl delete -f .
 
 kubectl rollout status deployment/my-deployment
