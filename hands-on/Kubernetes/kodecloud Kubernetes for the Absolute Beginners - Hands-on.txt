@@ -25,6 +25,8 @@ k get service --all-namespaces
 
 kubectl delete -f .
 
+rollout----
+
 kubectl rollout status deployment/my-deployment
 
 kubectr rollout history deployment/my-deployment
