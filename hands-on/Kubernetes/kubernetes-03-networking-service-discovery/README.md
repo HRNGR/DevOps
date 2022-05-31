@@ -321,7 +321,7 @@ spec:
   type: NodePort  
   ports:
   - port: 3000  ##loadbalancer's port
-    targetPort: 5000  ##node's port
+    targetPort: 5000  ##node's port look image.jpeg
   selector:
     env: front-end 
 ```
