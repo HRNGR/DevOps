@@ -481,6 +481,8 @@ spec:
         - containerPort: 5000 ##node's port
 ```
 
+image.png
+
 - Use kubectl apply to push your configuration changes to the cluster.
 
 ```bash
