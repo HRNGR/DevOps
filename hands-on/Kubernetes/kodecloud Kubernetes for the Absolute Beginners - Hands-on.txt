@@ -22,7 +22,7 @@ kubectl delete replicaset replicaset-2
 What is the ip of node
 k get service --all-namespaces
 
-Delete 
+Delete deployment
 kubectl delete -f .
 
 rollout------
