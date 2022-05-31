@@ -32,7 +32,7 @@ kubectl rollout status deployment/my-deployment
 kubectr rollout history deployment/my-deployment
 
 
-set-----
+set----------
 
 kubectl set image deployment mydeployment nginx=nginx:1.18-perl
 
