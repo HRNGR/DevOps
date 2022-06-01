@@ -177,7 +177,7 @@ docker ps
 docker container ls
 ```
 
-- Check if the To-Do App is running by entering `http://<ec2-host-name>` in a browser.
+- Check if the To-Do App is running by entering `http://<ec2-host-name>` in a browser. 
 
 - Stop and remove container
 
