@@ -306,5 +306,5 @@ aws ecr delete-repository \
       --repository-name student2-repo/todo-app \
       --force
 ```
-
+      --region us-east-1   ## eklersen hatasız siler
 - Delete the image and repository of `student1-repo/todo-app` from AWS ECR Console.
