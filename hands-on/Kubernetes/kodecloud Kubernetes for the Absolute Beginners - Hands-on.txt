@@ -54,3 +54,4 @@ Use the kubectl edit pod <pod-name> command to edit pod properties.
 -----------------------
 Replica Control RC
 -----------------------
+k get replicationcontroller
