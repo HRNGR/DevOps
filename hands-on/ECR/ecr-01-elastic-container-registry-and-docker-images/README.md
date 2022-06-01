@@ -259,8 +259,8 @@ aws ecr create-repository \
 - Tag and push the image to your `student2-repo/todo-app` repository and show the pushed image on AWS ECR Console.
 
 ```bash
-docker tag todo-app:latest xxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:latest
-docker push xxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:latest
+docker tag todo-app:latest 837233063764.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:latest
+docker push 837233063764.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:latest
 ```
 
 - Delete the all local images of `todo-app`.
