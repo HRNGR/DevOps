@@ -20,5 +20,6 @@ docker image rm -f $(docker image ls)   ## Image lerin tamamını silmek için
 
 docker stop $(docker ps -a) && docker rm -fv $(docker ps -a) ## Konteynır ları stop ve remove için
 
+docker image rm --force $(docker image ls) ## image'leri siliyor
 
 Dockerda da gitignore u kullanabiliriz..
