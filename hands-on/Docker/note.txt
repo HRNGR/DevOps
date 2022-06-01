@@ -16,4 +16,8 @@ docker-compose up
 docker-compose down
 docker system prune -af
 
+docker image rm -f $(docker image ls)   ## Image lerin tamamını silmek için
+
+
+
 Dockerda da gitignore u kullanabiliriz..
