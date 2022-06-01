@@ -53,3 +53,10 @@ k get deployment voting-app-deploy
 and reflesh many times http://192.168.99.101:30004 under page u can see new pods also)
 
 
+
+
+----AWS EKS---------------
+aws --version
+aws eks update-kubeconfig --region region-code --name cluster-name
+kubectl get svc
+aws config
