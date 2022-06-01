@@ -23,7 +23,6 @@ What is the ip of node
 k get service --all-namespaces
 ------------------------------------------------------------------------------------------------------------
 
-
 minikube service voiting-service --url
 http://192.168.99.101:30004
 
@@ -40,7 +39,14 @@ kubectr rollout history deployment/my-deployment
 set----------
 
 kubectl set image deployment mydeployment nginx=nginx:1.18-perl
-
+kubectl set image pod redis redis123=redis
 kubectl scale deploy web-flask-deploy --replicas=3
 
+-----------------
+-----------------
+If you are not given a pod definition file, you may extract the definition to a file using the below command:
+kubectl get pod <pod-name> -o yaml > pod-definition.yaml
 
+Then edit the file to make the necessary changes, delete and re-create the pod.
+
+Use the kubectl edit pod <pod-name> command to edit pod properties.
