@@ -298,7 +298,7 @@ aws ecr batch-delete-image \
       --repository-name student2-repo/todo-app \
       --image-ids imageTag=latest
 ```
-
+      --region us-east-1   ## eklersen hatasız siler
 - Delete the ECR repository  `student2-repo/todo-app` from AWS CLI.
 
 ```bash
