@@ -41,6 +41,7 @@ set----------
 kubectl set image deployment mydeployment nginx=nginx:1.18-perl
 kubectl set image pod redis redis123=redis
 kubectl scale deploy web-flask-deploy --replicas=3
+kubectl replace -f rs-definition.yaml
 
 -----------------
 -----------------
