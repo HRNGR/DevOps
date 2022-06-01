@@ -99,7 +99,7 @@ resource "aws_instance" "ecr-instance" {
 output "ec2-public-ip" {
   value = "http://${aws_instance.ecr-instance.public_ip}"
 }
-
+## Key Pem değiştir
 output "ssh-connection" {
   value = "ssh -i ~/.ssh/FirstKey.pem ec2-user@${aws_instance.ecr-instance.public_ip}"
 }
