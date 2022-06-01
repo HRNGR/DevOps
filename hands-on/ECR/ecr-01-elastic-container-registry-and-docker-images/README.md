@@ -267,7 +267,7 @@ docker push 837233063764.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:
 
 ```bash
 docker image ls
-docker image rm --force <image_id>
+docker image rm --force <image_id>     ## docker image rm --force $(docker image ls)
 ```
 
 - Show that there is no image locally
@@ -279,14 +279,14 @@ docker image ls
 - Pull the image from your `student2-repo/todo-app` repository  to the local.
 
 ```bash
-docker pull xxxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:latest
-docker run -dp 80:3000 xxxxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:latest
+docker pull 837233063764.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:latest
+docker run -dp 80:3000 837233063764.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:latest
 ```
 
 - Or directly run the `todo-app` from the ECR repo.
 
 ```bash
-docker run -dp 80:3000 xxxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:latest
+docker run -dp 80:3000 837233063764.dkr.ecr.us-east-1.amazonaws.com/student2-repo/todo-app:latest
 ```
 
 - Check if the To-Do App is running by entering `http://<ec2-host-name>` in a browser.
