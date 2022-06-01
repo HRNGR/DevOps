@@ -222,20 +222,20 @@ docker build -t todo-app:latest .
 - Tag the image to push it to ECR repository.
 
 ```bash
-docker tag todo-app:latest xxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/student1-repo/todo-app:latest
+docker tag todo-app:latest 837233063764.dkr.ecr.us-east-1.amazonaws.com/student1-repo/todo-app:latest
 ```
 
 - Push the image to your ECR repository and show the pushed image on AWS ECR Console.
 
 ```bash
-docker push xxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/student1-repo/todo-app:latest
+docker push 837233063764.dkr.ecr.us-east-1.amazonaws.com/student1-repo/todo-app:latest
 ```
 - Show the repository . Immutable disable.
 
 - Create an container from image located ECR
 
 ```bash
-docker run --name todo-v1 -dp 80:3000 xxxxxxxxxxxxxx.dkr.ecr.us-east-1.amazonaws.com/student1-repo/todo-app:latest
+docker run --name todo-v1 -dp 80:3000 837233063764.dkr.ecr.us-east-1.amazonaws.com/student1-repo/todo-app:latest
 ```
 - Show the changes in the browser 
 
