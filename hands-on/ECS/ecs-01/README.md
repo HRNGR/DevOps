@@ -220,7 +220,7 @@ aws ecs create-cluster --cluster-name cluster-with-awscli
 - Before you can run a task on your ECS cluster, you must register a task definition. Task definitions are lists of containers grouped together. The following example is a simple task definition that creates a simple web app using the python:alpine container image.
 
 - Create a file and name it as `clarusshop-task.json` under `clarusshop` folder.
-##ımage satırını değiştirmeyi unutma ECR/repository  ## arn:aws:iam::837233063764:role/PolicyforECS
+## image satırını değiştirmeyi unutma ECR/repository  ## arn:aws:iam::837233063764:role/PolicyforECS
 ```json
 {
 	"family": "clarusshop-task-awscli",
