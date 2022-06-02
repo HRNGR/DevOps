@@ -141,7 +141,7 @@ press "i" to edit.
 ```
 
 - Paste a following content into Dockerfile
-
+## .cs uzantılı bir dosya çalıştırmak için yar (ortam sağlıyor) ve cs lazım. yarn yüklenince 2si birlikte  yükleniyor.
 ```dockerfile
 FROM node:12-alpine
 WORKDIR /app
