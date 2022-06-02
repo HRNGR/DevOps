@@ -23,3 +23,23 @@ docker stop $(docker ps -a) && docker rm -fv $(docker ps -a) ## Konteynır ları
 docker image rm --force $(docker image ls) ## image'leri siliyor
 
 Dockerda da gitignore u kullanabiliriz..
+
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+  name: frontend
+  labels:
+    tier: frontend
+spec:
+  replicas: 4
+  selector:
+    matchLabels:
+      tier: frontend
+  template:
+    metadata:
+      labels:
+        tier: frontend
+    spec:
+      containers:
+      - name: busybox
+        image: busybox
