@@ -250,7 +250,7 @@ aws ecs register-task-definition --cli-input-json file://clarusshop-task.json
 ```
 
 - List the task definitions. The output of this command shows the family and revision values that you can use together when calling run-task or start-task.
-## başka definition file varsa görmek için
+## başka definition file varsa görmek için giriyoruz
 ```bash
 aws ecs list-task-definitions
 ```
