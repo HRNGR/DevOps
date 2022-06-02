@@ -53,7 +53,7 @@ At the end of the this hands-on training, students will be able to;
 - connect to your instance with SSH.
 
 ```bash
-ssh -i .ssh/xxxxx.pem ec2-user@ec2-3-133-106-98.us-east-2.compute.amazonaws.com
+ssh -i .ssh/FirstKey.pem ec2-user@ec2-3-133-106-98.us-east-2.compute.amazonaws.com
 ```
 
 - Check your AWS CLI version `aws --version` command.(*AWS CLI is already installed on Amazon Linux 2 AMIs, but Amazon ECR functionality is available in the AWS CLI starting with version 1.9.15*).
@@ -220,14 +220,14 @@ aws ecs create-cluster --cluster-name cluster-with-awscli
 - Before you can run a task on your ECS cluster, you must register a task definition. Task definitions are lists of containers grouped together. The following example is a simple task definition that creates a simple web app using the python:alpine container image.
 
 - Create a file and name it as `clarusshop-task.json` under `clarusshop` folder.
-
+##ımage satırını değiştirmeyi unutma ECR/repository  ## arn:aws:iam::837233063764:role/PolicyforECS
 ```json
 {
 	"family": "clarusshop-task-awscli",
 	"networkMode": "awsvpc",
 	"containerDefinitions": [{
 		"name": "clarusshop-app",
-		"image": "046402772087.dkr.ecr.us-east-1.amazonaws.com/clarusshop:latest",
+		"image": "837233063764.dkr.ecr.us-east-1.amazonaws.com/clarusshophrn",
 		"portMappings": [{
 			"containerPort": 80,
 			"protocol": "tcp"
@@ -250,7 +250,7 @@ aws ecs register-task-definition --cli-input-json file://clarusshop-task.json
 ```
 
 - List the task definitions. The output of this command shows the family and revision values that you can use together when calling run-task or start-task.
-
+## başka definition file varsa görmek için
 ```bash
 aws ecs list-task-definitions
 ```
@@ -258,9 +258,9 @@ aws ecs list-task-definitions
 ### Create a Service
 
 - After you have registered a task for your account, you can create a service for the registered task in your cluster. 
-
+## subnet ve Sec_gr u değiştir
 ```bash
-aws ecs create-service --cluster cluster-with-awscli --service-name clarusshop-service --task-definition clarusshop-task-awscli --desired-count 1 --launch-type "FARGATE" --network-configuration "awsvpcConfiguration={subnets=[subnet-077c9758],securityGroups=[sg-e29b36ce],assignPublicIp=ENABLED}"
+aws ecs create-service --cluster cluster-with-awscli --service-name clarusshop-service --task-definition clarusshop-task-awscli --desired-count 2 --launch-type "FARGATE" --network-configuration "awsvpcConfiguration={subnets=[subnet-081ddd6689c0ca67b],securityGroups=[sg-037e30253bb138070],assignPublicIp=ENABLED}"
 ```
 
 - List the services for your cluster. 
