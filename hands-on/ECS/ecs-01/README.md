@@ -258,7 +258,7 @@ aws ecs list-task-definitions
 ### Create a Service
 
 - After you have registered a task for your account, you can create a service for the registered task in your cluster. 
-## subnet ve Sec_gr u değiştir (önceki cluster ın ayarlarına gir)
+## subnet ve Sec_gr u değiştir (önceki cluster ın Networking ayarlarına gir)
 ```bash
 aws ecs create-service --cluster cluster-with-awscli --service-name clarusshop-service --task-definition clarusshop-task-awscli --desired-count 2 --launch-type "FARGATE" --network-configuration "awsvpcConfiguration={subnets=[subnet-081ddd6689c0ca67b],securityGroups=[sg-037e30253bb138070],assignPublicIp=ENABLED}"
 ```
