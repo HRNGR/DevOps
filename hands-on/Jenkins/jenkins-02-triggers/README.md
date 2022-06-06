@@ -252,7 +252,7 @@ git push
 - Go to the the `Configure` and skip to the `Build Triggers` section
   - Select Poll SCM, and enter `* * * * *` (5 stars)
 - `Save` the configuration.
-
+## H * * * * o bir saat içinde herhangi bir zaman
 - Go to the GitHub repo and modify some part in the `Jenkinsfile` and commit.
 
 - Observe the auto build action at Jenkins job.
