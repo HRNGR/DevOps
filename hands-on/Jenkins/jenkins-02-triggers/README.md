@@ -70,7 +70,7 @@ https://github.com/<your-github-account-name>/jenkins-first-webhook-project/
 
 - Check `Branch Specifier`. It must be same branch name with your `jenkins-first-webhook-project` Github repository. If your repository's default branch name is "main", then change "master" to "main".
 
-- Go to `Build` section and choose "Execute Shell Command" step from `Add build step` dropdown menu.
+- Go to `Build` section and choose `Execute Shell Command` step from `Add build step` dropdown menu.
 
 - Write down `python hello-world.py` to execute shell command, in textarea shown.
 
