@@ -257,3 +257,23 @@ git push
 
 - Observe the auto build action at Jenkins job.
 
+## Hocanın gönderdiği örnek ( 2 stage li )
+
+pipeline {
+    agent any
+    stages {
+        stage('build') {
+            steps {
+                echo 'Clarusway_Way to Reinvent Yourself!!!'
+                sh 'echo Integrating Jenkins Pipeline with GitHub Webhook using Jenkinsfile'
+            }
+        }
+        stage('run') {
+            steps {
+                echo 'Clarusway_Way to Reinvent Yourself!!!'
+                sh 'python --version'
+                sh 'python pipeline.py'
+            }
+        }
+    }
+}
