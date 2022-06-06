@@ -11,6 +11,12 @@
 		},
 		{
 			"path": "E:\\mywebsite"
+		},
+		{
+			"path": "..\\jenkinsfile-pipeline-project"
+		},
+		{
+			"path": "..\\jenkins-first-webhook-project"
 		}
 	]
 }
