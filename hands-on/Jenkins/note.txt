@@ -1,0 +1,5 @@
+sudo cat /var/lib/jenkins/secrets/initialAdminPassword
+
+AnsiColor
+Copy Artifact
+Deploy to container
