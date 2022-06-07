@@ -93,7 +93,7 @@ sudo yum install git -y
 
 - For Description : `This Job is packaging Java-Tomcat-Sample Project and creates a war file.`
 
-- At `General Tab`, select Discard old builds, `Strategy` is `Log Rotation`, and for `Days to keep builds` enter `5` and `Max # of builds to keep` enter `3`.
+- At `General Tab`, select `Discard old builds`, `Strategy` is `Log Rotation`, and for `Days to keep builds` enter `5` and `Max # of builds to keep` enter `3`.
 
 - From `Source Code Management` part select `Git`
 
