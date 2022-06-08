@@ -17,6 +17,9 @@
 		},
 		{
 			"path": "..\\jenkins-first-webhook-project"
+		},
+		{
+			"path": "..\\jenkis-maven-project"
 		}
 	]
 }
