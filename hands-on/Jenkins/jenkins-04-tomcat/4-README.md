@@ -189,8 +189,8 @@ cd /opt/tomcat/conf
 - Restart the tomcat server
 
 ```bash
-/opt/tomcat/bin/shutdown.sh
-/opt/tomcat/bin/startup.sh
+sudo /opt/tomcat/bin/shutdown.sh
+sudo /opt/tomcat/bin/startup.sh
 ```
 
 ## Part 5 - Auto start of Tomcat server at boot
