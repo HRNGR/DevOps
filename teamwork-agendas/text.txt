@@ -1,7 +1,5 @@
 Convert Milliseconds into Hours, Minutes, and Seconds with Bash Scripting
 
-
-
 cat $INPUT | awk -v CON_HOURS=$CON_HOURS -v CON_MINUTES=$CON_MINUTES -v DAYS '
 >         { $1=substr($0,0,10) }
 >         { MILLISECONDS = $1 }
