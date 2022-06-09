@@ -103,7 +103,7 @@ mkdir bin
 cd bin
 wget http://<jenkins_master_ip>:8080/jnlpJars/slave.jar
 ```
-
+wget http://54.157.201.238:8080/jnlpJars/slave.jar
 - Go to Jenkins dashboard, click on "Manage Jenkins" from left hand menu.
 
 - Select "Manage Nodes and Clouds"
