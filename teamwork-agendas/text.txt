@@ -1,0 +1,25 @@
+Convert Milliseconds into Hours, Minutes, and Seconds with Bash Scripting
+
+
+
+cat $INPUT | awk -v CON_HOURS=$CON_HOURS -v CON_MINUTES=$CON_MINUTES -v DAYS '
+>         { $1=substr($0,0,10) }
+>         { MILLISECONDS = $1 }
+>         { DAYS = int(MILLISECONDS * CON_DAYS) }
+>         { MILLISECONDS = MILLISECONDS - int( DAYS / CON_DAYS ) }
+>         { HOURS = int(MILLISECONDS * CON_HOURS) }
+>         { MILLISECONDS = MILLISECONDS - int(HOURS / CON_HOURS) }
+>         { MINUTES = int(MILLISECONDS * CON_MINUTES) }
+>         { MILLISECONDS = MILLISECONDS - int(MINUTES / CON_MINUTES) }
+>         { SECONDS = int(MILLISECONDS * CON_SECONDS) }
+>         { MILLISECONDS = MILLISECONDS - int( SECONDS / CON_SECONDS ) }
+>         { $1 = DAYS":"HOURS":"MINUTES":"SECONDS":"MILLISECONDS"ms" }
+>         {print}'
+
+
+
+
+
+
+second=236521
+printf '%dd:%dh:%dm:%ds\n' $((second/86400)) $((second%86400/3600)) $((second%3600/60))   $((second%60))2d:17h:42m:1s
