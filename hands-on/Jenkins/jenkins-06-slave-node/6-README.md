@@ -90,7 +90,7 @@ ifconfig
 - Go to the Jenkins Master server and test ssh connection.
 
 ```bash
-ssh root@<slave-node-ip-number>
+ssh root@172.31.85.254
 exit
 ```
 
@@ -103,7 +103,7 @@ mkdir bin
 cd bin
 wget http://<jenkins_master_ip>:8080/jnlpJars/slave.jar
 ```
-wget http://54.157.201.238:8080/jnlpJars/slave.jar
+## wget http://54.157.201.238:8080/jnlpJars/slave.jar
 - Go to Jenkins dashboard, click on "Manage Jenkins" from left hand menu.
 
 - Select "Manage Nodes and Clouds"
@@ -124,7 +124,7 @@ wget http://54.157.201.238:8080/jnlpJars/slave.jar
 
 - Select `Launch agent via execution of command on the master` from dropdown menu in the "Launch method" field.
 
-- Enter `ssh -i /var/lib/jenkins/.ssh/<the_key_file> root@<slave_ip> java -jar /root/bin/slave.jar` in the "Launch command" field.
+- Enter `ssh -i /var/lib/jenkins/.ssh/<the_key_file> root@<slave_ip> java -jar /root/bin/slave.jar` in the "Launch command" field.   ## Private IP
 
 - Select `Keep this agent online as much as possible` from dropdown menu in the "Availability" field.
 
