@@ -219,7 +219,7 @@ pipeline {
   - From `Add build step`, select the `Process Job DSLs`.
 
   - for `Look on Filesystem` `DSL Scripts`, enter `MavenProjectDSL.groovy`
-  ## SAVE 
+  ## SAVE  
 - Now click the  `Build Now` option, it will fail. Check the console log for the fail reason.
 
 - Go to `Manage Jenkins` ,  select the `In-process Script Approval`, `approve` the script.
