@@ -123,7 +123,7 @@ wget http://<jenkins_master_ip>:8080/jnlpJars/slave.jar
 - Enter `Linux` in the "Labels" field.
 
 - Select `Launch agent via execution of command on the master` from dropdown menu in the "Launch method" field.
-id_rsa
+<the_key_file> id_rsa
 - Enter `ssh -i /var/lib/jenkins/.ssh/<the_key_file> root@<slave_ip> java -jar /root/bin/slave.jar` in the "Launch command" field.   ## Private IP
 
 - Select `Keep this agent online as much as possible` from dropdown menu in the "Availability" field.
