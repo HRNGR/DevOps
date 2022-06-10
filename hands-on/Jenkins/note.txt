@@ -1,5 +1,7 @@
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
+Locale =dil ingilizce olur
+
 AnsiColor
 Copy Artifact
 Deploy to container
