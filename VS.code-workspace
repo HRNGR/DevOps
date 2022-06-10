@@ -20,6 +20,9 @@
 		},
 		{
 			"path": "..\\jenkins-maven-project"
+		},
+		{
+			"path": "..\\todo-app"
 		}
 	]
 }
