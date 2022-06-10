@@ -2,7 +2,7 @@ initialAdminPassword
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
 
-Temel Jenkins Plugin'ler;
+Dil Jenkins Plugin'ı;
 Locale =dil ingilizce olur
 
 Temel Jenkins Plugin'ler;
@@ -21,8 +21,5 @@ Copy Artifact
 Deploy to container
 Terraform
 Git Server
-white_check_mark
-eyes
-raised_hands
 
 ----------------------------------
