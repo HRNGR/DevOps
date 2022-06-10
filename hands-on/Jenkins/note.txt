@@ -1,7 +1,28 @@
+initialAdminPassword
 sudo cat /var/lib/jenkins/secrets/initialAdminPassword
 
+
+Temel Jenkins Plugin'ler;
 Locale =dil ingilizce olur
 
+Temel Jenkins Plugin'ler;
 AnsiColor
 Copy Artifact
 Deploy to container
+
+Kullanılabilecek Jenkins Plugin'ler;
+GitHub Integration
+Pipeline: GitHub
+Docker
+Docker Pipeline
+Ansible
+AnsiColor
+Copy Artifact
+Deploy to container
+Terraform
+Git Server
+white_check_mark
+eyes
+raised_hands
+
+----------------------------------
