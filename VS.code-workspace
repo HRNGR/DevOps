@@ -23,6 +23,12 @@
 		},
 		{
 			"path": "..\\todo-app"
+		},
+		{
+			"path": "..\\ecr-2"
+		},
+		{
+			"path": "..\\todo-app-node-project"
 		}
 	]
 }
