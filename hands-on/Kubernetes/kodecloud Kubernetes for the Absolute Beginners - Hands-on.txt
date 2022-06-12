@@ -32,8 +32,8 @@ kubectl run httpd --image=httpd:alpine --port=80 --expose
 Create a new ConfigMap for the webapp-color POD. Use the spec given below. CheckCompleteIncomplete ConfigName Name: webapp-config-map, Data: APP_COLOR=darkblue
 kubectl create configmap webapp-config-map --from-literal=APP_COLOR=darkblue
 
-Mevcutta çalışan bir pod un yaml dosyasını oluşturmak için
-k get pod webapp -o yaml> pod.yaml
+Mevcutta çalışan bir pod un yaml dosyasını oluşturmak için If you are not given a pod definition file, you may extract the definition to a file using the below command:
+kubectl get pod <pod-name> -o yaml > pod-definition.yaml
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -61,8 +61,7 @@ kubectl scale --replicas=6 replicaset my-replicaset
                             (types)       (name)
 -----------------
 -----------------
-If you are not given a pod definition file, you may extract the definition to a file using the below command:
-kubectl get pod <pod-name> -o yaml > pod-definition.yaml
+
 
 Then edit the file to make the necessary changes, delete and re-create the pod.
 
