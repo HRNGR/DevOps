@@ -1,16 +1,10 @@
 {
 	"folders": [
 		{
-			"path": "..\\..\\.ssh"
-		},
-		{
 			"path": "..\\clarusway_devops_10_22"
 		},
 		{
 			"path": "."
-		},
-		{
-			"path": "E:\\mywebsite"
 		},
 		{
 			"path": "..\\jenkinsfile-pipeline-project"
@@ -29,6 +23,9 @@
 		},
 		{
 			"path": "..\\todo-app-node-project"
+		},
+		{
+			"path": "G:\\mywebsite"
 		}
 	]
 }
