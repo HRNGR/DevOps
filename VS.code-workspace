@@ -7,24 +7,6 @@
 			"path": "."
 		},
 		{
-			"path": "..\\jenkinsfile-pipeline-project"
-		},
-		{
-			"path": "..\\jenkins-first-webhook-project"
-		},
-		{
-			"path": "..\\jenkins-maven-project"
-		},
-		{
-			"path": "..\\todo-app"
-		},
-		{
-			"path": "..\\ecr-2"
-		},
-		{
-			"path": "..\\todo-app-node-project"
-		},
-		{
 			"path": "G:\\mywebsite"
 		}
 	]
