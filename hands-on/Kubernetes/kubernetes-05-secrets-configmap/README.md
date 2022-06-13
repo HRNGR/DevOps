@@ -72,6 +72,8 @@ $ kubectl create secret generic db-user-pass-key --from-file=username=./username
 >```bash
 >kubectl create secret generic dev-db-secret --from-literal=username=devuser --from-literal=password='S!B\*d$zDsb='
 >```
+## From kubekode ## k create secret generic db-secret --from-literal=DB_Host=sql01 --from-literal=DB_User=root --from-literal=DB_Password=password123
+
 >You do not need to escape special characters in passwords from files (--from-file).
 
 - You can check that the secret was created:
