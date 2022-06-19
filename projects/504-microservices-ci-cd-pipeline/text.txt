@@ -4,3 +4,10 @@
 
 8 microservis
 5 pipeline
+
+
+DEV--Built unit test
+DEV--nightly-(Cronjob)-functional test
+Release--weekly-(Cronjob)-manuel test
+Release--weekly-staging-(Cronjob)-rancher cluster orchestration tools
+Master--prod-
