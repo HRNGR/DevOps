@@ -55,6 +55,10 @@ set-----------
 kubectl set image deployment mydeployment nginx=nginx:1.18-perl
 kubectl set image pod redis redis123=redis
 kubectl scale deploy web-flask-deploy --replicas=3
+
+kubectl get po example -o yaml > example.yaml (mevcutta çalışan bit pod un yaml dosyasını yazmak için kullanılır)
+kubectl replace -f example.yaml --force (ve artık hazırlanan yaml dosyasıyla çalışması için bağlanır)
+
 kubectl replace -f rs-definition.yaml
 kubectl scale --replicas=6 rs-definition.yaml
 kubectl scale --replicas=6 replicaset my-replicaset
@@ -72,3 +76,6 @@ Replica Control RC
 -----------------------
 k get replicaset
 k get replicationcontroller
+
+
+
