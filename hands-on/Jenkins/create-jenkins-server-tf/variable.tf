@@ -4,12 +4,9 @@ variable "region" {
   default = "us-east-2"
 }
 variable "mykey" {
-<<<<<<< HEAD
   default = "FirstKey"
-=======
-  default = "alexd"
->>>>>>> 58bbc566fa737fbb7f647b8f36f4ecc34ccea104
 }
+
 variable "tags" {
   default = "jenkins-server"
 }
