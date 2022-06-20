@@ -34,6 +34,7 @@ kubectl create configmap webapp-config-map --from-literal=APP_COLOR=darkblue
 
 Mevcutta çalışan bir pod un yaml dosyasını oluşturmak için If you are not given a pod definition file, you may extract the definition to a file using the below command:
 kubectl get pod <pod-name> -o yaml > pod-definition.yaml
+kubectl replace -f example.yaml --force (ve artık hazırlanan yaml dosyasıyla çalışması için bağlanır)
 
 ------------------------------------------------------------------------------------------------------------
 
@@ -55,9 +56,6 @@ set-----------
 kubectl set image deployment mydeployment nginx=nginx:1.18-perl
 kubectl set image pod redis redis123=redis
 kubectl scale deploy web-flask-deploy --replicas=3
-
-kubectl get po example -o yaml > example.yaml (mevcutta çalışan bit pod un yaml dosyasını yazmak için kullanılır)
-kubectl replace -f example.yaml --force (ve artık hazırlanan yaml dosyasıyla çalışması için bağlanır)
 
 kubectl replace -f rs-definition.yaml
 kubectl scale --replicas=6 rs-definition.yaml
