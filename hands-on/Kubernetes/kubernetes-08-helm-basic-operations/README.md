@@ -353,7 +353,6 @@ data:
   myvalue: "hrn-chart configmap example"
   course: {{ .Values.course }}
   topic: {{ .Values.lesson.topic }}
-=======
   myvalue: "clarus-chart configmap example"
   course: {{ quote .Values.course }}
   topic: {{ upper .Values.lesson.topic }}
