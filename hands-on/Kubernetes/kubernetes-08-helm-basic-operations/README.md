@@ -569,7 +569,6 @@ helm plugin install https://github.com/chartmuseum/helm-push.git
 - In hrn-chart/Chart.yaml, set the `version` value to `0.2.0`and push the chart.
 
 ```bash
-<<<<<<< HEAD
 helm cm-push hrn-chart mylocalrepo
 cd
 helm cm-push clarus-chart mylocalrepo
