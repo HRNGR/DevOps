@@ -4,7 +4,7 @@
 
 8 microservices
 5 pipelines
-
+5 Branches
 
 ((( https://nvie.com/posts/a-successful-git-branching-model/ )))
 
