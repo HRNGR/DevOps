@@ -6,6 +6,8 @@
 5 pipelines
 
 
+((( https://nvie.com/posts/a-successful-git-branching-model/ )))
+
 DEV--Built unit test
 DEV--nightly-(Cronjob)-functional test
 Release--weekly-(Cronjob)-manuel test
