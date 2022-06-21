@@ -571,7 +571,6 @@ helm plugin install https://github.com/chartmuseum/helm-push.git
 ```bash
 <<<<<<< HEAD
 helm cm-push hrn-chart mylocalrepo
-=======
 cd
 helm cm-push clarus-chart mylocalrepo
 ```
