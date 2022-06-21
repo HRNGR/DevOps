@@ -349,7 +349,6 @@ kind: ConfigMap
 metadata:
   name: {{ .Release.Name }}-config
 data:
-<<<<<<< HEAD
   myvalue: "hrn-chart configmap example"
   course: {{ .Values.course }}
   topic: {{ .Values.lesson.topic }}
