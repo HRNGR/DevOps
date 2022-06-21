@@ -245,7 +245,6 @@ helm uninstall myvalue
 helm install --debug --dry-run setflag hrn-chart --set course=AWS
 ```
 
-<<<<<<< HEAD
 - Install the hrn-chart.
 
 ```bash
@@ -270,9 +269,6 @@ kubectl describe cm hrn-chart-config
 ```bash
 helm uninstall setflag
 ```
-
-=======
->>>>>>> bb15a75f1f3dba56bb542603c9727630f1f79c39
 - We can also get values with built-in objects. Objects can be simple and have just one value. Or they can contain other objects or functions. For example. the Release object contains several objects (like Release.Name) and the Files object has a few functions.
 
 - Edit the hrn-chart/templates/configmap.yaml as below.
@@ -301,7 +297,6 @@ lesson:
   topic: helm
 ```
 
-<<<<<<< HEAD
 - Edit the hrn-chart/templates/configmap.yaml as below.
 
 ```yaml
@@ -341,11 +336,10 @@ helm install --debug --dry-run morevalues hrn-chart
 ```
 
 - Helm has over 60 available functions. Some of them are defined by the [Go template language](https://pkg.go.dev/text/template) itself. Most of the others are part of the [Sprig template](https://masterminds.github.io/sprig/) library. We have already seen the quote. Let's see some other functions.
-=======
+
 - So far, we've seen how to place information into a template. But that information is placed into the template unmodified. Sometimes we want to transform the supplied data in a way that makes it more useful to us.
 
 - Helm has over 60 available functions. Some of them are defined by the [Go template language](https://pkg.go.dev/text/template) itself. Most of the others are part of the [Sprig template](https://masterminds.github.io/sprig/) library. Let's see some functions.
->>>>>>> bb15a75f1f3dba56bb542603c9727630f1f79c39
 
 - Update the `hrn-chart/templates/configmap.yaml` as below.
 
