@@ -357,7 +357,7 @@ data:
   myvalue: "clarus-chart configmap example"
   course: {{ quote .Values.course }}
   topic: {{ upper .Values.lesson.topic }}
->>>>>>> bb15a75f1f3dba56bb542603c9727630f1f79c39
+
   time: {{ now | date "2006.01.02" | quote }} 
 ```
 
