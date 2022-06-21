@@ -2,8 +2,8 @@
 
 
 
-8 microservis
-5 pipeline
+8 microservices
+5 pipelines
 
 
 DEV--Built unit test
