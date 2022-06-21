@@ -574,7 +574,6 @@ helm cm-push hrn-chart mylocalrepo
 =======
 cd
 helm cm-push clarus-chart mylocalrepo
->>>>>>> bb15a75f1f3dba56bb542603c9727630f1f79c39
 ```
 
 - Update and search the mylocalrepo.
