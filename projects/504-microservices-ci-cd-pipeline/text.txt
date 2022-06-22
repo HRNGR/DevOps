@@ -12,3 +12,7 @@ DEV--nightly-(Cronjob)-functional test
 Release--weekly-(Cronjob)-manuel test
 Release--weekly-staging-(Cronjob)-rancher cluster orchestration tools
 Master--prod-
+
+
+git remote set-url origin https://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@github.com/HRNGR/petclinic-microservices-with-db.git
+git remote set-url origin https://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@github.com/HRNGR/petclinic-microservices-with-db-ohio.git
