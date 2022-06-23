@@ -1,4 +1,9 @@
 
+Java kodu executable hale getirmek için maven ile JAR file haline getiriyorum
+
+Jacoco plugin ile unit          ( Unit unit ele alıyor)
+Selenium plugin ile factional   (Bütün halde ele alıyor birbiri ile hiyerarşisini test ediyor)
+
 
 
 8 microservices
@@ -15,4 +20,8 @@ Master--prod-
 
 
 git remote set-url origin https://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@github.com/HRNGR/petclinic-microservices-with-db.git
-git remote set-url origin https://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@github.com/HRNGR/petclinic-microservices-with-db-ohio.git
+git remote set-url origin https://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@github.com/HRNGR/petclinic-microservices-with-db-ohio.git
+
+
+Bunu bi yere yazzzz
+git push --set-upstream origin feature/msp-16
