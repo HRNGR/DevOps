@@ -18,8 +18,11 @@ Release--weekly-(Cronjob)-manuel test
 Release--weekly-staging-(Cronjob)-rancher cluster orchestration tools
 Master--prod-
 
-
-
+---------------------------------
+terraform destroy -auto-approve -no-color
+---------------------------------
+terraform loglarının başında ve sonundaki  [0m[0m bunun gibi bozuk karakterleri görmemek için -no-color ekleyebilirsiniz
+---------------------------------
 
 git config --global user.email "gurharun@gmail.com"
 git config --global user.name "HRNGR"
@@ -34,6 +37,9 @@ Bunu bi yere yazzzz
 git push --set-upstream origin feature/msp-16
 
 
+---------------------------------
+call-ansible-test-dev.key path i neresi
+"./var/lib/jenkins/workspace/test-creating-qa-automation-infrastructure "
 ---------------------------------
 sudo usermod -s /bin/bash jenkins
 sudo su - jenkins
