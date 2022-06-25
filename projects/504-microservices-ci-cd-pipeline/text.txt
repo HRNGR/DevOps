@@ -19,9 +19,27 @@ Release--weekly-staging-(Cronjob)-rancher cluster orchestration tools
 Master--prod-
 
 
-git remote set-url origin https://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@github.com/HRNGR/petclinic-microservices-with-db.git
-git remote set-url origin https://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@github.com/HRNGR/petclinic-microservices-with-db-ohio.git
 
+
+git config --global user.email "gurharun@gmail.com"
+git config --global user.name "HRNGR"
+hocam bunları girdinmi
+git config --global credential.helper store
+
+git remote set-url origin https://TOKEN@github.com/HRNGR/petclinic-microservices-with-db.git
+git remote set-url origin https://TOKEN@github.com/HRNGR/petclinic-microservices-with-db-ohio.git
+git config --global init.defaultBranch main
 
 Bunu bi yere yazzzz
 git push --set-upstream origin feature/msp-16
+
+
+---------------------------------
+sudo usermod -s /bin/bash jenkins
+sudo su - jenkins
+
+kubectl describe node ip-172-31-21-229.ec2.internal
+
+cd infrastructure/dev-k8s-terraform
+terraform destroy -auto-approve
+----------------------------------
