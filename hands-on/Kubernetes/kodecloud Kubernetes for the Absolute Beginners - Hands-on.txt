@@ -62,6 +62,8 @@ kubectl scale --replicas=6 rs-definition.yaml
 kubectl scale --replicas=6 replicaset my-replicaset
                             (types)       (name)
 -----------------
+k get pods --selector env=dev --no-headers | wc -l
+k get all --selector env=prod,bu=finance,tier=frontend
 -----------------
 
 
