@@ -48,4 +48,41 @@ kubectl describe node ip-172-31-21-229.ec2.internal
 
 cd infrastructure/dev-k8s-terraform
 terraform destroy -auto-approve
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ----------------------------------
+:jenkins dan server'a bağlanma:
+
+sudo usermod -s /bin/bash jenkins
+sudo su - jenkins
+
+cd .ssh
+ls
+ssh -i "matt-petclinic-qa.key" ubuntu@ec2-3-83-220-109.compute-1.amazonaws.com
+kubectl get ns
+kubectl get ingress -n petclinic-qa
+---------------------------------
+
+
+
+outband
+
+3627 4 tane satırı baştan gir clarusway i değiştir
