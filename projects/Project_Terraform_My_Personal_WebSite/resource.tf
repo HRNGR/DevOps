@@ -8,7 +8,7 @@
 # #rout53 record s3
 # resource "aws_route53_record" "main" {
 #   zone_id = aws_route53_zone.main.zone_id
-#   name    = "example.com"
+#   name    = "harungur.com"
 #   type    = "A"
 
 
@@ -78,7 +78,7 @@ resource "aws_instance" "Personal_Website" {
   vpc_security_group_ids = [aws_security_group.webserverSG.id]
   user_data              = file("./scrip.sh")
   tags = {
-    "Name" = "Personal_Website"
+    "Name" = "My_Personal_Website"
   }
 }
 

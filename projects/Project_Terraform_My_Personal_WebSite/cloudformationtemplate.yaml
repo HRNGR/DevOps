@@ -1,15 +1,15 @@
 AWSTemplateFormatVersion: 2010-09-09
 
 Description: |
-  Personal Website with Cloudformation 
+  My Personal Website with Cloudformation 
 
 Parameters:
   myVPC:
-    Description: Select your VPC
+    Description: Select VPC
     Type: AWS::EC2::VPC::Id
 
   myKP:
-    Description: Select your Key
+    Description: Select Key
     Type: AWS::EC2::KeyPair::KeyName
 
 Resources:
@@ -39,10 +39,10 @@ LogicalID:
 ACMCertificate: 
     Type: "AWS::CertificateManager::Certificate"
     Properties: 
-      DomainName: example.com
+      DomainName: harungur.com
       DomainValidationOptions:
-            - DomainName: www.example.com
-              HostedZoneId: ZZZHHHHWWWWAAA
+            - DomainName: www.harungur.com
+              HostedZoneId: XXXXXXXXXXXX
       ValidationMethod: DNS 
 
 
