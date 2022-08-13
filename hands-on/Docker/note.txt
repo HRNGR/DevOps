@@ -1,26 +1,39 @@
+Başlangıç
+--------------------
+sudo systemctl start docker
+sudo systemctl enable docker
+sudo systemctl status docker
+sudo usermod -a -G docker ec2-user
+newgrp docker
+--------------------
+Mevcut durum listeleme
+--------------------
+docker ps -a
+docker container ls
+docker network ls
 docker images // image leri listeler
+--------------------
+Bilgi inceleme
+docker version
+docker info
+docker image inspect ubuntu
+docker image inspect ubuntu:18.04
+## kurulu işlletim sistemini öğrenme 
+## uname
+--------------------
+containerlara bağlanma
+docker start 756 && docker attach 756 // container çalıştır ve bağlan
+--------------------
+Silme
 docker rmi ubuntu // ubuntu image ini silver
 docker container prune // tüm containerları ini silver
 docker volume prune // tüm volume leri ini silver
-docker ps -a // docker container ls //container ları listeler 
-docker start 756 && docker attach 756 // container çalıştır ve bağlan
-## kurulu işlletim sistemini öğrenme 
-## uname
-Defaults to ubuntu:latest
-docker image inspect ubuntu
-Ubuntu with tag 18.04
-docker image inspect ubuntu:18.04
-
-
+docker stop $(docker ps -a) && docker rm -fv $(docker ps -a) ## Konteynır ları stop ve remove için
+docker image rm --force $(docker image ls) ## image'leri siliyor
+docker system prune -af
+--------------------
+??????????
 docker-compose up
 docker-compose down
-docker system prune -af
-
-docker image rm -f $(docker image ls)   ## Image lerin tamamını silmek için
-
-docker stop $(docker ps -a) && docker rm -fv $(docker ps -a) ## Konteynır ları stop ve remove için
-
-docker image rm --force $(docker image ls) ## image'leri siliyor
 
 Dockerda da gitignore u kullanabiliriz..
-
