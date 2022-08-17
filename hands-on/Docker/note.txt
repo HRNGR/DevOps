@@ -20,6 +20,7 @@ docker image inspect ubuntu
 docker image inspect ubuntu:18.04
 ## kurulu işlletim sistemini öğrenme 
 ## uname
+docker logs --tail 200 <container_adi> ## contatinın son 200 loguna bakmayı sağlan
 --------------------
 containerlara bağlanma
 docker start 756 && docker attach 756 // container çalıştır ve bağlan
