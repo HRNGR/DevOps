@@ -171,7 +171,7 @@ docker container ls
 - Login in to Docker with credentials.
 
 ```bash
-docker login
+docker login 
 ```
 
 - Push newly built image to Docker Hub, and show the updated repo on Docker Hub.
@@ -205,7 +205,7 @@ docker image ls
 - Run the newly built image as container in detached mode, connect host `port 80` to container `port 80`, and name container as `welcome`. Then list running containers and connect to EC2 instance from the browser to show the Flask app is running.
 
 ```bash
-docker run -d --name welcome -p 8080:80 clarusway/flask-app:2.0
+docker run -d --name welcome1 -p 8080:80 clarusway/flask-app:2.0     ## 2. kez oluşturulurken name değiştirilmeli...!!!
 docker ps
 ```
 

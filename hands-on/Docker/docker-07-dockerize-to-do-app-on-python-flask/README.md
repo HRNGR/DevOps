@@ -246,24 +246,30 @@ if __name__== '__main__':
 - Create another file called `requirements.txt` in your project folder, add the followings as package list.
 
 ```bash
+echo '
 flask
 flask-mysql
+' > requirements.txt
+
 ```
 
 - Create a Dockerfile with followings.
 
 ```bash
+echo '
 FROM python:alpine
 COPY . /app
 WORKDIR /app
 RUN pip install -r requirements.txt
 EXPOSE 80
 CMD python ./to-do-api.py
+' > Dockerfile
 ```
 
 - Create a file called `docker-compose.yml` in your project folder with following setup.
 
 ```yaml
+echo '
 version: "3.7"
 
 services:
@@ -289,6 +295,7 @@ services:
 networks:
     clarusnet:
         driver: bridge
+' > docker-compose.yml
 ```
 
 - Compose up your application.

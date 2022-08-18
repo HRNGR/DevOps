@@ -35,14 +35,16 @@ mkdir clarusweb-nginx && cd clarusweb-nginx
 - Create an index.html file.
 
 ```bash
-echo "<h1>Welcome to Clarusway<h1>" > index.html
+echo "<h1>Welcome to Harun<h1>" > index.html
 ```
 
 - Create a Dockerfile and input following statements.
 
 ```txt
+echo '
 FROM nginx:alpine
 COPY . /usr/share/nginx/html
+' > Dockerfile
 ```
 
 - Build an image from this Dockerfile.
@@ -75,6 +77,7 @@ mkdir clarusweb-env && cd clarusweb-env
 - Create an clarusweb.html file and input following statements. Pay attention to `COLOR` statement. We will change background color with `env`.
 
 ```txt
+echo '
 <html>
 <head>
 <title>clarusweb</title>
@@ -83,11 +86,13 @@ mkdir clarusweb-env && cd clarusweb-env
 <h1>Welcome to Clarusway<h1>
 </body>
 </html>
+' > clarusweb.html
 ```
 
 - Create a Dockerfile and input following statements.
 
 ```txt
+echo "
 FROM nginx:latest
 ENV COLOR="red"
 RUN apt-get update ; apt-get install curl -y
@@ -95,6 +100,7 @@ WORKDIR /usr/share/nginx/html
 COPY . /usr/share/nginx/html
 HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 CMD curl -f http://localhost/ || exit 1
 CMD sed -e s/COLOR/"$COLOR"/ clarusweb.html > index.html ; rm clarusweb.html ; nginx -g 'daemon off;'
+" > Dockerfile
 ```
 
 - Build an image from this Dockerfile.

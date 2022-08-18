@@ -40,8 +40,10 @@ cd shell-exec-cmd-entrypoint
 - create a Dockerfile and input following statements.
 
 ```txt
+echo '
 FROM ubuntu
 CMD echo "hello"
+' > Dockerfile
 ```
 
 - Build an image from this Dockerfile and tag it as "cmd-shell:v1".

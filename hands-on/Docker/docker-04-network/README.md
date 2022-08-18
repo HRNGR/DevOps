@@ -238,7 +238,7 @@ docker network rm clarusnet
 - Run a `nginx` web server, name the container as `ng`, and bind the web server to host port 8080 command to run alpine shell. Explain `--rm` and `-p` flags and port binding.
 
 ```bash
-docker container run --rm -d -p 8080:80 --name ng nginx
+docker container run --rm -d -p 8080:80 --name ng nginx ## -d ile container start olur, --rm komutu ile container stop olursa otomatik olarak silinir.
 ```
 
 - Add a security rule for protocol HTTP port 8080 and show Nginx Web Server is running on Docker Machine.
