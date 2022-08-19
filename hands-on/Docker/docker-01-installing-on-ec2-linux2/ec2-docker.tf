@@ -1,5 +1,4 @@
 # Please change the key_name and your config file 
-+
 
 provider "aws" {
   region  = "us-east-1"
