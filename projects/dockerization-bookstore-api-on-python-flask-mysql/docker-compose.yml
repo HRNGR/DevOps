@@ -24,4 +24,5 @@ services:
       - clarusnet
 
 networks:
-  clarusnet:
+    clarusnet:
+        driver: bridge
