@@ -5,15 +5,15 @@ services:
     image: mysql:5.7
     container_name: database
     environment:
-      MYSQL_ROOT_PASSWORD: P123456p
-      MYSQL_DATABASE: bookstore_db
-      MYSQL_USER: clarusway
-      MYSQL_PASSWORD: Clarusway_1
+      MYSQL_ROOT_PASSWORD: L123456p
+      MYSQL_DATABASE: librarian_db
+      MYSQL_USER: admin
+      MYSQL_PASSWORD: admin123
     networks:
-      - clarusnet
+      - librariannet
 
   myapp:
-    image: hrngr/bookstoreapi:latest
+    image: hrngr/librarianapi:latest
     container_name: myapp
     restart: always
     depends_on:
@@ -21,8 +21,8 @@ services:
     ports:
       - "80:80"
     networks:
-      - clarusnet
+      - librariannet
 
 networks:
-    clarusnet:
+    librariannet:
         driver: bridge
