@@ -23,7 +23,7 @@ docker image inspect ubuntu:18.04
 docker logs --tail 200 <container_adi> ## contatinın son 200 loguna bakmayı sağlan
 --------------------
 containerlara bağlanma
-docker start 756 && docker attach 756 // container çalıştır ve bağlan
+docker start b7d && docker attach b7d // container çalıştır ve bağlan
 --------------------
 Silme
 docker rmi ubuntu // ubuntu image ini silver
@@ -33,8 +33,7 @@ docker stop $(docker ps -a) && docker rm -fv $(docker ps -a) ## Konteynır ları
 docker image rm --force $(docker image ls) ## image'leri siliyor
 docker system prune -af
 --------------------
-??????????
-docker-compose up
+docker-compose up ##Docker composed çalıştırma
 docker-compose down
 
 Dockerda da gitignore u kullanabiliriz..
