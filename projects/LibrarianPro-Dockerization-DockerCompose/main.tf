@@ -18,7 +18,7 @@ provider "aws" {
 
 provider "github" {
   # Configuration options
-  token = "TOKENXXX"
+    token = "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"
 }
 
 resource "github_repository" "myrepo" {
@@ -67,7 +67,7 @@ resource "aws_instance" "tf-librarian-ec2" {
           -o /usr/local/bin/docker-compose
           chmod +x /usr/local/bin/docker-compose
           mkdir -p /home/ec2-user/librarian-api
-          TOKEN="TOKENXXX"
+          TOKEN="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"
           FOLDER="https://$TOKEN@raw.githubusercontent.com/HRNGR/librarianPro/main/"
           curl -s --create-dirs -o "/home/ec2-user/librarian-api/app.py" -L "$FOLDER"LibrarianPro.py
           curl -s --create-dirs -o "/home/ec2-user/librarian-api/requirements.txt" -L "$FOLDER"requirements.txt
