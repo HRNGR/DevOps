@@ -34,9 +34,9 @@ def init_librarian_db():
     data = """
     INSERT INTO librarian_db.books (title, author, is_sold)
     VALUES
-        ("OLASILIKSIZ", "ADAMFAWER", 1 ),
-        ("MANALISA CODE", "DAN BROWN", 0),
-        ("Alican", "Anonim", 0);
+        ("OLASILIKSIZ", "ADAM FAWER", 1 ),
+        ("The Vanishing Half: A Novel", "Brit Bennett", 0),
+        ("CİN ALİ", "ANONIM, Harun GUR", 0);
     """
     cursor.execute(drop_table)
     cursor.execute(books_table)
