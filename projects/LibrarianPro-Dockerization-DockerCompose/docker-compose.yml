@@ -24,4 +24,4 @@ services:
       - librariannet
 
 networks:
-    librariannet:
+  librariannet:
