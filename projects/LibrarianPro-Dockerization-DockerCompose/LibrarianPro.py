@@ -17,13 +17,13 @@ connection = mysql.connect()
 connection.autocommit(True)
 cursor = connection.cursor()
 
-# Write a function named `init_bookstore_db` which initilazes the bookstore db
+# Write a function named `init_librarian_db` which initilazes the librarian db
 # Create books table within sqlite db and populate with sample data
 # Execute the code below only once.
-def init_bookstore_db():
-    drop_table = 'DROP TABLE IF EXISTS bookstore_db.books;'
+def init_librarian_db():
+    drop_table = 'DROP TABLE IF EXISTS librarian_db.books;'
     books_table = """
-    CREATE TABLE bookstore_db.books(
+    CREATE TABLE librarian_db.books(
     book_id INT NOT NULL AUTO_INCREMENT,
     title VARCHAR(100) NOT NULL,
     author VARCHAR(100),
@@ -32,11 +32,11 @@ def init_bookstore_db():
     )ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
     """
     data = """
-    INSERT INTO bookstore_db.books (title, author, is_sold)
+    INSERT INTO librarian_db.books (title, author, is_sold)
     VALUES
-        ("Where the Crawdads Sing", "Delia Owens", 1 ),
-        ("The Vanishing Half: A Novel", "Brit Bennett", 0),
-        ("1st Case", "James Patterson, Chris Tebbetts", 0);
+        ("OLASILIKSIZ", "ADAMFAWER", 1 ),
+        ("MANALISA CODE", "DAN BROWN", 0),
+        ("Alican", "Anonim", 0);
     """
     cursor.execute(drop_table)
     cursor.execute(books_table)
@@ -122,11 +122,11 @@ def remove_book(book):
     return True if row is None else False
 
 
-# Write a function named `home` which returns 'Welcome to the Callahan's Bookstore API Service',
+# Write a function named `home` which returns 'Welcome to the Harun's librarian API Service',
 # and assign to the static route of ('/')
 @app.route('/')
 def home():
-    return "Welcome to Callahan's Bookstore API Service"
+    return "Welcome to Harun's Librarian API Service"
 
 # Write a function named `get_books` which returns all books in JSON format for `GET`,
 # and assign to the static route of ('/books')
@@ -188,5 +188,5 @@ def bad_request(error):
 
 # Add a statement to run the Flask application which can be reached from any host on port 80.
 if __name__== '__main__':
-    init_bookstore_db()
+    init_librarian_db()
     app.run(host='0.0.0.0', port=80)
