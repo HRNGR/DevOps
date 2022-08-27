@@ -18,7 +18,7 @@ provider "aws" {
 
 provider "github" {
   # Configuration options
-  token = ""
+  token = "take a token"
 }
 
 resource "github_repository" "myrepo" {
