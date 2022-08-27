@@ -11,6 +11,12 @@ terraform {
   }
 }
 
+## Her projede projenin tag ini yazabiliriz.
+
+locals {
+  mytag = "proje adi"
+}
+
 data "aws_ami" "tf_ami" {
     most_recent = true
     owners = ["self"]
@@ -20,9 +26,6 @@ data "aws_ami" "tf_ami" {
     }
 }
 
-locals {
-  mytag = "hrn"
-}
 
 resource "aws_instance" "tf-ec2" {
     ami = data.aws_ami.tf-ami.id
