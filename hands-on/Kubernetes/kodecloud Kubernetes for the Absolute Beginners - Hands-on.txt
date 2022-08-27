@@ -33,7 +33,7 @@ Create a new ConfigMap for the webapp-color POD. Use the spec given below. Check
 kubectl create configmap webapp-config-map --from-literal=APP_COLOR=darkblue
 
 Mevcutta çalışan bir pod un yaml dosyasını oluşturmak için If you are not given a pod definition file, you may extract the definition to a file using the below command:
-kubectl get pod <pod-name> -o yaml > pod-definition.yaml
+kubectl get pod <pod-name> -o yaml > unknown-pod-definition.yaml
 kubectl replace -f example.yaml --force (ve artık hazırlanan yaml dosyasıyla çalışması için bağlanır)
 
 ------------------------------------------------------------------------------------------------------------
