@@ -30,7 +30,7 @@ resource "github_repository" "githubrepo" {
   visibility = "private"
 }
 
-
+## Döngü ile ingress poort tanımlama      !!!!!!!!!!!!!!!
 variable "sg-ports" {
   default = [80, 22, 8080]
 }
@@ -177,3 +177,7 @@ output "aws-account-id" {
   value = "${data.aws_caller_identity.current.account_id}"
 }
 
+## github token output olarak alma.
+# output "github-tokend" {
+#   value = "${local.github-tokend}"
+# }
