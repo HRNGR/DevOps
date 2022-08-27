@@ -10,7 +10,7 @@ Mevcut durum listeleme
 --------------------
 docker ps -a
 docker container ls
-docker network ls
+docker network ls       ## Default networks ; Bridge, Null, Host
 docker images // image leri listeler
 --------------------
 Bilgi inceleme
