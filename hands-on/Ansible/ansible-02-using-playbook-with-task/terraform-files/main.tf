@@ -67,7 +67,7 @@ resource "null_resource" "config" {
     host = aws_instance.nodes[0].public_ip
     type = "ssh"
     user = "ec2-user"
-    private_key = file("~/.ssh/tyler-team.pem")
+    private_key = file("~/.ssh/FirstKey.pem")
     # Do not forget to define your key file path correctly!
   }
 
