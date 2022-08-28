@@ -78,7 +78,7 @@ resource "null_resource" "config" {
 
   provisioner "file" {
     # Do not forget to define your key file path correctly!
-    source = "~/.ssh/tyler-team.pem"
+    source = "~/.ssh/FirstKey.pem"
     destination = "/home/ec2-user/oliver.pem"
   }
 
