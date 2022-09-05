@@ -59,7 +59,7 @@ resource "aws_instance" "tf-ec2" {
               -o /usr/local/bin/docker-compose
               chmod +x /usr/local/bin/docker-compose
 	            EOF
-}  
+}
 output "myec2-public-ip" {
   value = aws_instance.tf-ec2.public_ip
 }
