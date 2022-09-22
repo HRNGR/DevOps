@@ -26,7 +26,6 @@ containerlara bağlanma
 docker start b7d && docker attach b7d // container çalıştır ve bağlan
 --------------------
 Çalışan Container ın Config bilgisini alma
-
 docker-compose build  ##(SORUN VARSA)
 docker exec -it d56da8b4c593 /bin/sh  ## İçine gir
 vi /etc/nginx/nginx.conf ##Config bilgisini al
