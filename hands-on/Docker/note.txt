@@ -25,6 +25,13 @@ docker logs --tail 200 <container_adi> ## contatinın son 200 loguna bakmayı sa
 containerlara bağlanma
 docker start b7d && docker attach b7d // container çalıştır ve bağlan
 --------------------
+docker-compose build  (SORUN VARSA)
+docker exec -it d56da8b4c593 /bin/sh
+vi /etc/nginx/nginx.conf
+
+
+
+
 Silme
 docker rmi ubuntu // ubuntu image ini silver
 docker container prune // tüm containerları ini silver
