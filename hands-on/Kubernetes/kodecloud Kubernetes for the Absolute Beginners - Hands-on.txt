@@ -1,3 +1,6 @@
+alias k=kubectl
+echo 'alias k=kubectl' >>~/.bashrc
+
 KUBERNETES CONCEPTS – PODS, REPLICASETS, DEPLOYMENTS, LABS: REPLICA SETS
 
 How many PODs exist on the system?
