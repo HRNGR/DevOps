@@ -2,4 +2,4 @@ Nginx LOGs
 cd var/log/nginx
 cat staging.flo.com.tr.error.log
 --------------------------------------
-
+cd /etc/apache2/mods-available
