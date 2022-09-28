@@ -1,4 +1,5 @@
 Nginx LOGs
 cd var/log/nginx
 cat staging.flo.com.tr.error.log
----------------------------------------
+--------------------------------------
+
