@@ -54,5 +54,5 @@ docker system prune -af
 --------------------
 docker-compose up ##Docker composed çalıştırma
 docker-compose down
-
+--------------------
 Dockerda da gitignore u kullanabiliriz..
