@@ -79,6 +79,3 @@ Replica Control RC
 -----------------------
 k get replicaset
 k get replicationcontroller
-
-
-
