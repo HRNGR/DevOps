@@ -68,11 +68,11 @@ kubectl scale --replicas=6 replicaset my-replicaset
 k get pods --selector env=dev --no-headers | wc -l
 k get all --selector env=prod,bu=finance,tier=frontend
 -----------------
-
-z
 Then edit the file to make the necessary changes, delete and re-create the pod.
 
 Use the kubectl edit pod <pod-name> command to edit pod properties.
+
+
 
 -----------------------
 Replica Control RC
