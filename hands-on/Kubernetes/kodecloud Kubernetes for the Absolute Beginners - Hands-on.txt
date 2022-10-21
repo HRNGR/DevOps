@@ -72,10 +72,10 @@ Then edit the file to make the necessary changes, delete and re-create the pod.
 
 Use the kubectl edit pod <pod-name> command to edit pod properties.
 
-
-
 -----------------------
 Replica Control RC
 -----------------------
 k get replicaset
 k get replicationcontroller
+-----------------------
+k exect -it <pod name>
