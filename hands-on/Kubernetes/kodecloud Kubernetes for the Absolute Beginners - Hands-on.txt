@@ -78,4 +78,7 @@ Replica Control RC
 k get replicaset
 k get replicationcontroller
 -----------------------
-k exect -it <pod name>
+pod a bağlanma
+k exect -it <pod name> 
+
+
