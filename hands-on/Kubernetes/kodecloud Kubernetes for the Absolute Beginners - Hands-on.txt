@@ -79,6 +79,6 @@ k get replicaset
 k get replicationcontroller
 -----------------------
 pod a bağlanma
-k exect -it <pod name> 
+k exect -it <pod name> -n flo -- bash
 
 
