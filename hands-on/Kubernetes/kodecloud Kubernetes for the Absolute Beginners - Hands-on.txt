@@ -40,6 +40,9 @@ kubectl get pod <pod-name> -o yaml > unknown-pod-definition.yaml
 kubectl replace -f example.yaml --force (ve artık hazırlanan yaml dosyasıyla çalışması için bağlanır)
 
 ------------------------------------------------------------------------------------------------------------
+kubectl get cm -n flo => flo tag li configuration dosyalrını alır
+-----------------------
+
 
 minikube service voiting-service --url
 http://192.168.99.101:30004
@@ -80,5 +83,8 @@ k get replicationcontroller
 -----------------------
 pod a bağlanma
 k exect -it <pod name> -n flo -- bash
-
-
+-----------------------
+Jenkkinste namespace seçmek için
+kucectx (Kalıcı) ya da awsx (1 defalık)
+komutu girilir ve namespace seçilir (!!! joblarda girilen shell ler etkilenecektir)
+-----------------------
