@@ -42,8 +42,6 @@ kubectl replace -f example.yaml --force (ve artık hazırlanan yaml dosyasıyla 
 ------------------------------------------------------------------------------------------------------------
 kubectl get cm -n flo => flo tag li configuration dosyalrını alır
 -----------------------
-
-
 minikube service voiting-service --url
 http://192.168.99.101:30004
 
