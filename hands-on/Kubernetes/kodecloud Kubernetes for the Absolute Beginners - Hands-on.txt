@@ -1,3 +1,6 @@
+alias k=kubectl
+echo 'alias k=kubectl' >>~/.bashrc
+--------------------
 KUBERNETES CONCEPTS – PODS, REPLICASETS, DEPLOYMENTS, LABS: REPLICA SETS
 
 How many PODs exist on the system?
@@ -29,6 +32,7 @@ kubectl create deployment redis-deploy --image=redis --replicas=2 -n dev-ns
 Create a pod called httpd using the image httpd:alpine in the default namespace. Next, create a service of type ClusterIP by the same name (httpd). The target port for the service should be 80.
 kubectl run httpd --image=httpd:alpine --port=80 --expose
 
+
 Create a new ConfigMap for the webapp-color POD. Use the spec given below. CheckCompleteIncomplete ConfigName Name: webapp-config-map, Data: APP_COLOR=darkblue
 kubectl create configmap webapp-config-map --from-literal=APP_COLOR=darkblue
 
@@ -37,7 +41,8 @@ kubectl get pod <pod-name> -o yaml > unknown-pod-definition.yaml
 kubectl replace -f example.yaml --force (ve artık hazırlanan yaml dosyasıyla çalışması için bağlanır)
 
 ------------------------------------------------------------------------------------------------------------
-
+kubectl get cm -n flo => flo tag li configuration dosyalrını alır
+-----------------------
 minikube service voiting-service --url
 http://192.168.99.101:30004
 
@@ -65,8 +70,6 @@ kubectl scale --replicas=6 replicaset my-replicaset
 k get pods --selector env=dev --no-headers | wc -l
 k get all --selector env=prod,bu=finance,tier=frontend
 -----------------
-
-
 Then edit the file to make the necessary changes, delete and re-create the pod.
 
 Use the kubectl edit pod <pod-name> command to edit pod properties.
@@ -76,6 +79,11 @@ Replica Control RC
 -----------------------
 k get replicaset
 k get replicationcontroller
-
-
-
+-----------------------
+pod a bağlanma
+k exect -it <pod name> -n flo -- bash
+-----------------------
+Jenkkinste namespace seçmek için
+kucectx (Kalıcı) ya da awsx (1 defalık)
+komutu girilir ve namespace seçilir (!!! joblarda girilen shell ler etkilenecektir)
+-----------------------
