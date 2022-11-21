@@ -107,7 +107,7 @@ rm data/* (nevarneyok sil)
 grep -Eo "i-[a-Z 0-9]{17}"
 docker container ls | grep nginx (containerlardan nginx olanları süzerek listeler)
 ------------
- grep:
+grep:
 wc -l satır adedini verir (filitrelediğimiz seyin adedini verir)
  -v eşleşmeyenler
 -c eşleşen satır sayısı
