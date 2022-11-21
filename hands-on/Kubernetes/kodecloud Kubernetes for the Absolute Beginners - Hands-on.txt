@@ -50,14 +50,12 @@ Delete deployment
 kubectl delete -f .
 
 rollout------
-
 kubectl rollout status deployment/my-deployment
 
 kubectr rollout history deployment/my-deployment
 
 
 set-----------
-
 kubectl set image deployment mydeployment nginx=nginx:1.18-perl
 kubectl set image pod redis redis123=redis
 kubectl scale deploy web-flask-deploy --replicas=3
