@@ -21,11 +21,11 @@ export PS1="\[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]
 sudo kubeadm join 172.31.20.50:6443 --token 3gzgkc.je9jpy43mpx4qfri \
         --discovery-token-ca-cert-hash sha256:ca77bd18c64c21c1b6b4f71f8bed6982786254aca37d52b850b1e81f477e2b26
 -----------------------
+Vi kısayollar
 i // o insert ve ensona gelir
 gg en başa gider         (insert demeden önce)
 d satır siler
 d15 15 satır birden siler
------------
 Çıkış;
 esc :x! kaydetmeden
 esc:vq!kaydederek
@@ -33,7 +33,6 @@ esc:wq kaydederek
 esc:q! kaydetmeden
 :q! Exit and ignore any changes
 :x Exit, saving changes
-ctrl+d
 -----------
 sudo su (root a geçiyor)
 sudo su - (root a geçiyor ve HOME a geçiyor)
