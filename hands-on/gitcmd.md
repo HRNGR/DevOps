@@ -1,5 +1,6 @@
 export PS1="\[\e[1;31m\]\u\[\e[33m\]@\h# \W:\[\e[32m\]\\$\[\e[m\] "
 sudo hostnamectl set-hostname D
+alias k=kubectl
 bash
 clear
 
@@ -16,15 +17,9 @@ export PS1="\[\e[34m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[34m\]@\[\e[m\]\[\e[43m\]
 ubuntu;
 export PS1="\[\e[32m\][\[\e[m\]\[\e[31m\]\u\[\e[m\]\[\e[33m\]@\[\e[m\]\[\e[32m\]\h\[\e[m\]:\[\e[36m\]\w\[\e[m\]\[\e[32m\]]\[\e[m\]\[\e[32;47m\]\\$\[\e[m\] "
 ------------
-sudo hostnamectl set-hostname CN
-bash
-
-alias k=kubectl
 
 sudo kubeadm join 172.31.20.50:6443 --token 3gzgkc.je9jpy43mpx4qfri \
         --discovery-token-ca-cert-hash sha256:ca77bd18c64c21c1b6b4f71f8bed6982786254aca37d52b850b1e81f477e2b26
------------------------
-kubectl get po -w
 -----------------------
 i // o insert ve ensona gelir
 gg en başa gider         (insert demeden önce)
