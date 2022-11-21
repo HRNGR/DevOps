@@ -55,12 +55,12 @@ $ scp -i firstkey.pem "ec2-user@54.161.246.232:/home/ec2-user/cs.sh"  ./
 PC to EC2 File Trasnfer
 $ scp -i firstkey.pem "./aa.sh" "ec2-user@54.161.246.232:/home/ec2-user/"
 ----------
-Remote-SSH extension ı yükle
-View/Command Palette  (ctrl+shitf+p
+VisualStudio'ya Remote-SSH extension ı yükle
+View/Command Palette  (ctrl+shitf+p)
 remote-ssh configuration file
 c:USER\HRN\.shh\config
 içine girip "" içindekini düzenleyerek yapıştıracağız"
-
+"""""""""""""""""""""""
 EC2yu sürekli açık tutma
 Host *
     TCPKeepAlive yes
@@ -75,6 +75,7 @@ Host linux
 Sağ altta yeşil kısma bas "connect to host" ya da "connect to host with current window" a tıkla
 linux
 continue
+"""""""""""""""""""""""
 ------------
 $*** değişken şeklinde algılıyor "..***..." tırnak içinde dahi başına ' $' / gelirse $ aktif olmuyor
 ------------
