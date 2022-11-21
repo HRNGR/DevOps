@@ -55,14 +55,13 @@ $ scp -i firstkey.pem "ec2-user@54.161.246.232:/home/ec2-user/cs.sh"  ./
 PC to EC2 File Trasnfer
 $ scp -i firstkey.pem "./aa.sh" "ec2-user@54.161.246.232:/home/ec2-user/"
 ----------
-EC2yu sürekli açık tutma
-
 Remote-SSH extension ı yükle
 View/Command Palette  (ctrl+shitf+p
 remote-ssh configuration file
 c:USER\HRN\.shh\config
-içine girip "" içindekini düzenleyerek yapıştıracağız
-"
+içine girip "" içindekini düzenleyerek yapıştıracağız"
+
+EC2yu sürekli açık tutma
 Host *
     TCPKeepAlive yes
     ServerAliveInterval 120
