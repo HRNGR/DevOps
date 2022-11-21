@@ -109,10 +109,10 @@ docker container ls | grep nginx (containerlardan nginx olanları süzerek liste
 ------------
 grep:
 wc -l satır adedini verir (filitrelediğimiz seyin adedini verir)
- -v eşleşmeyenler
+-v eşleşmeyenler
 -c eşleşen satır sayısı
- -n eşleşen satır ve satır numarası
- -i büyük küçük harf eşleşenler
+-n eşleşen satır ve satır numarası
+-i büyük küçük harf eşleşenler
 -d "-" olan
 tr 'a' 'b' A yerine b yaz
 ------------
