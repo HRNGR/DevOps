@@ -70,7 +70,6 @@ Host linux
     HostName 13.58.215.54 (Bağlandığınız EC2nun ipsini yazıyorsunuz)
     IdentityFile C:\Users\harun.gur\.ssh\key.pem (Key dosyanızın konumunu yazıyorsunuz)
     User ec2-userl
-    
    
 Sağ altta yeşil kısma bas "connect to host" ya da "connect to host with current window" a tıkla
 linux
