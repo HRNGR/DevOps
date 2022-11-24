@@ -1,0 +1,6 @@
+ArgoCD Password
+k -n argocd get secret
+
+k -n argocd get secret argocd-initial-admin-secret -o json | jp .data.password -r 
+
+k -n argocd get secret argocd-initial-admin-secret -o json | jp .data.password -r | base64 -d 
