@@ -2,3 +2,6 @@ ArgoCD Password
 k -n argocd get secret
 k -n argocd get secret argocd-initial-admin-secret -o json | jp .data.password -r 
 k -n argocd get secret argocd-initial-admin-secret -o json | jp .data.password -r | base64 -d 
+(*1*)
+k -n argocd get svc                         ** in list read "argocd-server" ip
+k -n argocd login 10.15.65.54               ** Username admin pasword (*1*)
