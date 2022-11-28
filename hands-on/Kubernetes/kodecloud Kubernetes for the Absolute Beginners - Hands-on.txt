@@ -90,6 +90,11 @@ komutu girilir ve namespace seçilir (!!! joblarda girilen shell ler etkilenecek
 
 -----------------------
 Belli aralıklarla podların resetlenmesi için oluşturulan jenkins jobı execute shell örnegi
+
+peryodu schecule ettikten sonra aşağıdaki execute shell i girebiliriz.
+
+listelediği (pods a eşitlediği) podları FOR öngüsü ile sırayla podların içerisinde "servise nxlog restart" komutlarını çalıştırır. sonrasında statuse ile son halini echo -e ile komudun çıkışını job description a loglar
+
 #!/bin/bash
 echo "Prod ortamı Nxlog Restart işlemi başlıyor..."
 pods=$(kubectl get pods -n NF-prod | grep NF-prod-deployment | awk '{print $1}')
