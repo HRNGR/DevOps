@@ -95,11 +95,11 @@ echo "Prod ortamı Nxlog Restart işlemi başlıyor..."
 pods=$(kubectl get pods -n NF-prod | grep NF-prod-deployment | awk '{print $1}')
 for pod in $pods
 do
-	echo -e "Lojistik Prod - $pod - Nxlog Restart ---------------------\n"
+	echo -e "NF-Prod - $pod - Nxlog Restart ---------------------\n"
 	kubectl exec -it $pod -n NF-prod -- bash -c "service nxlog restart"
-    echo -e "\n-----------------------------------------------------------\n"
-    echo -e "Lojistik Prod - $pod - Nxlog Status ---------------------\n"
-    kubectl exec -it $pod -n NF-prod -- bash -c "service nxlog status"
+	echo -e "\n-----------------------------------------------------------\n"
+	echo -e "NF-Prod - $pod - Nxlog Status ---------------------\n"
+	kubectl exec -it $pod -n NF-prod -- bash -c "service nxlog status"
 	echo -e "\n-----------------------------------------------------------"
 done
 echo "Prod ortamı Nxlog Restart işlemi tamamlandı."
