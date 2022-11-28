@@ -85,3 +85,22 @@ Jenkkinste namespace seçmek için
 kucectx (Kalıcı) ya da awsx (1 defalık)
 komutu girilir ve namespace seçilir (!!! joblarda girilen shell ler etkilenecektir)
 -----------------------
+
+
+
+-----------------------
+Belli aralıklarla podların resetlenmesi için oluşturulan jenkins jobı execute shell örnegi
+#!/bin/bash
+echo "Prod ortamı Nxlog Restart işlemi başlıyor..."
+pods=$(kubectl get pods -n NF-prod | grep NF-prod-deployment | awk '{print $1}')
+for pod in $pods
+do
+	echo -e "Lojistik Prod - $pod - Nxlog Restart ---------------------\n"
+	kubectl exec -it $pod -n NF-prod -- bash -c "service nxlog restart"
+    echo -e "\n-----------------------------------------------------------\n"
+    echo -e "Lojistik Prod - $pod - Nxlog Status ---------------------\n"
+    kubectl exec -it $pod -n NF-prod -- bash -c "service nxlog status"
+	echo -e "\n-----------------------------------------------------------"
+done
+echo "Prod ortamı Nxlog Restart işlemi tamamlandı."
+-----------------------
