@@ -73,23 +73,6 @@ Dockerda da gitignore u kullanabiliriz..
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 --------------------
 #!/bin/bash
 #ubuntu üzerine docker ve docker-compose kurmak için gerekli script.
