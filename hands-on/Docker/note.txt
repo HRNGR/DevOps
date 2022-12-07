@@ -9,6 +9,8 @@ newgrp docker
 Mevcut durum listeleme
 --------------------
 docker ps -a
+docker-compose up -d
+watch docker ps
 docker container ls
 docker network ls       ## Default networks ; Bridge, Null, Host
 docker images // image leri listeler
