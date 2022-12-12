@@ -10,7 +10,7 @@ How many ReplicaSets exist on the system?
 kubectl get pods -o wide
 
 What is the image used to create the pods in the new-replica-set?
-kubectl describe pod
+kubectl describe pod new-replica-set
 
 Delete any one of the 4 PODs.
 kubectl delete pod new-replica-set-2hwks
