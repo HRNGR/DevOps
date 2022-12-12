@@ -23,3 +23,5 @@ Terraform
 Git Server
 
 ----------------------------------
+Slack Example
+https://eavnitech.com/blog/send-notification-to-slack-from-the-Jenkins-CI-job-and-jenkinsfile/
