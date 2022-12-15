@@ -25,3 +25,14 @@ Git Server
 ----------------------------------
 Slack Example
 https://eavnitech.com/blog/send-notification-to-slack-from-the-Jenkins-CI-job-and-jenkinsfile/
+
+----------------------------------
+Trigger EXAMPLES
+    stage ('Deployment Job Trigger') {
+    build job: "${triggerJob}", parameters: [[$class: 'StringParameterValue', name: 'tag', value: "$tag"]],wait: false
+    }
+
+
+
+    
+----------------------------------
