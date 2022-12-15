@@ -32,7 +32,10 @@ Trigger EXAMPLES
     build job: "${triggerJob}", parameters: [[$class: 'StringParameterValue', name: 'tag', value: "$tag"]],wait: false
     }
 
-
+String triggerJob = "Deploy-Blue-Green"
+    stage ('Deployment Job Trigger') {
+    build job: "${triggerJob}", parameters: [[$class: 'StringParameterValue', name: 'tag', value: "$tag"]],wait: false
+    }
 
     
 ----------------------------------
