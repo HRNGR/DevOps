@@ -37,5 +37,12 @@ String triggerJob = "Deploy-Blue-Green"
     build job: "${triggerJob}", parameters: [[$class: 'StringParameterValue', name: 'tag', value: "$tag"]],wait: false
     }
 
+// Cache-Clearjobı tetikleme eklendi denenmedi 15.12.22
+    stage ('Cache-Clear Job Trigger') {
+        build job: "Cache-Clear",wait: false
+        echo "Cache-Clear yapıldı..!!!""
+    }  
+  
+
     
 ----------------------------------
