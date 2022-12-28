@@ -22,9 +22,21 @@ Deploy to container
 Terraform
 Git Server
 
+
+
+
+
+
 ----------------------------------
 Slack Example
 https://eavnitech.com/blog/send-notification-to-slack-from-the-Jenkins-CI-job-and-jenkinsfile/
+
+----------------------------------
+TimeOut EXAMPLES
+
+  options {
+      timeout(time: 1, unit: 'HOURS') 
+  }
 
 ----------------------------------
 Trigger EXAMPLES
@@ -41,8 +53,5 @@ String triggerJob = "Deploy-Blue-Green"
     stage ('Cache-Clear Job Trigger') {
         build job: "Cache-Clear",wait: false
         echo "Cache-Clear yapıldı..!!!""
-    }  
-  
-
-    
+    }
 ----------------------------------
