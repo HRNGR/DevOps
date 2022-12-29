@@ -54,4 +54,121 @@ String triggerJob = "Deploy-Blue-Green"
         build job: "Cache-Clear",wait: false
         echo "Cache-Clear yapıldı..!!!""
     }
+    
+    
+    
 ----------------------------------
+String kubecontext = "www-flo-prod"
+String namespace = "ninewest"
+String cronname =  "ayenxml"
+String image = "bbm-ninewest" 
+String brand = "ninewest"
+String cron= "/var/www/magento/webservice/bin/console flo:page:ayen_xml;"
+String efsID = "fs-7240732b"
+String efsRegion = "eu-central-1"
+String efsDNS = "fs-7240732b.flo.aws"
+pipeline{
+  agent { label 'master'}
+  stages{
+    stage('Trigger Cron'){
+      options {
+        timeout(activity: true, time: 5, unit: 'MINUTES')   // timeout on this stage
+      }
+      steps{
+        script {
+          def data = readFile(file: '/var/lib/jenkins/brands-version/ninewest.txt') 
+          String tag= "${data}"
+          echo "${tag}"
+          sh ("truncate -s 0 pod.yml")
+          sh ("""
+          echo "${tag}"
+          cat <<EOF >>pod.yml
+          apiVersion: v1
+          kind: Pod
+          metadata:
+            name: "${brand}-${cronname}-${env.BUILD_NUMBER}"
+            labels: 
+              role: cron
+          spec:
+            containers:
+              - name: "${brand}-${cronname}-${env.BUILD_NUMBER}"
+                image: 691136496385.dkr.ecr.eu-central-1.amazonaws.com/${image}:${tag}
+                command:
+                    - /bin/bash
+                    - -c
+                    - ${cron}
+                resources:
+                  limits:
+                    cpu: 1
+                    memory: 10000Mi
+                  requests:
+                    cpu: 500m
+                    memory: 1000Mi
+                env:
+                  - name: CURRENT_APP_VERSION
+                    value: ${tag}
+                  - name: FILE_SYSTEM_ID
+                    value: ${efsID}
+                  - name: AWS_REGION
+                    value: ${efsRegion}
+                  - name: PROVISIONER_NAME
+                    value: eks-course/aws-efs
+                volumeMounts:
+                 - mountPath: /var/www/magento/pub/media
+                   name: pv-volume
+            nodeSelector:
+                envtype: cron
+            restartPolicy: Never
+            volumes:
+               - name: pv-volume
+                 nfs:
+                   path: /
+                   server: ${efsDNS}
+            dnsPolicy: Default
+          """)
+          //sh ("cat pod.yml")
+          sh ("kubectl apply -f pod.yml --context=${kubecontext} --namespace=${namespace}")
+          ansiColor('xterm') {
+                    sh """#!/bin/bash
+                    while :
+                    do
+	                    if [[ \$(kubectl get pods --context=${kubecontext} --namespace=${namespace} | grep ${brand}-${cronname}-${env.BUILD_NUMBER} | awk '{print \$3}') == "Running" || \$(kubectl get pods --context=${kubecontext} --namespace=${namespace} | grep ${brand}-${cronname}-${env.BUILD_NUMBER} | awk '{print \$3}') == "Completed" ]]
+                      then
+                          kubectl logs -f ${brand}-${cronname}-${env.BUILD_NUMBER} --context=${kubecontext} --namespace=${namespace}
+                          break
+                      elif [[ \$(kubectl get pods --context=${kubecontext} --namespace=${namespace} | grep ${brand}-${cronname}-${env.BUILD_NUMBER} | awk '{print \$3}') == "OOMKilled" || \$(kubectl get pods --context=${kubecontext} --namespace=${namespace} | grep ${brand}-${cronname}-${env.BUILD_NUMBER} | awk '{print \$3}') == "Error" ]]
+                      then
+                          echo "Error"
+                          break
+                      else
+                          continue
+                      fi
+                    done
+              """
+            }
+            }
+      }
+    }
+    stage('TextFinder'){
+      steps{
+        findText alsoCheckConsoleOutput: true, regexp: '(error|Error|exception|Exception|Fatal|Notice|PHP Fatal error)', unstableIfFound: true
+      }
+    }
+  }
+  post {
+    aborted {
+            sh """ 
+                kubectl delete pod ${brand}-${cronname}-${env.BUILD_NUMBER} --context=${kubecontext} --namespace=${namespace}
+             """ 
+    }
+    failure {
+        slackSend (color:'danger', message: "Job Name: *${env.JOB_NAME}* Build Number: *${env.BUILD_NUMBER}* STATUS: *FAILURE* | Open <${env.BUILD_URL}|here> ")
+        discordSend description: "Build Number: *${env.BUILD_NUMBER}*", footer: "FAILURE", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/884364540995862539/WKTac-9xZOVTOfyzG-x7BkAbzS2Fiibr5nM5FjUZrEKEsZnTd1djBiS-b0_XFfyYS4W5"
+    }
+    notBuilt {
+        slackSend (color:'warning', message: "Job Name: *${env.JOB_NAME}* Build Number: *${env.BUILD_NUMBER}* STATUS: *NOT_BUILT* | Open <${env.BUILD_URL}|here> ")
+        discordSend description: "Build Number: *${env.BUILD_NUMBER}*", footer: "NOT_BUILT", link: env.BUILD_URL, result: currentBuild.currentResult, title: JOB_NAME, webhookURL: "https://discord.com/api/webhooks/884364540995862539/WKTac-9xZOVTOfyzG-x7BkAbzS2Fiibr5nM5FjUZrEKEsZnTd1djBiS-b0_XFfyYS4W5"
+    }
+  }
+}
+
