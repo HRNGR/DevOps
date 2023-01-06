@@ -109,3 +109,12 @@ do
 done
 echo "Prod ortamı Nxlog Restart işlemi tamamlandı."
 -----------------------
+
+
+
+
+
+cluster ip
+Node Port
+ingress engress
+loadbalancer
