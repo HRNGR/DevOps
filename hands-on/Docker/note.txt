@@ -39,7 +39,7 @@ docker container start epic  stoptaki container ı çalıştırmak için
 
 
 --------------------
-
+docker run -it --name nginx -v /home/var/volume/volume1:/www/html/ nginx /bin/bash
 
 
 
