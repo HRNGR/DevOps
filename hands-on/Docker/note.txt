@@ -35,9 +35,10 @@ docker logs --tail 200 <container_adi> ## contatinın son 200 loguna bakmayı sa
 Run
 docker container run --name web -p 5000:80 alpine:3.9
 docker container run -it -d --name nginx -p 5000:80 nginx:latest
-exit sonrası container kapanmasın diye -d
--i interaktif connection
--t
+exit sonrası container kapanmasın diye -d // -i interaktif connection  // -t
+docker container start epic  stoptaki container ı çalıştırmak için 
+
+
 --------------------
 COPY File
 docker cp    source     to   target       (otherwise true)
@@ -45,6 +46,8 @@ docker cp web:/index.html index.html
 --------------------
 containerlara bağlanma
 docker start b7d && docker attach b7d // container çalıştır ve bağlan
+docker exec -it b7d
+
 --------------------
 Çalışan Container ın Config bilgisini alma
 docker-compose build  ##(SORUN VARSA)
