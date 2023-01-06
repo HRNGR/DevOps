@@ -26,6 +26,7 @@ docker version
 docker info
 docker port web
 docker inspect/diff web
+docker images Tüm 
 docker image inspect ubuntu
 docker image inspect ubuntu:18.04
 ## kurulu işletim sistemini öğrenme 
@@ -48,7 +49,7 @@ docker cp web:/index.html index.html
 --------------------
 containerlara bağlanma
 docker start b7d && docker attach b7d // container çalıştır ve bağlan
-docker exec -it b7d
+docker exec -it b7d /bin/bash              (terminal şekli için /bin/bash yazılır
 
 --------------------
 Çalışan Container ın Config bilgisini alma
