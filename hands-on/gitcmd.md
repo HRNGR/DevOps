@@ -115,4 +115,6 @@ wc -l satır adedini verir (filitrelediğimiz seyin adedini verir)
 -d "-" olan
 tr 'a' 'b' A yerine b yaz
 ------------
-
+Sed (replace)
+awk for divitual 
+awk '{3}' text.txt (3. sutunu yazar)
