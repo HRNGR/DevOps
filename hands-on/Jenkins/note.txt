@@ -55,6 +55,13 @@ String triggerJob = "Deploy-Blue-Green"
         echo "Cache-Clear yapıldı..!!!""
     }
     
+-------
+String wwwTriggerJob = "SORTING-CLIENT-EKS-Deploy"
+String tag2= '''$tag'''
+stage ('Deployment Job Trigger sepet cluster') {
+        build job: "${wwwTriggerJob}", parameters: [[$class: 'StringParameterValue', name: 'tag', value: "$tag"]],wait: false
+    }
+-------
     
     
 ----------------------------------
