@@ -194,23 +194,23 @@ s3_bucket_name = "wolf-tfvar-bucket"
 ```
 - Aşağıdaki komutu çalıştırın.
 ```bash
-terraform plan --var-file="compwolf.tfvars"
+terraform plan --var-file="hrn.tfvars"
 ```
 
 ##### 3-
-- `compwolf.tfvars` adlı bir dosya adı oluşturun. Aşağıdakileri ekleyin.
+- `hrn.tfvars` adlı bir dosya adı oluşturun. Aşağıdakileri ekleyin.
 ```bash
 s3_bucket_name = "wolf-tfvar-bucket"
 ```
 - Aşağıdaki komutu çalıştırın.
 ```bash
-terraform plan --var-file="compwolf.tfvars"
+terraform plan --var-file="hrn.tfvars"
 ```
 
 ##### 4-
-- `compwolf.auto.tfvars` adlı bir dosya adı oluşturun. Aşağıdakileri ekleyin.
+- `hrn.auto.tfvars` adlı bir dosya adı oluşturun. Aşağıdakileri ekleyin.
 ```bash
-s3_bucket_name = "compwolf-auto-tfvar-bucket"
+s3_bucket_name = "hrn-auto-tfvar-bucket"
 ```
 - Aşağıdaki komutu çalıştırın.
 ```bash
@@ -253,7 +253,7 @@ terraform {
 }
 
 locals {
-  mytag = "compwolf-name"
+  mytag = "hrn-name"
 }
 
 resource "aws_instance" "tf-ec2" {
