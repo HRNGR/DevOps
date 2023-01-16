@@ -147,11 +147,11 @@ $ terraform apply -refresh=false
 
 ```bash
 variable "ec2_name" {
-  default = "compwolf-ec2"
+  default = "hrn-ec2"
 }
 
 variable "s3_bucket_name" {
-  default = "compwolf-s3-bucket-variable-addwhateveryouwant"
+  default = "hrn-s3-bucket-variable-addwhateveryouwant"
 }
 ```
 
@@ -188,7 +188,7 @@ s3_bucket_name = "tfvars-bucket"
 terraform plan
 ```
 ##### 2-
-- `compwolf.tfvars` adlı bir dosya adı oluşturun. Aşağıdakileri ekleyin.
+- `hrn.tfvars` adlı bir dosya adı oluşturun. Aşağıdakileri ekleyin.
 ```bash
 s3_bucket_name = "wolf-tfvar-bucket"
 ```
