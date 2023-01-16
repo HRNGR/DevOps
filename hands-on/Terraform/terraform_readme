@@ -259,7 +259,7 @@ locals {
 resource "aws_instance" "tf-ec2" {
   ami           = var.ec2_ami
   instance_type = var.ec2_type
-  key_name      = "erdogan"
+  key_name      = "hrnkey"
   tags = {
     Name = "${local.mytag}-come from locals"
   }
@@ -283,7 +283,7 @@ resource "aws_s3_bucket" "tf-s3" {
 resource "aws_instance" "tf-ec2" {
   ami           = var.ec2_ami
   instance_type = var.ec2_type
-  key_name      = "erdogan" # <pem file>
+  key_name      = "hrnkey" # <pem file>
   count         = 3
   #  count = 3  "aynı özelliklerde birden fazla makine ayağa kaldırmak için kaç adet makine ayağa kaldırmak istiyorsak aynı özelliklerde gitilen sayı kadar makine ayağa kaldırır"
   tags = {
