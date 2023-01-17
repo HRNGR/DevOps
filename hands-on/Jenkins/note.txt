@@ -17,11 +17,12 @@ Docker
 Docker Pipeline
 Ansible
 AnsiColor
+Safe Restrat
 Copy Artifact
 Deploy to container
 Terraform
 Git Server
-Safe Restrat
+
 
 
 
