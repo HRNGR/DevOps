@@ -16,7 +16,6 @@ docker network ls       ## Default networks ; Bridge, Null, Host
 docker images // image leri listeler
 --------------------
 
-
 Bilgi inceleme
 docker version
 docker info
