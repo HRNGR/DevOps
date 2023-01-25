@@ -74,7 +74,7 @@ Host linux
 Sağ altta yeşil kısma bas "connect to host" ya da "connect to host with current window" a tıkla
 linux
 continue
-"""""""""""""""""""""""
+"""""""""""""""""""
 ------------
 $*** değişken şeklinde algılıyor "..***..." tırnak içinde dahi başına ' $' / gelirse $ aktif olmuyor
 ------------
