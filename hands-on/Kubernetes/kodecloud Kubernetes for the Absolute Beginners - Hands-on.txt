@@ -25,7 +25,6 @@ kubectl delete replicaset replicaset-2
 What is the ip of node
 k get service --all-namespaces
 
-
 Create a new deployment called redis-deploy in the dev-ns namespace with the redis image. It should have 2 replicas. Use imperative commands.
 kubectl create deployment redis-deploy --image=redis --replicas=2 -n dev-ns
 
