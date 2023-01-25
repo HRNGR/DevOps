@@ -15,8 +15,6 @@ docker container ls
 docker network ls       ## Default networks ; Bridge, Null, Host
 docker images // image leri listeler
 --------------------
-docker exec -it oobeya-nginx -- sh
-curl -H 'Host:oobeya.flo.com.tr' 127.0.0.1
 
 
 Bilgi inceleme
@@ -56,6 +54,9 @@ docker cp web:/index.html index.html
 containerlara bağlanma
 docker start b7d && docker attach b7d // container çalıştır ve bağlan
 docker exec -it b7d /bin/bash              (terminal şekli için /bin/bash yazılır
+
+docker exec -it oobeya-nginx -- sh
+curl -H 'Host:oobeya.flo.com.tr' 127.0.0.1
 
 --------------------
 Çalışan Container ın Config bilgisini alma
