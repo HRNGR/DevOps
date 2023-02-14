@@ -29,7 +29,11 @@ Git Server
 
 
 ----------------------------------
-Bloking jobs if run sametime
+Block build if certain jobs are running
+Blocking Jobs
+.*FLO-EKS.*CronJobs.*SitemapGenerateV2
+.*FLO-EKS.*CronJobs.*ayenXml
+
 
 ----------------------------------
 
