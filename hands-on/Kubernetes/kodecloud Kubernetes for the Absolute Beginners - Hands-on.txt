@@ -53,6 +53,11 @@ kubectl rollout status deployment/my-deployment
 
 kubectr rollout history deployment/my-deployment
 
+kubectl rollout restart deploy -n <namespacename> // namespace teki tüm podları restart yapar
+
+
+
+
 
 set-----------
 kubectl set image deployment mydeployment nginx=nginx:1.18-perl
