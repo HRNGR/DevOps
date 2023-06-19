@@ -64,7 +64,7 @@ root@flopay-deployment-f5fc5d797-7gkbf:/var/www/flopay# curl -vvv https://epay-o
 
 
 ----------------------------------------------
-
+Pod un loglarına bakma
 h-4.2$ sudo su
 [root@ip-10-65-116-234 bin]# su jenkins
 bash-4.2$ kubectl get ns
