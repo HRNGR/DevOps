@@ -114,3 +114,10 @@ Stack trace:
 #8 {main}
   th in /var/www/panel/app/Model/V1/Florchestra.php on line 428" while reading response header from u
 
+
+----------------------------------------------
+Pod RDS portuna erişip erişmediği test etmek i.in
+nc-v flocomtr-backupv2-cluster-w2.ctygmjmovavk.eu-central-1.rds.amazonaws.com 3306
+
+  
+
