@@ -14,6 +14,8 @@ watch docker ps
 docker container ls
 docker network ls       ## Default networks ; Bridge, Null, Host
 docker images // image leri listeler
+tail-f )(dosyaadı accesslog)
+
 --------------------
 
 Bilgi inceleme
