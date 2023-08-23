@@ -27,9 +27,15 @@ Ardından gerekli bazı paketleri kuracağız.
 sudo apt-get update && sudo apt-get install -y apt-transport-https curl
 
 
-
-
-
+rollout restart
+-------------------------
++ kubectl rollout restart deployment varnish-cache-deployment --namespace flo --context flo-preprod
+deployment.apps/varnish-cache-deployment restarted
++ kubectl rollout status deployment varnish-cache-deployment --namespace flo --context flo-preprod
+Waiting for deployment "varnish-cache-deployment" rollout to finish: 1 old replicas are pending termination...
+Waiting for deployment "varnish-cache-deployment" rollout to finish: 1 old replicas are pending termination...
+deployment "varnish-cache-deployment" successfully rolled out
+-------------------------
 
 
 
