@@ -96,7 +96,9 @@ bash-4.2$ kubectl get pods -n butigo-panel
 NAME                                               READY   STATUS    RESTARTS   AGE
 butigo-panel-preprod-deployment-6f4f867dcf-7lgcv   1/1     Running   0          3h9m
 varnish-cache-deployment-8674d8577b-vd2qh          1/1     Running   0          15h
+*****
 bash-4.2$ kubectl exec -it butigo-panel-preprod-deployment-6f4f867dcf-7lgcv -n butigo-panel bash
+*****
 kubectl exec [POD] [COMMAND] is DEPRECATED and will be removed in a future version. Use kubectl exec [POD] -- [COMMAND] instead.
 root@butigo-panel-preprod-deployment-6f4f867dcf-7lgcv:/var/www/panel# cd /var/log
 root@butigo-panel-preprod-deployment-6f4f867dcf-7lgcv:/var/log# cd nginx
@@ -110,16 +112,11 @@ root@butigo-panel-preprod-deployment-6f4f867dcf-7lgcv:/var/log/nginx# cat error.
 2023/04/10 10:18:55 [error] 21#21: *9 FastCGI sent in stderr: "PHP message: PHP Fatal error:  Uncaught Exception: Undefined Florchestra URL. in /var/www/panel/app/Model/V1/Florchestra.php:428
 Stack trace:
 #0 /var/www/panel/app/Model/V1/Florchestra.php(1797): App\Model\V1\Florchestra->doRequest(Array, 'api/custom_site...', 'POST', Array, true)
-#1 /var/www/panel/app/Library/Flo/Utils.php(1923): App\Model\V1\Florchestra->getCustomSiteSettingByKey('white_list')
-#2 /var/www/panel/app/Library/Flo/Cors/AccessControl.php(19): App\Library\Flo\Utils::getAllowedDomains()
-#3 /var/www/panel/app/Controller/V1/BaseAction.php(28): App\Controller\V1\BaseAction->AllowHttpOrigin()
-#4 /var/www/panel/vendor/butterfly/core/src/Framework/App.php(492): App\Controller\V1\BaseAction->__construct('index', 'index')
-#5 /var/www/panel/vendor/butterfly/core/src/Framework/App.php(451): Butterfly\Framework\App::initControllerAction('index::index')
-#6 /var/www/panel/vendor/butterfly/core/src/Framework/App.php(33): Butterfly\Framework\App::prerouter()
+.
+.
+.
 #7 /var/www/panel/public/index.php(9): Butterfly\Framework\App::init()
-#8 {main}
-  th in /var/www/panel/app/Model/V1/Florchestra.php on line 428" while reading response header from u
-
+#8 {main}  th in /var/www/panel/app/Model/V1/Florchestra.php on line 428" while reading response header from u
 
 ----------------------------------------------
 Pod RDS portuna erişip erişmediği test etmek i.in
